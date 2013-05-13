@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
-	<name>js_wright</name>
-	<creationDate>March 2013</creationDate>
+	<name>js_mondrian</name>
+	<creationDate>May 2013</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>3.0.21_dev1</version>
-    <description>TPL_JS_WRIGHT_XML_DESCRIPTION</description>
+	<version>1.0.0_beta1</version>
+    <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
 
 	<languages folder="language">
 		<!-- en-GB -->
-		<language tag="en-GB">en-GB/en-GB.tpl_js_wright.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_js_wright.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian.sys.ini</language>
 		<!-- es-ES -->
-		<language tag="es-ES">es-ES/es-ES.tpl_js_wright.ini</language>
-		<language tag="es-ES">es-ES/es-ES.tpl_js_wright.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian.sys.ini</language>
 	</languages>
 	
 	<files>
@@ -57,7 +57,7 @@
 	</positions>
 	
 	<config>
-		<fields name="params" addfieldpath="/templates/js_wright/wright/parameters/joomla_2.5">
+		<fields name="params" addfieldpath="/templates/js_mondrian/wright/parameters/joomla_2.5">
 			<fieldset name="basic">
                 <!-- Start of default Wright params -->
 				<field name="helper" type="help" label="TPL_JS_WRIGHT_FIELD_NEED_HELP_LABEL" description="TPL_JS_WRIGHT_FIELD_NEED_HELP_DESC"/>
