@@ -1,3 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/*  Mondrian */
+@navtabsBg:#263138;
+@navtabsBgHover:#151D21;
+@tableThColor:#F4F4F0;
+@ms1Background:#D1E751;
+@ms1Color:#7D8C28;
+@BgAlternate:#EFEFEF;
 //
 // Variables
 // --------------------------------------------------
@@ -20,8 +28,8 @@
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
+@blue:                  #33CCFF;
+@blueDark:              #00ABE9;
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
@@ -33,18 +41,18 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @grayDark;
+@textColor:             @black;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             #325159;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "Montserrat", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
@@ -78,9 +86,9 @@
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
-@tableBorder:                       #ddd; // table and cell border
+@tableBackgroundAccent:             #D6F5FF; // for striping
+@tableBackgroundHover:              darken(@tableBackgroundAccent ,6%);; // for hover
+@tableBorder:                       @navtabsBg; // table and cell border
 
 // Buttons
 // -------------------------
@@ -88,8 +96,8 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         #ccc;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackground:              #15ACE6;
+@btnPrimaryBackgroundHighlight:     #007FB1;
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
@@ -181,14 +189,14 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
-@navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarBackgroundHighlight:       @navtabsBg;
+@navbarBackground:                @navtabsBg;
+@navbarBorder:                    @navbarBackground;
 
-@navbarText:                      #777;
-@navbarLinkColor:                 #777;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarText:                      @white;
+@navbarLinkColor:                 @white;
+@navbarLinkColorHover:            @white;
+@navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 
@@ -242,9 +250,9 @@
 @successBackground:       #dff0d8;
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                #3a87ad;
-@infoBackground:          #d9edf7;
-@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+@infoText:                @blue;
+@infoBackground:          @blueDark;
+@infoBorder:              @blueDark;
 
 
 // Tooltips and popovers
