@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta1</version>
+	<version>1.0.0_beta2</version>
     <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -99,6 +99,14 @@
 					<option value="img-rounded">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_ROUNDED</option>
 					<option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
 					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
+				</field>
+				<field name="mondrian_featured_blog" type="radio" default="1" label="TPL_JS_MONDRIAN_FEATURED_BLOG" description="TPL_JS_MONDRIAN_FEATURED_BLOG_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="mondrian_logo_on_featured" type="radio" default="0" label="TPL_JS_MONDRIAN_LOGO_ON_FEATURED" description="TPL_JS_MONDRIAN_LOGO_ON_FEATURED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
 				</field>
                 <!-- End of default Wright params -->
 			</fieldset>

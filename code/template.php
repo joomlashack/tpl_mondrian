@@ -10,12 +10,13 @@
  */
 // no direct access
 defined('_JEXEC') or die('Restricted access');
-
+$footerWrapp =" container";
 // get the bootstrap row mode ( row / row-fluid )
 $gridMode = $this->params->get('bs_rowmode','row-fluid');
 $containerClass = 'container';
 if ($gridMode == 'row-fluid') {
     $containerClass = 'container-fluid';
+    $footerWrapp =" container-fluid";
 }
 
 $bodyclass = "";
@@ -27,6 +28,19 @@ $responsive = ' responsive';
 if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
+$mondrianFtBlog = $this->params->get('mondrian_featured_blog','1');
+if ($mondrianFtBlog) {
+    $mondrianFtBlogClass = ' mondrianFtBlog';
+}
+if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
+    $sidebarClass= ' sb1 sb2';
+}elseif ($this->countModules('sidebar2')) {
+        $sidebarClass = ' sb2';
+}elseif ($this->countModules('sidebar1')) {
+        $sidebarClass = ' sb1';
+}
+$mondrianLogoAbsolute = ($this->params->get('mondrian_logo_on_featured','0') == '1' ? true : false);
+
 ?>
 <doctype>
 <html>
@@ -34,25 +48,23 @@ if ($responsivePage == 0) {
     
 <w:head />
 </head>
-<body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass . $responsive?>"<?php endif; ?>>
+<body class="<?php if ($bodyclass != "") { echo $bodyclass . $responsive;  } ?> <?php echo $mondrianFtBlogClass . $sidebarClass; ?>">
     <div class="BgAlternate"></div>
     <?php if ($this->countModules('toolbar')) : ?>
-    <!-- menu -->
-    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+        <!-- toolbar -->
+        <div class="wrappToolbar">
+            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+        </div>
+        <div class="<?php echo $containerClass ?> wrapp-btnToolbar" style="height: 0;">
+            <div id="btnToolbar" class="hidden-tablet hidden-phone"></div>
+        </div>
     <?php endif; ?>
     <div class="<?php echo $containerClass ?> mondrian-container">
 <div class="container-fluid">
     <!-- header -->
-    <header id="header">
-        <div class="row-fluid clearfix">
-            <!-- top -->
-            <?php if ($this->countModules('top')) : ?>
-            <div id="top">
-                <w:module type="none" name="top" chrome="xhtml" />
-            </div>
-            <?php endif; ?>
-            <w:logo name="menu" />
-            <div class="clear"></div>
+    <header id="header"  <?php if ($mondrianLogoAbsolute): ?>class="header-absolute"<?php endif; ?>>
+        <div class="row-fluid clearfix wrapp-logo">
+            <w:logo name="top" type="xhtml"/>
         </div>
     </header>
     
@@ -114,29 +126,32 @@ if ($responsivePage == 0) {
     </div>
     <?php endif; ?>
     <?php if ($this->countModules('grid-bottom2')) : ?>
-    <!-- grid-bottom2 -->
-    <div id="grid-bottom2" >
-                    <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
-    </div>
+        <!-- grid-bottom2 -->
+        <div id="grid-bottom2" >
+            <div class="bd-grid-bottom2"></div>
+            <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+        </div>
     <?php endif; ?>
     <?php if ($this->countModules('bottom-menu')) : ?>
     <!-- bottom-menu -->
-            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
+            <w:nav containerClass="container-fluid" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
     <?php endif; ?></div>
         
     </div>
     
     <!-- footer -->
-    <div class="wrapper-footer">
-        <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
-             <div class="<?php echo $containerClass ?>">
-                <?php if ($this->countModules('footer')) : ?>
-                    <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
-                <?php endif; ?>
-                <w:footer />
-            </div>
+    <div class="wrapper-footer<?php echo $footerWrapp; ?>">
+        <footer id="footer" class="<?php if ($this->params->get('stickyFooter',1)) : ?> sticky<?php endif;?>">
+             <div class="<?php echo $containerClass; ?>">
+                 <div class="container-fluid">
+                     <?php if ($this->countModules('footer')) : ?>
+                         <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
+                      <?php endif; ?>
+                     <w:footer />
+                 </div>
+             </div>
         </footer>
     </div>
-    
+    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/mondrian.js'></script>
 </body>
 </html>
