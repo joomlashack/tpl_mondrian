@@ -4,8 +4,12 @@
 @navtabsBgHover:#151D21;
 @tableThColor:#F4F4F0;
 @ms1Background:#D1E751;
+@ms2Background:#7ECFF1;
 @ms1Color:#7D8C28;
 @BgAlternate:#EFEFEF;
+@borderCallToActionColor:#535362;
+@hourBackground:#D1E942;
+@hourBorderColor:#7D8D1C;
 //
 // Variables
 // --------------------------------------------------
@@ -70,7 +74,7 @@
 // -------------------------
 // Based on 14px font-size and 20px line-height
 
-@fontSizeLarge:         @baseFontSize * 1.25; // ~18px
+@fontSizeLarge:         16px; // ~18px
 @fontSizeSmall:         @baseFontSize * 0.85; // ~12px
 @fontSizeMini:          @baseFontSize * 0.75; // ~11px
 
@@ -127,16 +131,16 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:            @navtabsBg;
 @dropdownBorder:                rgba(0,0,0,.2);
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
-@dropdownLinkColor:             @grayDark;
-@dropdownLinkColorHover:        @white;
-@dropdownLinkColorActive:       @white;
+@dropdownLinkColor:             @white;
+@dropdownLinkColorHover:        darken(@white ,15%);
+@dropdownLinkColorActive:       darken(@white ,15%);
 
-@dropdownLinkBackgroundActive:  @linkColor;
+@dropdownLinkBackgroundActive:  @navtabsBg;
 @dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
 
 
@@ -170,7 +174,7 @@
 
 // Hr border color
 // -------------------------
-@hrBorder:                @grayLighter;
+@hrBorder:                #ddd;
 
 
 // Horizontal forms & lists
@@ -195,17 +199,17 @@
 
 @navbarText:                      @white;
 @navbarLinkColor:                 @white;
-@navbarLinkColorHover:            @white;
-@navbarLinkColorActive:           @white;
+@navbarLinkColorHover:            darken(@white ,15%);
+@navbarLinkColorActive:           darken(@white ,15%);
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:      transparent;
 
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
+@navbarInverseBackground:                @navtabsBgHover;
+@navbarInverseBackgroundHighlight:       @navtabsBgHover;
+@navbarInverseBorder:                    @navtabsBgHover;
 
 @navbarInverseText:                      @grayLight;
 @navbarInverseLinkColor:                 @grayLight;
