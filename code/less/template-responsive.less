@@ -179,6 +179,11 @@
 			padding-right: 25px !important;
 		}
 	}
+	#bottom-menu{
+		.btn-navbar{
+			margin-top: 10px;
+		}
+	}
 }
 @media (max-width: 767px) {
 	.mondrianFtBlog{
@@ -293,5 +298,49 @@
 	}
 	.slideTitle{
 		padding:10px 30px !important;
+	}
+	.sb1.sb2 #sidebar1:first-child+#main+#sidebar2{
+		border-left: none;
+	}
+	.sb2 #sidebar2{
+		border-left: none;
+	}
+	.sb1.sb2 #sidebar1:first-child+#main+#sidebar2::before{
+		content: none;
+		display: none;
+	}
+	.sb2 #sidebar2::before{
+		content: none;
+		display: none;
+	}
+	.sb1.sb2 #sidebar1:first-child+#main+#sidebar2::after,.sb2 #sidebar2::after{
+		content: none;
+		display: none;
+	}
+	.module_ms1.first.last, .moduletable_ms1.first.last, .moduletext_ms1.first.last, .module_ms1:first-child:last-child, .moduletable_ms1:first-child:last-child, .moduletext_ms1:first-child:last-child{
+		margin-bottom: 20px;
+	}
+	#sidebar1,#sidebar2{
+		.module{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.sb1.sb2 #sidebar1:first-child,.sb1 #sidebar1:first-child{
+		border-right: none;
+	}
+	.sb1.sb2 #sidebar1:first-child::before,.sb1 #sidebar1:first-child::before,.sb1.sb2 #sidebar1:first-child::after,.sb1 #sidebar1:first-child::after{
+		content: none;
+		display: none;
+	}
+	.affix{
+		position: static;
+	}
+	.doc-mondrian .nav-tabs+.current{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#logo{
+		margin-bottom: 20px;
 	}
 }

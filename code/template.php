@@ -142,7 +142,7 @@ $mondrianLogoAbsolute = ($this->params->get('mondrian_logo_on_featured','0') == 
     <!-- footer -->
     <div class="wrapper-footer<?php echo $footerWrapp; ?>">
         <footer id="footer" class="<?php if ($this->params->get('stickyFooter',1)) : ?> sticky<?php endif;?>">
-             <div class="<?php echo $containerClass; ?>">
+             <div class="<?php echo $containerClass; ?> footer-inner">
                  <div class="container-fluid">
                      <?php if ($this->countModules('footer')) : ?>
                          <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
