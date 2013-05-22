@@ -234,12 +234,21 @@ dl.article-info{
 		height: 25px;
 		line-height: 25px;
 	}
-	span:last-child{
+	> span:last-child{
 		.border-radius(4px);
 		background-color: @blueDark;
 		color: @white;
 		padding-left: 5px;
 		padding-right: 5px;
+	}
+	li:last-child{
+		span{
+			.border-radius(4px);
+			background-color: @blueDark;
+			color: @white;
+			padding-left: 5px;
+			padding-right: 5px;		
+		}
 	}
 }
 .nav-tabs{
@@ -732,6 +741,14 @@ dl.nav-tabs{
 					background-color: @blueDark !important;
 					border: none!important;
 					color: @white;
+				}
+			}
+		}
+		&.nav-stacked{
+			> li{
+				margin-bottom: 5px;
+				a{
+					.border-radius(3px) !important;
 				}
 			}
 		}
