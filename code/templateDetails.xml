@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta3</version>
+	<version>1.0.0_beta4</version>
     <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -107,6 +107,27 @@
 				<field name="mondrian_logo_on_featured" type="radio" default="0" label="TPL_JS_MONDRIAN_LOGO_ON_FEATURED" description="TPL_JS_MONDRIAN_LOGO_ON_FEATURED_DESC">
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
+				</field>
+				<field name="mondrian_grid_top_background_color" type="list" default="color_four" label="TPL_JS_MONDRIAN_GRID_TOP_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">Color 1</option>
+					<option value="color_two">Color 2</option>
+					<option value="color_three">Color 3</option>
+					<option value="color_four">Color 4</option>
+					<option value="color_five">Color 5</option>
+				</field>
+				<field name="mondrian_grid_top2_background_color" type="list" default="color_four" label="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">Color 1</option>
+					<option value="color_two">Color 2</option>
+					<option value="color_three">Color 3</option>
+					<option value="color_four">Color 4</option>
+					<option value="color_five">Color 5</option>
+				</field>
+				<field name="mondrian_grid_top3_background_color" type="list" default="color_four" label="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">Color 1</option>
+					<option value="color_two">Color 2</option>
+					<option value="color_three">Color 3</option>
+					<option value="color_four">Color 4</option>
+					<option value="color_five">Color 5</option>
 				</field>
                 <!-- End of default Wright params -->
 			</fieldset>
