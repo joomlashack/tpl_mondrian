@@ -649,6 +649,7 @@ dl.nav-tabs{
 }
 .mondrianFtBlog{
 	.items-leading{
+		.clearfix();
 		background-color: @ms1Background;
 		color: @ms1Color;
 		display: block;
@@ -713,6 +714,11 @@ dl.nav-tabs{
 		.btn{
 			text-decoration: none;
 			min-width: 132px;
+		}
+		.btn-group{
+			.btn{
+				min-width: auto;
+			}
 		}
 	}
 	.nav-tabs{
