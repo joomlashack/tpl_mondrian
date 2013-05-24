@@ -12,6 +12,29 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
+$template = $app->getTemplate(true);
+
+$this->wrightLeadingExtraClass = " container-fluid";
+
+if ($continerClass=="container") {
+	$this->wrightLeadingItemElementsStructure = Array(
+		'image',
+		'article-info',
+		'div.leading-content',
+			'icons',
+			'title',
+			'content',
+		'/div'
+	);
+	$this->wrightLeadingHasImageClass = "has-img";
+	$this->wrightLeadingExtraClass .= " container";
+}
+
+// if ($holaaa) {
+// 	$this->wrightLeadingExtraClass .= " memo";
+// }
+
+
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
 include(Overrider::getOverride('com_content.category','blog'));
 ?>
