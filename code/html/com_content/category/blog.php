@@ -14,9 +14,15 @@ $app = JFactory::getApplication();
 
 $template = $app->getTemplate(true);
 
-$this->wrightLeadingExtraClass = " container-fluid";
+$gridMode = $template->params->get('bs_rowmode','row-fluid');
+$mondrianFullWidthContent = $template->params->get('mondrian_full_width_content','1');
 
-if ($continerClass=="container") {
+$this->wrightLeadingExtraClass = "container-fluid";
+$this->wrightIntroItemsClass = "container-fluid";
+
+if ($gridMode == "row" and $mondrianFullWidthContent) {
+	$this->wrightLeadingExtraClass = "container";
+	$this->wrightIntroItemsClass = " container";
 	$this->wrightLeadingItemElementsStructure = Array(
 		'image',
 		'article-info',
@@ -26,14 +32,7 @@ if ($continerClass=="container") {
 			'content',
 		'/div'
 	);
-	$this->wrightLeadingHasImageClass = "has-img";
-	$this->wrightLeadingExtraClass .= " container";
 }
-
-// if ($holaaa) {
-// 	$this->wrightLeadingExtraClass .= " memo";
-// }
-
 
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
 include(Overrider::getOverride('com_content.category','blog'));

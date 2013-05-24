@@ -646,14 +646,8 @@ dl.nav-tabs{
 .wrapper-toolbar,.mondrian-container,#footer{
 	z-index: 2;
 }
-.fixed{
-	&.mondrianFtBlog{
-		.items-leading{
-			[class^="leading-"], [class*="leading-"]{
-				.container;
-			}
-		}
-	}
+.items-leading{
+	display: block;
 }
 .mondrianFtBlog{
 	.items-leading{
@@ -722,6 +716,7 @@ dl.nav-tabs{
 		}
 	}
 	.items-row{
+		padding-bottom: 10px;
 		padding-top: 10px;
 		a{
 			text-decoration: underline;
@@ -1166,6 +1161,10 @@ ul[class*="newsfeed"]{
 			}
 		}
 	}
+}
+.main-wrapp{
+	padding-left: 0;
+	padding-right: 0;
 }
 #top{
 	.moduletable{
