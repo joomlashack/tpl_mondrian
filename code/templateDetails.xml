@@ -100,6 +100,13 @@
 					<option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
 					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
 				</field>
+                <!-- End of default Wright params -->
+			</fieldset>
+			<fieldset name="TPL_JS_MONDRIAN_OPTIONS">
+				<field name="mondrian_full_width_content" type="radio" default="1" label="TPL_JS_MONDRIAN_FULL_WIDTH_CONTENT" description="TPL_JS_MONDRIAN_FULL_WIDTH_CONTENT_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
 				<field name="mondrian_featured_blog" type="radio" default="1" label="TPL_JS_MONDRIAN_FEATURED_BLOG" description="TPL_JS_MONDRIAN_FEATURED_BLOG_DESC">
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
@@ -129,7 +136,6 @@
 					<option value="color_four">Color 4</option>
 					<option value="color_five">Color 5</option>
 				</field>
-                <!-- End of default Wright params -->
 			</fieldset>
 		</fields>
 	</config>
