@@ -16,7 +16,6 @@ $gridMode = $this->params->get('bs_rowmode','row-fluid');
 $containerClass = 'container';
 if ($gridMode == 'row-fluid') {
     $containerClass = 'container-fluid';
-    $footerWrapp =" container-fluid";
 }else{
     $fixedClass = ' fixed';
 }
@@ -34,6 +33,9 @@ $mondrianFtBlog = $this->params->get('mondrian_featured_blog','1');
 if ($mondrianFtBlog) {
     $mondrianFtBlogClass = ' mondrianFtBlog';
 }
+// sidebarClass
+
+$sidebarClass= ' no-sidebar';
 if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
     $sidebarClass= ' sb1 sb2';
 }elseif ($this->countModules('sidebar2')) {
@@ -45,13 +47,14 @@ $mondrianLogoAbsolute = ($this->params->get('mondrian_logo_on_featured','0') == 
 $mondrianGridTopBackground = $this->params->get('mondrian_grid_top_background_color','color_four');
 $mondrianGridTo2pBackground = $this->params->get('mondrian_grid_top2_background_color','color_four');
 $mondrianGridTop3Background = $this->params->get('mondrian_grid_top3_background_color','color_four');
-$mondrianFullWidthContent = $this->params->get('mondrian_full_width_content','1');
-$mainContainer="container";
-$mainGridMode="row";
-if ($containerClass =="container-fluid" or $mondrianFullWidthContent)  {
+
+$mainContainer="container-mondrian";
+$mainGridMode="row-mondrian";
+if ($containerClass =="container-fluid" && $sidebarClass ==' no-sidebar')  {
     $mainContainer="container-fluid";
     $mainGridMode="row-fluid";
 }
+
 switch ($mondrianGridTopBackground) {
     case 'color_one':
         $gridTopBackground = " color_one";
@@ -68,6 +71,10 @@ switch ($mondrianGridTopBackground) {
     case 'color_five':
         $gridTopBackground = " color_five";
         break;
+    case 'color_six':
+        $gridTopBackground = " color_six";
+        break;
+
 }
 switch ($mondrianGridTo2pBackground) {
     case 'color_one':
@@ -85,6 +92,10 @@ switch ($mondrianGridTo2pBackground) {
     case 'color_five':
         $gridTop2Background = " color_five";
         break;
+    case 'color_six':
+        $gridTop2Background = " color_six";
+        break;
+
 }
 switch ($mondrianGridTop3Background) {
     case 'color_one':
@@ -102,6 +113,10 @@ switch ($mondrianGridTop3Background) {
     case 'color_five':
         $gridTop3Background = " color_five";
         break;
+    case 'color_six':
+        $gridTop3Background = " color_six";
+        break;
+
 }
 
 ?>
@@ -121,8 +136,8 @@ switch ($mondrianGridTop3Background) {
             <div id="btnToolbar" class="hidden-tablet hidden-phone"></div>
         </div>
     <?php endif; ?>
-    <div class="container-fluid">
-        <div class="row-fluid">
+    <div class="<?php echo $mainContainer; ?>">
+        <div class="<?php echo $mainGridMode; ?>">
             <div class="mondrian-container">
                 <!-- header -->
                     <header id="header" class="<?php if ($mondrianLogoAbsolute): ?>header-absolute<?php endif; ?>">
@@ -156,7 +171,7 @@ switch ($mondrianGridTop3Background) {
                     </div>
                 <?php endif; ?>
                 <div class="<?php echo $mainContainer;?> main-wrapp">
-                    <div id="main-content" class="<?php $mainGridMode;?>">
+                    <div id="main-content" class="<?php echo $mainGridMode; ?>">
                         <!-- sidebar1 -->
                         <aside id="sidebar1">
                             <w:module name="sidebar1" chrome="xhtml" />
@@ -165,23 +180,41 @@ switch ($mondrianGridTop3Background) {
                         <section id="main">
                             <?php if ($this->countModules('above-content')) : ?>
                             <!-- above-content -->
-                            <div id="above-content">
-                                <w:module type="none" name="above-content" chrome="xhtml" />
-                            </div>
+                                <div id="above-content">
+                                    <div class="<?php echo $containerClass; ?>">
+                                        <div class="<?php echo $gridMode; ?>">
+                                            <div class="span12">
+                                                <w:module type="none" name="above-content" chrome="xhtml" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             <?php endif; ?>
                             <?php if ($this->countModules('breadcrumbs')) : ?>
-                            <!-- breadcrumbs -->
-                            <div id="breadcrumbs">
-                                    <w:module type="single" name="breadcrumbs" chrome="none" />
-                            </div>
+                                <!-- breadcrumbs -->
+                                <div id="breadcrumbs">
+                                        <div class="<?php echo $containerClass; ?>">
+                                            <div class="<?php echo $gridMode; ?>">
+                                                <div class="span12">
+                                                    <w:module type="single" name="breadcrumbs" chrome="none" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
                             <?php endif; ?>
                             <!-- component -->
                             <w:content />
                             <?php if ($this->countModules('below-content')) : ?>
                             <!-- below-content -->
-                            <div id="below-content">
-                                <w:module type="none" name="below-content" chrome="xhtml" />
-                            </div>
+                                <div id="below-content">
+                                    <div class="<?php echo $containerClass; ?>">
+                                        <div class="<?php echo $gridMode; ?>">
+                                            <div class="span12">
+                                                <w:module type="none" name="below-content" chrome="xhtml" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             <?php endif; ?>
                         </section>
                         <!-- sidebar2 -->

@@ -14,26 +14,41 @@ $app = JFactory::getApplication();
 
 $template = $app->getTemplate(true);
 
-$gridMode = $template->params->get('bs_rowmode','row-fluid');
-$mondrianFullWidthContent = $template->params->get('mondrian_full_width_content','1');
+$gridMode = $template->params->get('bs_rowmode','row');
 
-$this->wrightLeadingExtraClass = "container-fluid";
-$this->wrightIntroItemsClass = "container-fluid";
+$this->wrightLeadingItemsClass = "container-fluid";  // envuelve a todos los leading
+$this->wrightLeadingExtraClass = "";  // envuelve a cada leading
 
-if ($gridMode == "row" and $mondrianFullWidthContent) {
-	$this->wrightLeadingExtraClass = "container";
-	$this->wrightIntroItemsClass = " container";
+// wrightIntroItemsClass envuelve a todos los intro  -- container / container-fluid
+// wrightIntroRowsClass envuelve a cada fila de intro -- row / row-fluid
+// wrightIntroExtraClass envuelve a cada intro
+
+$this->wrightComplementOuterClass = "container-fluid"; // -- links, subcategories, pagination -- container / container-fluid
+$this->wrightComplementInnerClass = "row-fluid"; // -- links, subcategories, pagination -- container / container-
+
+$this->wrightIntroItemsClass= "container-fluid";
+if ($gridMode == "row") {
 	$this->wrightLeadingItemElementsStructure = Array(
-		'image',
-		'article-info',
-		'div.leading-content',
-			'icons',
-			'title',
-			'content',
-		'/div'
+		'div.container',
+			'div.row',
+				'div.span12',
+					'div.leading-content',
+						'title',
+						'icons',
+						'article-info',
+						'image',
+						'content',
+					'/div',
+				'/div',
+			'/div',
+		'/div',
 	);
+	$this->wrightComplementOuterClass = "container"; // -- links, subcategories, pagination -- container / container-fluid
+	$this->wrightLeadingItemsClass = "";  // envuelve a todos los leading
+	$this->wrightIntroItemsClass= "container";
 }
 
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
 include(Overrider::getOverride('com_content.category','blog'));
 ?>
+
