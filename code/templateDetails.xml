@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta5</version>
+	<version>1.0.0_beta6</version>
     <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -103,10 +103,6 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_MONDRIAN_OPTIONS">
-				<field name="mondrian_full_width_content" type="radio" default="1" label="TPL_JS_MONDRIAN_FULL_WIDTH_CONTENT" description="TPL_JS_MONDRIAN_FULL_WIDTH_CONTENT_DESC">
-					<option value="0">JNo</option>
-					<option value="1">JYes</option>
-				</field>
 				<field name="mondrian_featured_blog" type="radio" default="1" label="TPL_JS_MONDRIAN_FEATURED_BLOG" description="TPL_JS_MONDRIAN_FEATURED_BLOG_DESC">
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
@@ -121,6 +117,7 @@
 					<option value="color_three">Color 3</option>
 					<option value="color_four">Color 4</option>
 					<option value="color_five">Color 5</option>
+					<option value="color_six">Color 6 (White)</option>
 				</field>
 				<field name="mondrian_grid_top2_background_color" type="list" default="color_four" label="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR_DESC">
 					<option value="color_one">Color 1</option>
@@ -128,6 +125,7 @@
 					<option value="color_three">Color 3</option>
 					<option value="color_four">Color 4</option>
 					<option value="color_five">Color 5</option>
+					<option value="color_six">Color 6 (White)</option>
 				</field>
 				<field name="mondrian_grid_top3_background_color" type="list" default="color_four" label="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR_DESC">
 					<option value="color_one">Color 1</option>
@@ -135,6 +133,7 @@
 					<option value="color_three">Color 3</option>
 					<option value="color_four">Color 4</option>
 					<option value="color_five">Color 5</option>
+					<option value="color_six">Color 6 (White)</option>
 				</field>
 			</fieldset>
 		</fields>
