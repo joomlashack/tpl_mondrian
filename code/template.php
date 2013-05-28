@@ -43,6 +43,7 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
 }elseif ($this->countModules('sidebar1')) {
         $sidebarClass = ' sb1';
 }
+
 $mondrianLogoAbsolute = ($this->params->get('mondrian_logo_on_featured','0') == '1' ? true : false);
 $mondrianGridTopBackground = $this->params->get('mondrian_grid_top_background_color','color_four');
 $mondrianGridTo2pBackground = $this->params->get('mondrian_grid_top2_background_color','color_four');

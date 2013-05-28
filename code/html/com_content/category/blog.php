@@ -15,6 +15,7 @@ $app = JFactory::getApplication();
 // wrightIntroRowsClass envuelve a cada fila de intro -- row / row-fluid
 // wrightIntroExtraClass envuelve a cada intro
 // wrightIntroItemsClass envuelve a todos los intro  -- container / container-fluid
+// $this->wrightIntroItemsClass= "container-fluid";
 $template = $app->getTemplate(true);
 
 $gridMode = $template->params->get('bs_rowmode','row');
@@ -25,11 +26,9 @@ $this->wrightLeadingExtraClass = "";  // envuelve a cada leading
 $this->wrightComplementOuterClass = "container-fluid"; // -- links, subcategories, pagination -- container / container-fluid
 $this->wrightComplementInnerClass = "row-fluid"; // -- links, subcategories, pagination -- container / container-
 
-$this->wrightIntroItemsClass= "container-fluid";
+$sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));
 
-$sidebarExistsClass = $template->params->get('sidebarExists',1);
-
-if ($gridMode == "row" &&  $sidebarExistsClass== 1) {
+if ($gridMode == "row" &&  $sidebarExists== 1) {
 	$this->wrightLeadingItemElementsStructure = Array(
 		'div.container',
 			'div.row',
