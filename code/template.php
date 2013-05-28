@@ -197,9 +197,9 @@ if ($mondrianToolbarDisplayed){
                             <?php if ($this->countModules('above-content')) : ?>
                             <!-- above-content -->
                                 <div id="above-content">
-                                    <div class="<?php echo $containerClass; ?>">
-                                        <div class="<?php echo $gridMode; ?>">
-                                            <div class="span12">
+                                    <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $containerClass .'"'; endif; ?>>
+                                        <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $gridMode .'"'; endif; ?>>
+                                            <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="span12"'; endif; ?>>
                                                 <w:module type="none" name="above-content" chrome="xhtml" />
                                             </div>
                                         </div>
@@ -209,9 +209,9 @@ if ($mondrianToolbarDisplayed){
                             <?php if ($this->countModules('breadcrumbs')) : ?>
                                 <!-- breadcrumbs -->
                                 <div id="breadcrumbs">
-                                        <div class="<?php echo $containerClass; ?>">
-                                            <div class="<?php echo $gridMode; ?>">
-                                                <div class="span12">
+                                        <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $containerClass .'"'; endif; ?>>
+                                            <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $gridMode .'"'; endif; ?>>
+                                                <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="span12"'; endif; ?>>
                                                     <w:module type="single" name="breadcrumbs" chrome="none" />
                                                 </div>
                                             </div>
@@ -223,9 +223,9 @@ if ($mondrianToolbarDisplayed){
                             <?php if ($this->countModules('below-content')) : ?>
                             <!-- below-content -->
                                 <div id="below-content">
-                                    <div class="<?php echo $containerClass; ?>">
-                                        <div class="<?php echo $gridMode; ?>">
-                                            <div class="span12">
+                                    <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $containerClass .'"'; endif; ?>>
+                                        <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $gridMode .'"'; endif; ?>>
+                                            <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="span12"'; endif; ?>>
                                                 <w:module type="none" name="below-content" chrome="xhtml" />
                                             </div>
                                         </div>
