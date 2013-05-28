@@ -135,6 +135,10 @@
 					<option value="color_five">Color 5</option>
 					<option value="color_six">Color 6 (White)</option>
 				</field>
+				<field name="mondrian_toolbar_displayed" type="radio" default="0" label="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED" description="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>

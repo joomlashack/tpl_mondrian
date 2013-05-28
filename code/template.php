@@ -10,7 +10,7 @@
  */
 // no direct access
 defined('_JEXEC') or die('Restricted access');
-$footerWrapp =" container";
+
 // get the bootstrap row mode ( row / row-fluid )
 $gridMode = $this->params->get('bs_rowmode','row-fluid');
 $containerClass = 'container';
@@ -24,11 +24,13 @@ $bodyclass = "";
 if ($this->countModules('toolbar')) {
     $bodyclass = "toolbarpadding";
 }
+
 $responsivePage = $this->params->get('responsive','1');
 $responsive = ' responsive';
 if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
+
 $mondrianFtBlog = $this->params->get('mondrian_featured_blog','1');
 if ($mondrianFtBlog) {
     $mondrianFtBlogClass = ' mondrianFtBlog';
@@ -127,6 +129,10 @@ switch ($mondrianGridTop3Background) {
 
 }
 
+$mondrianToolbarDisplayed = ($this->params->get('mondrian_toolbar_displayed','0') == '1' ? true : false);
+if ($mondrianToolbarDisplayed){
+    $mondrianToolbarDisplayedClass=" toolbarDisplayed";
+}
 ?>
 <doctype>
 <html>
@@ -134,15 +140,17 @@ switch ($mondrianGridTop3Background) {
     
 <w:head />
 </head>
-<body class="<?php if ($bodyclass != "") { echo $bodyclass . $responsive;  } ?> <?php echo $mondrianFtBlogClass . $sidebarClass . $fixedClass; ?>">
+<body class="<?php if ($bodyclass != "") { echo $bodyclass . $responsive;  } ?> <?php echo $mondrianFtBlogClass . $sidebarClass . $mondrianToolbarDisplayedClass . $fixedClass; ?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <div class="wrappToolbar">
             <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
         </div>
-        <div class="<?php echo $containerClass ?> wrapp-btnToolbar" style="height: 0;">
-            <div id="btnToolbar" class="hidden-tablet hidden-phone"></div>
-        </div>
+        <?php if(!$mondrianToolbarDisplayed): ?>
+            <div class="<?php echo $containerClass ?> wrapp-btnToolbar" style="height: 0;">
+                <div id="btnToolbar" class="hidden-tablet hidden-phone"></div>
+            </div>
+        <?php endif; ?>
     <?php endif; ?>
     <div class="<?php echo $parentContainer; ?>">
         <div class="<?php echo $parentGridMode; ?>">
@@ -271,6 +279,8 @@ switch ($mondrianGridTop3Background) {
              </div>
         </footer>
     </div>
-    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/mondrian.js'></script>
+    <?php if(!$mondrianToolbarDisplayed): ?>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/mondrian.js'></script>
+    <?php endif; ?>
 </body>
 </html>
