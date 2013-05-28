@@ -22,14 +22,13 @@ $gridMode = $template->params->get('bs_rowmode','row');
 $this->wrightLeadingItemsClass = "container-fluid";  // envuelve a todos los leading
 $this->wrightLeadingExtraClass = "";  // envuelve a cada leading
 
-
 $this->wrightComplementOuterClass = "container-fluid"; // -- links, subcategories, pagination -- container / container-fluid
 $this->wrightComplementInnerClass = "row-fluid"; // -- links, subcategories, pagination -- container / container-
 
 $this->wrightIntroItemsClass= "container-fluid";
-// $sidebarClass= ' no-sidebar';
 
 $sidebarExistsClass = $template->params->get('sidebarExists',1);
+
 if ($gridMode == "row" &&  $sidebarExistsClass== 1) {
 	$this->wrightLeadingItemElementsStructure = Array(
 		'div.container',
@@ -46,7 +45,7 @@ if ($gridMode == "row" &&  $sidebarExistsClass== 1) {
 			'/div',
 		'/div',
 	);
-	$this->wrightIntroItemsClass= "container";
+	$this->wrightIntroItemsClass= "container-fluid";
 }elseif($gridMode == "row"){
 	$this->wrightLeadingItemElementsStructure = Array(
 		'div.container',
@@ -63,6 +62,7 @@ if ($gridMode == "row" &&  $sidebarExistsClass== 1) {
 			'/div',
 		'/div',
 	);
+	$this->wrightIntroItemsClass= "container";
 }
 
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
