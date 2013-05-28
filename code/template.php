@@ -48,11 +48,18 @@ $mondrianGridTopBackground = $this->params->get('mondrian_grid_top_background_co
 $mondrianGridTo2pBackground = $this->params->get('mondrian_grid_top2_background_color','color_four');
 $mondrianGridTop3Background = $this->params->get('mondrian_grid_top3_background_color','color_four');
 
-$mainContainer="container-mondrian";
-$mainGridMode="row-mondrian";
-if ($containerClass =="container-fluid" && $sidebarClass ==' no-sidebar')  {
+$mainContainer="container";
+$mainGridMode="row";
+$parentContainer="container-fluid";
+$parentGridMode="row-fluid";
+if ($containerClass =="container-fluid")  {
     $mainContainer="container-fluid";
     $mainGridMode="row-fluid";
+}elseif($sidebarClass ==' no-sidebar'){
+    $mainContainer="container-mondrian";
+    $mainGridMode="row-mondrian";
+    $parentContainer="";
+    $parentGridMode="";
 }
 
 switch ($mondrianGridTopBackground) {
@@ -136,8 +143,8 @@ switch ($mondrianGridTop3Background) {
             <div id="btnToolbar" class="hidden-tablet hidden-phone"></div>
         </div>
     <?php endif; ?>
-    <div class="<?php echo $mainContainer; ?>">
-        <div class="<?php echo $mainGridMode; ?>">
+    <div class="<?php echo $parentContainer; ?>">
+        <div class="<?php echo $parentGridMode; ?>">
             <div class="mondrian-container">
                 <!-- header -->
                     <header id="header" class="<?php if ($mondrianLogoAbsolute): ?>header-absolute<?php endif; ?>">

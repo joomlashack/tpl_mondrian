@@ -12,6 +12,9 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
+// wrightIntroRowsClass envuelve a cada fila de intro -- row / row-fluid
+// wrightIntroExtraClass envuelve a cada intro
+// wrightIntroItemsClass envuelve a todos los intro  -- container / container-fluid
 $template = $app->getTemplate(true);
 
 $gridMode = $template->params->get('bs_rowmode','row');
@@ -19,15 +22,15 @@ $gridMode = $template->params->get('bs_rowmode','row');
 $this->wrightLeadingItemsClass = "container-fluid";  // envuelve a todos los leading
 $this->wrightLeadingExtraClass = "";  // envuelve a cada leading
 
-// wrightIntroItemsClass envuelve a todos los intro  -- container / container-fluid
-// wrightIntroRowsClass envuelve a cada fila de intro -- row / row-fluid
-// wrightIntroExtraClass envuelve a cada intro
 
 $this->wrightComplementOuterClass = "container-fluid"; // -- links, subcategories, pagination -- container / container-fluid
 $this->wrightComplementInnerClass = "row-fluid"; // -- links, subcategories, pagination -- container / container-
 
 $this->wrightIntroItemsClass= "container-fluid";
-if ($gridMode == "row") {
+// $sidebarClass= ' no-sidebar';
+
+$sidebarExistsClass = $template->params->get('sidebarExists',1);
+if ($gridMode == "row" &&  $sidebarExistsClass== 1) {
 	$this->wrightLeadingItemElementsStructure = Array(
 		'div.container',
 			'div.row',
@@ -43,9 +46,23 @@ if ($gridMode == "row") {
 			'/div',
 		'/div',
 	);
-	$this->wrightComplementOuterClass = "container"; // -- links, subcategories, pagination -- container / container-fluid
-	$this->wrightLeadingItemsClass = "";  // envuelve a todos los leading
 	$this->wrightIntroItemsClass= "container";
+}elseif($gridMode == "row"){
+	$this->wrightLeadingItemElementsStructure = Array(
+		'div.container',
+			'div.row',
+				'div.span12',
+					'div.leading-content',
+						'title',
+						'icons',
+						'article-info',
+						'image',
+						'content',
+					'/div',
+				'/div',
+			'/div',
+		'/div',
+	);
 }
 
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
