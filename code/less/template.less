@@ -665,25 +665,25 @@ dl.nav-tabs{
 #featured{
 	margin-bottom: 0;
 }
-.wrapper-toolbar,.mondrian-container,#footer{
+.wrapper-toolbar,
+.mondrian-main,
+#footer{
 	z-index: 2;
 }
 .items-leading{
 	display: block;
 }
 .mondrianFtBlog{
+
 	.items-leading{
-/*		[class*="leading-"]:nth-child(odd) {
-*/			background-color: @ms1Background;
+
+		.full-leading:nth-child(odd) {
+			background-color: @ms1Background;
 			color: @ms1Color;
-/*		}
-*/		.clearfix();
-		display: block;
-		// margin-left: -20px;
-		// margin-right: -20px;
-		padding-left: 20px;
-		padding-right: 20px;
-		width: auto;
+			padding: 0 5px;
+		}
+		.clearfix();
+
 		.img_caption{
 			background-color: @ms1Color;
 			color: @white;
@@ -719,15 +719,26 @@ dl.nav-tabs{
 				font-size: 20px;
 			}
 		}
-		&.span6:first-child{
+		&[class^="span"], &[class*="span"] {
 			border-right: 2px solid @hrBorder;
 			position: relative;
+			.box-sizing(border-box);
+			padding: 0 5px;
+			&:last-of-type {
+				border-right: 0;
+				&::after{
+					background-color: transparent;
+				}
+				&::before{
+					background-color: transparent;
+				}
+			}
 			&::after{
 				.border-radius(5px);
 				background-color: @hrBorder;
 				content: '';
 				height: 12px;
-				left: 99%;
+				right: -7px;
 				position: absolute;
 				top: 0;
 				width: 12px;
@@ -737,7 +748,7 @@ dl.nav-tabs{
 				background-color: @hrBorder;
 				content: '';
 				height: 12px;
-				left: 99%;
+				right: -7px;
 				position: absolute;
 				bottom: 0;
 				width: 12px;
@@ -950,14 +961,6 @@ ul[class*="newsfeed"]{
 		margin-bottom: 10px;
 	}
 }
-.wrapper-bottom-menu{
-	// margin-left: -20px;
-	// margin-right: -20px;
-	> .container-fluid{
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
 // Modules
 .color_six{
 	background-color: @white;
@@ -1104,322 +1107,70 @@ ul[class*="newsfeed"]{
 		}
 	}
 }
-.sb1{
-	#sidebar1:first-child{
-		border-right: 2px solid @hrBorder;
-		position: relative;
-		&::after{
-			.border-radius(5px);
-			background-color: @hrBorder;
-			content: '';
-			height: 12px;
-			left: 98%;
-			position: absolute;
-			top: 0;
-			width: 12px;
-		}
-		&::before{
-			.border-radius(5px);
-			background-color: @hrBorder;
-			content: '';
-			height: 12px;
-			left: 98%;
-			position: absolute;
-			bottom: 0;
-			width: 12px;
-		}
-	}
-	#sidebar1:last-child{
-		border-left: 2px solid @hrBorder;
-		position: relative;
-		&::after{
-			.border-radius(5px);
-			background-color: @hrBorder;
-			content: '';
-			height: 12px;
-			right: 98%;
-			position: absolute;
-			top: 0;
-			width: 12px;
-		}
-		&::before{
-			.border-radius(5px);
-			background-color: @hrBorder;
-			content: '';
-			height: 12px;
-			right: 98%;
-			position: absolute;
-			bottom: 0;
-			width: 12px;
-		}
-	}
-}
-.sb2{
-	#sidebar2:last-child{
-		border-left: 2px solid @hrBorder;
-		position: relative;
-		&::after{
-			.border-radius(5px);
-			background-color: @hrBorder;
-			content: '';
-			height: 12px;
-			right: 98%;
-			position: absolute;
-			top: 0;
-			width: 12px;
-		}
-		&::before{
-			.border-radius(5px);
-			background-color: @hrBorder;
-			content: '';
-			height: 12px;
-			right: 98%;
-			position: absolute;
-			bottom: 0;
-			width: 12px;
-		}
-	}
-	#sidebar2:first-child{
-		border-right: 2px solid @hrBorder;
-		position: relative;
-		&::after{
-			.border-radius(5px);
-			background-color: @hrBorder;
-			content: '';
-			height: 12px;
-			left: 98%;
-			position: absolute;
-			top: 0;
-			width: 12px;
-		}
-		&::before{
-			.border-radius(5px);
-			background-color: @hrBorder;
-			content: '';
-			height: 12px;
-			left: 98%;
-			position: absolute;
-			bottom: 0;
-			width: 12px;
-		}
-	}
-}
-.sb1.sb2{
-	#sidebar1:first-child{
-		border-right: 2px solid @hrBorder;
-		position: relative;
-			&::after{
-				.border-radius(5px);
-				background-color: @hrBorder;
-				content: '';
-				height: 12px;
-				left: 98%;
-				position: absolute;
-				top: 0;
-				width: 12px;
-			}
-			&::before{
-				.border-radius(5px);
-				background-color: @hrBorder;
-				content: '';
-				height: 12px;
-				left: 98%;
-				position: absolute;
-				bottom: 0;
-				width: 12px;
-			}
-		+ #main{
-			+ #sidebar2{
-				border-left: 2px solid @hrBorder;
-				position: relative;
-				&::after{
-					.border-radius(5px);
-					background-color: @hrBorder;
-					content: '';
-					height: 12px;
-					right: 98%;
-					position: absolute;
-					top: 0;
-					width: 12px;
-				}
-				&::before{
-					.border-radius(5px);
-					background-color: @hrBorder;
-					content: '';
-					height: 12px;
-					right: 98%;
-					position: absolute;
-					bottom: 0;
-					width: 12px;
-				}
-			}
-		}
-		+ #sidebar2{
-			border-right: 2px solid @hrBorder;
-			position: relative;
-			&::after{
-				.border-radius(5px);
-				background-color: @hrBorder;
-				content: '';
-				height: 12px;
-				left: 98%;
-				position: absolute;
-				top: 0;
-				width: 12px;
-			}
-			&::before{
-				.border-radius(5px);
-				background-color: @hrBorder;
-				content: '';
-				height: 12px;
-				left: 98%;
-				position: absolute;
-				bottom: 0;
-				width: 12px;
-			}
-		}
-	}
-	#sidebar2:first-child{
-		border-right: 2px solid @hrBorder;
-		position: relative;
-			&::after{
-				.border-radius(5px);
-				background-color: @hrBorder;
-				content: '';
-				height: 12px;
-				left: 98%;
-				position: absolute;
-				top: 0;
-				width: 12px;
-			}
-			&::before{
-				.border-radius(5px);
-				background-color: @hrBorder;
-				content: '';
-				height: 12px;
-				left: 98%;
-				position: absolute;
-				bottom: 0;
-				width: 12px;
-			}
-		+ #main{
-			+ #sidebar1{
-				border-left: 2px solid @hrBorder;
-				position: relative;
-				&::after{
-					.border-radius(5px);
-					background-color: @hrBorder;
-					content: '';
-					height: 12px;
-					right: 98%;
-					position: absolute;
-					top: 0;
-					width: 12px;
-				}
-				&::before{
-					.border-radius(5px);
-					background-color: @hrBorder;
-					content: '';
-					height: 12px;
-					right: 98%;
-					position: absolute;
-					bottom: 0;
-					width: 12px;
-				}
-			}
-		}
-		+ #sidebar1{
-			border-right: 2px solid @hrBorder;
-			position: relative;
-			&::after{
-				.border-radius(5px);
-				background-color: @hrBorder;
-				content: '';
-				height: 12px;
-				left: 98%;
-				position: absolute;
-				top: 0;
-				width: 12px;
-			}
-			&::before{
-				.border-radius(5px);
-				background-color: @hrBorder;
-				content: '';
-				height: 12px;
-				left: 98%;
-				position: absolute;
-				bottom: 0;
-				width: 12px;
-			}
-		}
-	}
-	#main:first-child{
-		+ #sidebar1{
-			border-left: 2px solid @hrBorder;
-				position: relative;
-				&::after{
-					.border-radius(5px);
-					background-color: @hrBorder;
-					content: '';
-					height: 12px;
-					right: 98%;
-					position: absolute;
-					top: 0;
-					width: 12px;
-				}
-				&::before{
-					.border-radius(5px);
-					background-color: @hrBorder;
-					content: '';
-					height: 12px;
-					right: 98%;
-					position: absolute;
-					bottom: 0;
-					width: 12px;
-				}
-		}
-		+ #sidebar2{
-			+ #sidebar1{
-				border-left: 2px solid @hrBorder;
-				position: relative;
-				&::after{
-					.border-radius(5px);
-					background-color: @hrBorder;
-					content: '';
-					height: 12px;
-					right: 98%;
-					position: absolute;
-					top: 0;
-					width: 12px;
-				}
-				&::before{
-					.border-radius(5px);
-					background-color: @hrBorder;
-					content: '';
-					height: 12px;
-					right: 98%;
-					position: absolute;
-					bottom: 0;
-					width: 12px;
-				}
-			}
-		}
 
+
+#sidebar1 {
+	border-right: 2px solid @hrBorder;
+	position: relative;
+	.box-sizing(border-box);
+	&::after{
+		.border-radius(5px);
+		background-color: @hrBorder;
+		content: '';
+		height: 12px;
+		right: -7px;
+		position: absolute;
+		top: 0;
+		width: 12px;
 	}
-}
-.sb1.sb2,
-.sb1,.sb2{
-	#sidebar1,#sidebar2{
-		margin-top: 10px;
+	&::before{
+		.border-radius(5px);
+		background-color: @hrBorder;
+		content: '';
+		height: 12px;
+		right: -7px;
+		position: absolute;
+		bottom: 0;
+		width: 12px;
 	}
 }
 
-.main-wrapp{
-	padding-left: 0;
-	padding-right: 0;
+#sidebar2 {
+	border-left: 2px solid @hrBorder;
+	position: relative;
+	.box-sizing(border-box);
+	&::after{
+		.border-radius(5px);
+		background-color: @hrBorder;
+		content: '';
+		height: 12px;
+		left: -7px;
+		position: absolute;
+		top: 0;
+		width: 12px;
+	}
+	&::before{
+		.border-radius(5px);
+		background-color: @hrBorder;
+		content: '';
+		height: 12px;
+		left: -7px;
+		position: absolute;
+		bottom: 0;
+		width: 12px;
+	}
 }
+
+
+#sidebar1,#sidebar2{
+	margin-top: 10px;
+}
+
 #main-content{
 	.clearfix();
+	section, aside {
+		.box-sizing(border-box);
+	}
 }
 #top{
 	.moduletable{
@@ -1532,23 +1283,6 @@ ul[class*="newsfeed"]{
 	.box-shadow(none);
 }
 // Menu
-#bottom-menu{
-	margin-bottom: 0;
-	.navbar{
-		margin-bottom: 0;
-	}
-}
-.fixed{
-	#bottom-menu{
-		.navbar{
-			.nav{
-				.container;
-				float: none;
-				left: auto;
-			}
-		}
-	}	
-}
 .navbar{
 	.btn{
 		font-size: 18px !important;
@@ -1877,12 +1611,8 @@ div:first-child+.panel{
 }
 /* Fluid View
 /**************************************************************************************************/
-.mondrian-container{
-	margin-left: -20px;
-	margin-right: -20px;
-}
 .fixed{
-	.mondrian-container{
+	.mondrian-main{
 		margin-left: 0;
 		margin-right: 0;
 	}
@@ -2016,3 +1746,5 @@ div:first-child+.panel{
 		width: auto;
 	}
 }
+
+

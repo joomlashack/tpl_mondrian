@@ -103,7 +103,7 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_MONDRIAN_OPTIONS">
-				<field name="mondrian_featured_blog" type="radio" default="1" label="TPL_JS_MONDRIAN_FEATURED_BLOG" description="TPL_JS_MONDRIAN_FEATURED_BLOG_DESC">
+				<field name="mondrian_full_width_background" type="radio" default="0" label="TPL_JS_MONDRIAN_FULL_WIDTH_BACKGROUND" description="TPL_JS_MONDRIAN_FULL_WIDTH_BACKGROUND">
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>
@@ -135,7 +135,7 @@
 					<option value="color_five">Color 5</option>
 					<option value="color_six">Color 6 (White)</option>
 				</field>
-				<field name="mondrian_toolbar_displayed" type="radio" default="0" label="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED" description="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED_DESC">
+				<field name="mondrian_toolbar_displayed" type="radio" default="1" label="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED" description="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED_DESC">
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>

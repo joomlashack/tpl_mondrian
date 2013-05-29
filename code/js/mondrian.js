@@ -1,4 +1,3 @@
-jQuery.noConflict();
 jQuery(document).ready(function(){
 
     var wrapperToolbarHeight = jQuery('.wrapper-toolbar').css('min-height');

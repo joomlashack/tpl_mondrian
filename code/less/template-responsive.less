@@ -10,7 +10,6 @@
 		background-image: url(../images/green/icon-cloud.png);
 		max-width: 100%;
 		height: 85px;
-
 	}
 	[data-icon="icon-diamond"]{
 		.background-size(cover);
@@ -191,9 +190,17 @@
 	}
 }
 @media (max-width: 767px) {
+	body {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	.main-wrapp {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.mondrianFtBlog{
 		[class^="column-"], [class*="column-"]{
-			&.span6:first-child{
+			&[class^="span"], &[class*="span"] {
 				border-right: none;
 				&::after{
 					.border-radius(5px);
@@ -237,6 +244,7 @@
 	.wrapper-footer{
 		padding-top: 0;
 		#footer{
+			margin: 0;
 			text-align: center;
 			width: 100% !important;
 			> .container{
@@ -267,10 +275,6 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
-	}
-	.wrappToolbar{
-		margin-left: -20px;
-		margin-right: -20px;
 	}
 	#featured{
 		#slider{
@@ -304,38 +308,18 @@
 	.slideTitle{
 		padding:10px 30px !important;
 	}
-	.sb1.sb2 #sidebar1:first-child+#main+#sidebar2,
-	.sb1.sb2 #main:first-child+#sidebar1,
-	.sb1.sb2 #main:first-child+#sidebar2+#sidebar1,
-	.sb1.sb2 #sidebar2:first-child+#main+#sidebar1{
-		border-left: none;
+	
+	#sidebar1, #sidebar2 {
+		border-right: 0;
+		border-left: 0;
+		&::after {
+			background-color: transparent;
+		}
+		&::before {
+			background-color: transparent;
+		}
 	}
-	.sb2 #sidebar2,
-	.sb1 #sidebar1{
-		border-left: none !important;
-		border-right: none !important;
-	}
-	.sb1.sb2 #sidebar1:first-child+#main+#sidebar2::before,
-	.sb1.sb2 #main:first-child+#sidebar1::before,
-	.sb1.sb2 #main:first-child+#sidebar2+#sidebar1::before,
-	.sb1.sb2 #sidebar2:first-child+#main+#sidebar1::before{
-		content: none;
-		display: none;
-	}
-	.sb2 #sidebar2::before,
-	.sb1 #sidebar1::before{
-		content: none !important;
-		display: none !important;
-	}
-	.sb1.sb2 #sidebar1:first-child+#main+#sidebar2::after,
-	.sb2 #sidebar2::after,
-	.sb1 #sidebar1::after,
-	.sb1.sb2 #main:first-child+#sidebar1::after,
-	.sb1.sb2 #main:first-child+#sidebar2+#sidebar1::after,
-	.sb1.sb2 #sidebar2:first-child+#main+#sidebar1::after{
-		content: none;
-		display: none;
-	}
+
 	.module_ms1.first.last, .moduletable_ms1.first.last, .moduletext_ms1.first.last, .module_ms1:first-child:last-child, .moduletable_ms1:first-child:last-child, .moduletext_ms1:first-child:last-child{
 		margin-bottom: 20px;
 	}

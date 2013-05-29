@@ -11,128 +11,6 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-// get the bootstrap row mode ( row / row-fluid )
-$gridMode = $this->params->get('bs_rowmode','row-fluid');
-$containerClass = 'container';
-if ($gridMode == 'row-fluid') {
-    $containerClass = 'container-fluid';
-}else{
-    $fixedClass = ' fixed';
-}
-
-$bodyclass = "";
-if ($this->countModules('toolbar')) {
-    $bodyclass = "toolbarpadding";
-}
-
-$responsivePage = $this->params->get('responsive','1');
-$responsive = ' responsive';
-if ($responsivePage == 0) {
-    $responsive = ' no-responsive';
-}
-
-$mondrianFtBlog = $this->params->get('mondrian_featured_blog','1');
-if ($mondrianFtBlog) {
-    $mondrianFtBlogClass = ' mondrianFtBlog';
-}
-// sidebarClass
-
-$sidebarClass= ' no-sidebar';
-if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
-    $sidebarClass= ' sb1 sb2';
-}elseif ($this->countModules('sidebar2')) {
-        $sidebarClass = ' sb2';
-}elseif ($this->countModules('sidebar1')) {
-        $sidebarClass = ' sb1';
-}
-
-$mondrianLogoAbsolute = ($this->params->get('mondrian_logo_on_featured','0') == '1' ? true : false);
-$mondrianGridTopBackground = $this->params->get('mondrian_grid_top_background_color','color_four');
-$mondrianGridTo2pBackground = $this->params->get('mondrian_grid_top2_background_color','color_four');
-$mondrianGridTop3Background = $this->params->get('mondrian_grid_top3_background_color','color_four');
-
-$mainContainer="container";
-$mainGridMode="row";
-$parentContainer="container-fluid";
-$parentGridMode="row-fluid";
-if ($containerClass =="container-fluid")  {
-    $mainContainer="container-fluid";
-    $mainGridMode="row-fluid";
-}elseif($sidebarClass ==' no-sidebar'){
-    $mainContainer="container-mondrian";
-    $mainGridMode="row-mondrian";
-    $parentContainer="";
-    $parentGridMode="";
-}
-
-switch ($mondrianGridTopBackground) {
-    case 'color_one':
-        $gridTopBackground = " color_one";
-        break;
-    case 'color_two':
-        $gridTopBackground = " color_two";
-        break;
-    case 'color_three':
-        $gridTopBackground = " color_three";
-        break;
-    case 'color_four':
-        $gridTopBackground = " color_four";
-        break;
-    case 'color_five':
-        $gridTopBackground = " color_five";
-        break;
-    case 'color_six':
-        $gridTopBackground = " color_six";
-        break;
-
-}
-switch ($mondrianGridTo2pBackground) {
-    case 'color_one':
-        $gridTop2Background = " color_one";
-        break;
-    case 'color_two':
-        $gridTop2Background = " color_two";
-        break;
-    case 'color_three':
-        $gridTop2Background = " color_three";
-        break;
-    case 'color_four':
-        $gridTop2Background = " color_four";
-        break;
-    case 'color_five':
-        $gridTop2Background = " color_five";
-        break;
-    case 'color_six':
-        $gridTop2Background = " color_six";
-        break;
-
-}
-switch ($mondrianGridTop3Background) {
-    case 'color_one':
-        $gridTop3Background = " color_one";
-        break;
-    case 'color_two':
-        $gridTop3Background = " color_two";
-        break;
-    case 'color_three':
-        $gridTop3Background = " color_three";
-        break;
-    case 'color_four':
-        $gridTop3Background = " color_four";
-        break;
-    case 'color_five':
-        $gridTop3Background = " color_five";
-        break;
-    case 'color_six':
-        $gridTop3Background = " color_six";
-        break;
-
-}
-
-$mondrianToolbarDisplayed = ($this->params->get('mondrian_toolbar_displayed','0') == '1' ? true : false);
-if ($mondrianToolbarDisplayed){
-    $mondrianToolbarDisplayedClass=" toolbarDisplayed";
-}
 ?>
 <doctype>
 <html>
@@ -140,7 +18,7 @@ if ($mondrianToolbarDisplayed){
     
 <w:head />
 </head>
-<body class="<?php if ($bodyclass != "") { echo $bodyclass . $responsive;  } ?> <?php echo $mondrianFtBlogClass . $sidebarClass . $mondrianToolbarDisplayedClass . $fixedClass; ?>">
+<body class="<?php if ($bodyclass != "") { echo $bodyclass . $responsive;  } ?> <?php echo $mondrianFtBlogClass . $mondrianToolbarDisplayedClass . $fixedClass; ?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <div class="wrappToolbar">
@@ -152,9 +30,8 @@ if ($mondrianToolbarDisplayed){
             </div>
         <?php endif; ?>
     <?php endif; ?>
-    <div class="<?php echo $parentContainer; ?>">
-        <div class="<?php echo $parentGridMode; ?>">
-            <div class="mondrian-container">
+            <div class="mondrian-main">
+
                 <!-- header -->
                     <header id="header" class="<?php if ($mondrianLogoAbsolute): ?>header-absolute<?php endif; ?>">
                         <div class="<?php echo $containerClass ?>">
@@ -163,6 +40,11 @@ if ($mondrianToolbarDisplayed){
                             </div>
                         </div>
                     </header>
+
+                <?php if ($this->countModules('menu')) : ?>
+                <!-- menu -->
+                        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="menu" />
+                <?php endif; ?>
                 
                 <!-- featured -->
                 <?php if ($this->countModules('featured')) : ?>
@@ -189,52 +71,60 @@ if ($mondrianToolbarDisplayed){
                 <div class="<?php echo $mainContainer;?> main-wrapp">
                     <div id="main-content" class="<?php echo $mainGridMode; ?>">
                         <!-- sidebar1 -->
-                        <aside id="sidebar1">
+                        <aside id="sidebar1" class="mondrian-col">
                             <w:module name="sidebar1" chrome="xhtml" />
                         </aside>
                         <!-- main -->
-                        <section id="main">
-                            <?php if ($this->countModules('above-content')) : ?>
-                            <!-- above-content -->
-                                <div id="above-content">
-                                    <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $containerClass .'"'; endif; ?>>
-                                        <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $gridMode .'"'; endif; ?>>
-                                            <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="span12"'; endif; ?>>
+                        <section id="main" class="mondrian-col">
+                            <?php if ($mainComplementContainer != '') : ?>
+                            <div class="<?php echo $mainComplementContainer ?>">
+                                    <div class="<?php echo $mainComplementGridMode ?>">
+                                        <div class="<?php echo $mainComplementSpan ?>">
+                            <?php endif; ?>
+
+                                        <?php if ($this->countModules('above-content')) : ?>
+                                        <!-- above-content -->
+                                            <div id="above-content">
                                                 <w:module type="none" name="above-content" chrome="xhtml" />
                                             </div>
-                                        </div>
+                                        <?php endif; ?>
+                                        <?php if ($this->countModules('breadcrumbs')) : ?>
+                                            <!-- breadcrumbs -->
+                                            <div id="breadcrumbs">
+                                                <w:module type="single" name="breadcrumbs" chrome="none" />
+                                            </div>
+                                        <?php endif; ?>
+                            <?php if ($mainComplementContainer != '') : ?>
                                     </div>
                                 </div>
+                            </div>
                             <?php endif; ?>
-                            <?php if ($this->countModules('breadcrumbs')) : ?>
-                                <!-- breadcrumbs -->
-                                <div id="breadcrumbs">
-                                        <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $containerClass .'"'; endif; ?>>
-                                            <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $gridMode .'"'; endif; ?>>
-                                                <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="span12"'; endif; ?>>
-                                                    <w:module type="single" name="breadcrumbs" chrome="none" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            <?php endif; ?>
+
                             <!-- component -->
                             <w:content />
+
+                            <?php if ($mainComplementContainer != '') : ?>
+                            <div class="<?php echo $mainComplementContainer ?>">
+                                    <div class="<?php echo $mainComplementGridMode ?>">
+                                        <div class="<?php echo $mainComplementSpan ?>">
+                            <?php endif; ?>
+
+
                             <?php if ($this->countModules('below-content')) : ?>
                             <!-- below-content -->
                                 <div id="below-content">
-                                    <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $containerClass .'"'; endif; ?>>
-                                        <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="'. $gridMode .'"'; endif; ?>>
-                                            <div <?php if ($sidebarClass == ' no-sidebar'):echo 'class="span12"'; endif; ?>>
-                                                <w:module type="none" name="below-content" chrome="xhtml" />
-                                            </div>
-                                        </div>
+                                    <w:module type="none" name="below-content" chrome="xhtml" />
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if ($mainComplementContainer != '') : ?>
                                     </div>
                                 </div>
+                            </div>
                             <?php endif; ?>
                         </section>
                         <!-- sidebar2 -->
-                        <aside id="sidebar2">
+                        <aside id="sidebar2" class="mondrian-col">
                             <w:module name="sidebar2" chrome="xhtml" />
                         </aside>
                     </div>
@@ -260,25 +150,22 @@ if ($mondrianToolbarDisplayed){
                 <?php endif; ?>
                 <?php if ($this->countModules('bottom-menu')) : ?>
                 <!-- bottom-menu -->
-                        <w:nav containerClass="container-fluid" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
+                        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
                 <?php endif; ?>
             </div>
-        </div>
-    </div>
     
     <!-- footer -->
     <div class="wrapper-footer">
         <footer id="footer" class="<?php if ($this->params->get('stickyFooter',1)) : ?> sticky<?php endif;?>">
              <div class="<?php echo $containerClass; ?> footer-inner">
-                 <div class="container-fluid">
-                     <?php if ($this->countModules('footer')) : ?>
-                         <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
-                      <?php endif; ?>
-                     <w:footer />
-                 </div>
+                 <?php if ($this->countModules('footer')) : ?>
+                     <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
+                  <?php endif; ?>
+                 <w:footer />
              </div>
         </footer>
     </div>
+
     <?php if(!$mondrianToolbarDisplayed): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/mondrian.js'></script>
     <?php endif; ?>
