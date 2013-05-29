@@ -885,13 +885,30 @@ iframe{
 		>li{
 			line-height: normal;
 			>a{
-				border-right: 1px solid @white;
 				padding-bottom: 0;
 				padding-left: 4px;
 				padding-right: 4px;
 				padding-top: 0;
+				&.divider-vertical{
+					border-left-color: @white;
+					border-right: none;
+					height: auto;
+					margin-left: 0;
+					margin-right: 0;
+					text-decoration: underline;
 				}
 			}
+			&:first-child{
+				>a{
+					&.divider-vertical{
+						border-left: none;						
+					}
+				}
+			}
+			[class^="icon-"], [class*="icon-"]{
+				font-size: 23px;
+			}
+		}
 	}
 }
 .navbar .nav>li>a{
