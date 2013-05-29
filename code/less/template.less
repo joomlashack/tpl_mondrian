@@ -1118,9 +1118,7 @@ ul[class*="newsfeed"]{
 			width: 12px;
 		}
 	}
-}
-.sb2{
-	#sidebar2{
+	#sidebar1:last-child{
 		border-left: 2px solid @hrBorder;
 		position: relative;
 		&::after{
@@ -1139,6 +1137,56 @@ ul[class*="newsfeed"]{
 			content: '';
 			height: 12px;
 			right: 98%;
+			position: absolute;
+			bottom: 0;
+			width: 12px;
+		}
+	}
+}
+.sb2{
+	#sidebar2:last-child{
+		border-left: 2px solid @hrBorder;
+		position: relative;
+		&::after{
+			.border-radius(5px);
+			background-color: @hrBorder;
+			content: '';
+			height: 12px;
+			right: 98%;
+			position: absolute;
+			top: 0;
+			width: 12px;
+		}
+		&::before{
+			.border-radius(5px);
+			background-color: @hrBorder;
+			content: '';
+			height: 12px;
+			right: 98%;
+			position: absolute;
+			bottom: 0;
+			width: 12px;
+		}
+	}
+	#sidebar2:first-child{
+		border-right: 2px solid @hrBorder;
+		position: relative;
+		&::after{
+			.border-radius(5px);
+			background-color: @hrBorder;
+			content: '';
+			height: 12px;
+			left: 98%;
+			position: absolute;
+			top: 0;
+			width: 12px;
+		}
+		&::before{
+			.border-radius(5px);
+			background-color: @hrBorder;
+			content: '';
+			height: 12px;
+			left: 98%;
 			position: absolute;
 			bottom: 0;
 			width: 12px;
@@ -1195,6 +1243,157 @@ ul[class*="newsfeed"]{
 				}
 			}
 		}
+		+ #sidebar2{
+			border-right: 2px solid @hrBorder;
+			position: relative;
+			&::after{
+				.border-radius(5px);
+				background-color: @hrBorder;
+				content: '';
+				height: 12px;
+				left: 98%;
+				position: absolute;
+				top: 0;
+				width: 12px;
+			}
+			&::before{
+				.border-radius(5px);
+				background-color: @hrBorder;
+				content: '';
+				height: 12px;
+				left: 98%;
+				position: absolute;
+				bottom: 0;
+				width: 12px;
+			}
+		}
+	}
+	#sidebar2:first-child{
+		border-right: 2px solid @hrBorder;
+		position: relative;
+			&::after{
+				.border-radius(5px);
+				background-color: @hrBorder;
+				content: '';
+				height: 12px;
+				left: 98%;
+				position: absolute;
+				top: 0;
+				width: 12px;
+			}
+			&::before{
+				.border-radius(5px);
+				background-color: @hrBorder;
+				content: '';
+				height: 12px;
+				left: 98%;
+				position: absolute;
+				bottom: 0;
+				width: 12px;
+			}
+		+ #main{
+			+ #sidebar1{
+				border-left: 2px solid @hrBorder;
+				position: relative;
+				&::after{
+					.border-radius(5px);
+					background-color: @hrBorder;
+					content: '';
+					height: 12px;
+					right: 98%;
+					position: absolute;
+					top: 0;
+					width: 12px;
+				}
+				&::before{
+					.border-radius(5px);
+					background-color: @hrBorder;
+					content: '';
+					height: 12px;
+					right: 98%;
+					position: absolute;
+					bottom: 0;
+					width: 12px;
+				}
+			}
+		}
+		+ #sidebar1{
+			border-right: 2px solid @hrBorder;
+			position: relative;
+			&::after{
+				.border-radius(5px);
+				background-color: @hrBorder;
+				content: '';
+				height: 12px;
+				left: 98%;
+				position: absolute;
+				top: 0;
+				width: 12px;
+			}
+			&::before{
+				.border-radius(5px);
+				background-color: @hrBorder;
+				content: '';
+				height: 12px;
+				left: 98%;
+				position: absolute;
+				bottom: 0;
+				width: 12px;
+			}
+		}
+	}
+	#main:first-child{
+		+ #sidebar1{
+			border-left: 2px solid @hrBorder;
+				position: relative;
+				&::after{
+					.border-radius(5px);
+					background-color: @hrBorder;
+					content: '';
+					height: 12px;
+					right: 98%;
+					position: absolute;
+					top: 0;
+					width: 12px;
+				}
+				&::before{
+					.border-radius(5px);
+					background-color: @hrBorder;
+					content: '';
+					height: 12px;
+					right: 98%;
+					position: absolute;
+					bottom: 0;
+					width: 12px;
+				}
+		}
+		+ #sidebar2{
+			+ #sidebar1{
+				border-left: 2px solid @hrBorder;
+				position: relative;
+				&::after{
+					.border-radius(5px);
+					background-color: @hrBorder;
+					content: '';
+					height: 12px;
+					right: 98%;
+					position: absolute;
+					top: 0;
+					width: 12px;
+				}
+				&::before{
+					.border-radius(5px);
+					background-color: @hrBorder;
+					content: '';
+					height: 12px;
+					right: 98%;
+					position: absolute;
+					bottom: 0;
+					width: 12px;
+				}
+			}
+		}
+
 	}
 }
 .sb1.sb2,
@@ -1275,7 +1474,7 @@ ul[class*="newsfeed"]{
 #grid-bottom2{
 	background-color: @navtabsBg;
 	color: @white;
-	font-size: 15px;
+	font-size:  0.9em ;
 	margin-bottom: 0;
 	// margin-left: -20px;
 	// margin-right: -20px;
@@ -1308,6 +1507,13 @@ ul[class*="newsfeed"]{
 	.grid-bottom2-inner{
 		position: relative;
 		z-index: 3;
+	}
+	h1,h2,h4,h5,h6{
+		margin-bottom: 0;
+		font-weight: normal;
+	}
+	h3{
+		font-weight: normal;
 	}
 }
 #grid-top{
