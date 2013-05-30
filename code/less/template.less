@@ -963,6 +963,23 @@ iframe{
 	background-color: @navtabsBgHover;
 	color: @navbarLinkColor;
 }
+.navbar{
+	li:hover{
+		> a{
+			background-color: @navbarLinkBackgroundHover;
+		}
+	}
+	.dropwdown-menu{
+		.box-shadow(none);
+		border: none;
+		border-top: 1px solid @dropdownmenuBorderColor;
+		li:hover{
+			> a{
+				background-color: @dropdownmenuBorderColor
+			}		
+		}
+	}
+}
 .pagination{
 	.counter{
 		line-height: 30px;
