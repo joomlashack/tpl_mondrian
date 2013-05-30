@@ -955,31 +955,6 @@ iframe{
 		}
 	}
 }
-.navbar .nav>li>a{
-	text-shadow:none;
-}
-.navbar .nav>.active>span.separator, .navbar .nav>.active>span.separator:hover, .navbar .nav>.active>span.separator:focus{
-	.box-shadow(none);
-	background-color: @navtabsBgHover;
-	color: @navbarLinkColor;
-}
-.navbar{
-	li:hover{
-		> a{
-			background-color: @navbarLinkBackgroundHover;
-		}
-	}
-	.dropwdown-menu{
-		.box-shadow(none);
-		border: none;
-		border-top: 1px solid @dropdownmenuBorderColor;
-		li:hover{
-			> a{
-				background-color: @dropdownmenuBorderColor
-			}		
-		}
-	}
-}
 .pagination{
 	.counter{
 		line-height: 30px;
@@ -1335,6 +1310,69 @@ ul[class*="newsfeed"]{
 #bottom-menu {
 	margin-bottom: 0;
 }
+.navbar .nav>li>a{
+	text-shadow:none;
+}
+.navbar .nav>.active>span.separator, .navbar .nav>.active>span.separator:hover, .navbar .nav>.active>span.separator:focus{
+	.box-shadow(none);
+	background-color: @navtabsBgHover;
+	color: @navbarLinkColor;
+}
+.navbar{
+	li:hover{
+		> a{
+			background-color: @navbarLinkBackgroundHover;
+		}
+	}
+	.dropdown-menu{
+		.box-shadow(none);
+		border: none;
+		border-top: 1px solid @dropdownmenuBorderColor;
+		padding-bottom: 0;
+		padding-top: 0;
+		&:before,&:after{
+			display: none !important;
+		}
+		li{
+			a{
+				border-bottom: 1px solid @dropdownmenuBorderColor;
+				padding-bottom: 7px;
+				padding-top: 7px;
+			}
+			&:last-child{
+				a{
+					border-bottom: none;
+				}
+			}
+			&:hover{
+				> a{
+					background-color: @dropdownmenuBorderColor;
+					background-image:none;
+					-ms-filter:none;
+					    filter:none;
+				}		
+			}
+		}
+	}
+}
+#toolbar{
+	.navbar{
+		li{
+			a{
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+		}
+		.dropdown-menu{
+			li{
+				a{
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+		}
+	}
+}
 
 .navbar{
 	margin-bottom: 0;
@@ -1412,6 +1450,9 @@ ul[class*="newsfeed"]{
 				font-size: 22px;
 				padding-left: 0;
 				padding-right: 0;
+				&:hover{
+					background-color: transparent;
+				}
 			}
 			>.separator{
 				color: @navbarLinkColor;
@@ -1421,6 +1462,11 @@ ul[class*="newsfeed"]{
 			}
 			&:last-child{
 				padding-right: 0;
+			}
+			&:hover{
+				a{
+					background-color: transparent;
+				}
 			}
 		}
 		.dropdown-menu{
