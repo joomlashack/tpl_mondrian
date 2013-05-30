@@ -1319,9 +1319,14 @@ ul[class*="newsfeed"]{
 	color: @navbarLinkColor;
 }
 .navbar{
-	li:hover{
-		> a{
-			background-color: @navbarLinkBackgroundHover;
+	li{
+		a{
+			.transition(background-color .25s ease-in-out);
+		}
+		&:hover{
+			> a{
+				background-color: @navbarLinkBackgroundHover;
+			}
 		}
 	}
 	.dropdown-menu{
