@@ -935,6 +935,11 @@ iframe{
 .navbar .nav>li>a{
 	text-shadow:none;
 }
+.navbar .nav>.active>span.separator, .navbar .nav>.active>span.separator:hover, .navbar .nav>.active>span.separator:focus{
+	.box-shadow(none);
+	background-color: @navtabsBgHover;
+	color: @navbarLinkColor;
+}
 .pagination{
 	.counter{
 		line-height: 30px;
