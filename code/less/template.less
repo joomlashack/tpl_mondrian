@@ -233,7 +233,8 @@ dl.article-info{
 	text-shadow: none;
 }
 
-.breadcrumbs{
+.breadcrumbs,
+.breadcrumb{
 	font-size: 12px;
 	a,span{
 		.ie7-inline-block();
@@ -257,8 +258,19 @@ dl.article-info{
 			padding-right: 5px;		
 		}
 	}
-	>.icon-caret-right:before{
-		content: '.';
+	.icon-caret-right{
+		display: inline-block;
+		height: 10px;
+		width: 10px;
+		&:before{
+			position: absolute;
+			top: -3px;
+			right: 0;
+			width: 4px;
+			height: 2px;
+			content: '.';
+			display: block;
+		}
 	}
 }
 .categories-list {
@@ -1185,6 +1197,9 @@ ul[class*="newsfeed"]{
 		background-color: @navbarBackground;
 		margin-bottom: 0;
 		.clearfix();
+		a{
+			color: @white;
+		}
 	}
 	.module_ms1,
 	.moduletable_ms1,
