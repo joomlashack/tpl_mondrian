@@ -675,6 +675,12 @@ dl.nav-tabs{
 .items-leading{
 	display: block;
 }
+
+.wrapper-menu,
+.wrapper-bottom-menu {
+	background-color: @navbarBackground;
+}
+
 .mondrianFtBlog{
 
 	.items-leading{
@@ -728,14 +734,14 @@ dl.nav-tabs{
 			padding: 0 5px;
 			&:last-of-type {
 				border-right: 0;
-				&::after{
+				&:after{
 					background-color: transparent;
 				}
-				&::before{
+				&:before{
 					background-color: transparent;
 				}
 			}
-			&::after{
+			&:after{
 				.border-radius(5px);
 				background-color: @hrBorder;
 				content: '';
@@ -745,7 +751,7 @@ dl.nav-tabs{
 				top: 0;
 				width: 12px;
 			}
-			&::before{
+			&:before{
 				.border-radius(5px);
 				background-color: @hrBorder;
 				content: '';
@@ -1120,7 +1126,7 @@ ul[class*="newsfeed"]{
 	border-right: 2px solid @hrBorder;
 	position: relative;
 	.box-sizing(border-box);
-	&::after{
+	&:after{
 		.border-radius(5px);
 		background-color: @hrBorder;
 		content: '';
@@ -1130,7 +1136,7 @@ ul[class*="newsfeed"]{
 		top: 0;
 		width: 12px;
 	}
-	&::before{
+	&:before{
 		.border-radius(5px);
 		background-color: @hrBorder;
 		content: '';
@@ -1146,7 +1152,7 @@ ul[class*="newsfeed"]{
 	border-left: 2px solid @hrBorder;
 	position: relative;
 	.box-sizing(border-box);
-	&::after{
+	&:after{
 		.border-radius(5px);
 		background-color: @hrBorder;
 		content: '';
@@ -1156,7 +1162,7 @@ ul[class*="newsfeed"]{
 		top: 0;
 		width: 12px;
 	}
-	&::before{
+	&:before{
 		.border-radius(5px);
 		background-color: @hrBorder;
 		content: '';
@@ -1290,7 +1296,14 @@ ul[class*="newsfeed"]{
 	.box-shadow(none);
 }
 // Menu
+
+#menu,
+#bottom-menu {
+	margin-bottom: 0;
+}
+
 .navbar{
+	margin-bottom: 0;
 	.btn{
 		font-size: 18px !important;
 		margin-top: 0;
@@ -1659,7 +1672,7 @@ div:first-child+.panel{
   z-index: 2;
   border: 0;
   color:@navtabsBgHover;
-  &::before{
+  &:before{
   	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
 	border-left: 20px solid @navtabsBgHover;
@@ -1697,7 +1710,7 @@ div:first-child+.panel{
 	margin: 10px 0;
 	padding: 56px 40px 14px;
 	position: relative;
-	&::after {
+	&:after {
 		background-color:@navtabsBgHover;
 		color: @white;
 		content: "EXAMPLE";
@@ -1746,12 +1759,42 @@ div:first-child+.panel{
 		font-size: 12px;
 		line-height: 2;
 	}
-	[class^="icon-"]::before, [class*=" icon-"]::before{
+	[class^="icon-"]:before, [class*=" icon-"]:before{
 		width: 25px;
 	}
-	.icon-spinner.icon-spin::before{
+	.icon-spinner.icon-spin:before{
 		width: auto;
 	}
 }
 
+body.is_internet.explorer.v_8 {
+	&.mondrianFtBlog{
+			.items-leading{
+				.full-leading {
+					background-color: @ms1Background;
+					color: @ms1Color;
+					padding: 0 5px;
+				}
+			}
+
+		[class^="column-"], [class*="column-"] {
+			&[class^="span"], &[class*="span"] {
+				&:after{
+					display: none;
+				}
+				&:before{
+					display: none;
+				}
+			}
+		}
+		#sidebar1, #sidebar2 {
+			&:after{
+				display: none;
+			}
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
 
