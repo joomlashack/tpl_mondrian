@@ -76,51 +76,53 @@ defined('_JEXEC') or die('Restricted access');
                         </aside>
                         <!-- main -->
                         <section id="main" class="mondrian-col">
-                            <?php if ($mainComplementContainer != '') : ?>
-                            <div class="<?php echo $mainComplementContainer ?>">
-                                    <div class="<?php echo $mainComplementGridMode ?>">
-                                        <div class="<?php echo $mainComplementSpan ?>">
-                            <?php endif; ?>
+                            <?php if ($this->countModules('above-content') || $this->countModules('breadcrumbs') : ?>
+                                <?php if ($mainComplementContainer != '') : ?>
 
-                                        <?php if ($this->countModules('above-content')) : ?>
-                                        <!-- above-content -->
-                                            <div id="above-content">
-                                                <w:module type="none" name="above-content" chrome="xhtml" />
+                                    <div class="<?php echo $mainComplementContainer ?>">
+                                            <div class="<?php echo $mainComplementGridMode ?>">
+                                                <div class="<?php echo $mainComplementSpan ?>">
+                                    <?php endif; ?>
+
+                                                <?php if ($this->countModules('above-content')) : ?>
+                                                <!-- above-content -->
+                                                    <div id="above-content">
+                                                        <w:module type="none" name="above-content" chrome="xhtml" />
+                                                    </div>
+                                                <?php endif; ?>
+                                                <?php if ($this->countModules('breadcrumbs')) : ?>
+                                                    <!-- breadcrumbs -->
+                                                    <div id="breadcrumbs">
+                                                        <w:module type="single" name="breadcrumbs" chrome="none" />
+                                                    </div>
+                                                <?php endif; ?>
+                                    <?php if ($mainComplementContainer != '') : ?>
                                             </div>
-                                        <?php endif; ?>
-                                        <?php if ($this->countModules('breadcrumbs')) : ?>
-                                            <!-- breadcrumbs -->
-                                            <div id="breadcrumbs">
-                                                <w:module type="single" name="breadcrumbs" chrome="none" />
-                                            </div>
-                                        <?php endif; ?>
-                            <?php if ($mainComplementContainer != '') : ?>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                <?php endif; ?>
                             <?php endif; ?>
 
                             <!-- component -->
                             <w:content />
 
-                            <?php if ($mainComplementContainer != '') : ?>
-                            <div class="<?php echo $mainComplementContainer ?>">
-                                    <div class="<?php echo $mainComplementGridMode ?>">
-                                        <div class="<?php echo $mainComplementSpan ?>">
-                            <?php endif; ?>
-
-
                             <?php if ($this->countModules('below-content')) : ?>
                             <!-- below-content -->
-                                <div id="below-content">
-                                    <w:module type="none" name="below-content" chrome="xhtml" />
+                                <?php if ($mainComplementContainer != '') : ?>
+                                <div class="<?php echo $mainComplementContainer ?>">
+                                        <div class="<?php echo $mainComplementGridMode ?>">
+                                            <div class="<?php echo $mainComplementSpan ?>">
+                                <?php endif; ?>
+                                    <div id="below-content">
+                                        <w:module type="none" name="below-content" chrome="xhtml" />
+                                    </div>
+                                    
+                                <?php if ($mainComplementContainer != '') : ?>
+                                        </div>
+                                    </div>
                                 </div>
                             <?php endif; ?>
 
-                            <?php if ($mainComplementContainer != '') : ?>
-                                    </div>
-                                </div>
-                            </div>
                             <?php endif; ?>
                         </section>
                         <!-- sidebar2 -->
