@@ -1910,22 +1910,6 @@ body.is_internet.explorer.v_8 {
 	li{
 		margin-bottom: 0;
 		position: relative;
-	}
-	>li{
-		&:first-child{
-			> a,>span{
-				.border-radius(4px 4px 0 0);
-			}
-		}
-		&:last-child{
-			> a,>span{
-				.border-radius(0 0 4px 4px);
-			}
-		}
-		a,span{
-			.transition(background-color .2s ease);
-			padding: 10px;
-		}
 		ul{
 			.border-radius(0 0 0 0);
 			.box-shadow(none);	
@@ -1955,6 +1939,22 @@ body.is_internet.explorer.v_8 {
 				display: block;
 				top: 0;
 			}
+		}
+	}
+	>li{
+		&:first-child{
+			> a,>span{
+				.border-radius(4px 4px 0 0);
+			}
+		}
+		&:last-child{
+			> a,>span{
+				.border-radius(0 0 4px 4px);
+			}
+		}
+		a,span{
+			.transition(background-color .2s ease);
+			padding: 10px;
 		}
 	}
 }
