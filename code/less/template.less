@@ -697,16 +697,18 @@ dl.nav-tabs{
 }
 
 .mondrianFtBlog{
-
+	.btn-group{
+		.btn{
+			min-width: auto;
+		}
+	}
 	.items-leading{
-
+		.clearfix();
 		.full-leading:nth-child(odd) {
 			background-color: @ms1Background;
 			color: @ms1Color;
 			padding: 0 5px;
 		}
-		.clearfix();
-
 		.img_caption{
 			background-color: @ms1Color;
 			color: @white;
@@ -727,6 +729,9 @@ dl.nav-tabs{
 				a{
 					color:@ms1Color;
 				}
+			}
+			.muted{
+				color: @ms1Color;
 			}
 		}
 	}
@@ -787,6 +792,11 @@ dl.nav-tabs{
 		.btn{
 			text-decoration: none;
 			min-width: 132px;
+		}
+		.btn-group{
+			.btn{
+				min-width: auto;
+			}
 		}
 	}
 	.nav-tabs{
