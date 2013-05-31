@@ -1578,28 +1578,26 @@ ul[class*="newsfeed"]{
 #myTab li {
 	margin-bottom: 0;
 }
-#slide-contact .accordion-group{
+.accordion-group{
 	border-bottom-width:0;
 	margin-bottom: 0;
-	-webkit-border-radius: 0 0 0 0;
-	-moz-border-radius: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	background-color: @tableBorder;
-	border-color: @wellBackground;
+	border-color: @hrBorder;
 	&:last-child{
-		border-bottom-color: @wellBackground;		
+		border-bottom-color: @hrBorder;		
 	}
 }
-#slide-contact .accordion-group:first-child{
-	-webkit-border-radius: 5px 5px 0 0;
-	-moz-border-radius: 5px 5px 0 0;
-	border-radius: 5px 5px 0 0;
+.accordion-group{
+	.border-radius(0 0 0 0);
 }
-#slide-contact .accordion-group:last-child{
-	-webkit-border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px;
-	border-bottom-width: 1px;
+#slide-contact.accordion{
+	border-bottom: 1px solid @hrBorder;
+}
+.accordion-heading{
+	a{
+		font-size: 24px;
+		font-weight: bold;
+		font-family:'Montserrat' ;
+	}
 }
 #advancedSearch {
 	hr{
