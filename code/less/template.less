@@ -1903,3 +1903,58 @@ body.is_internet.explorer.v_8 {
 	}
 }
 
+.mondrian-menu{
+	.border-radius(4px);
+	background-color: @mondrianMenuBackground;
+	display: table;
+	li{
+		margin-bottom: 0;
+		position: relative;
+	}
+	>li{
+		&:first-child{
+			> a,>span{
+				.border-radius(4px 4px 0 0);
+			}
+		}
+		&:last-child{
+			> a,>span{
+				.border-radius(0 0 4px 4px);
+			}
+		}
+		a,span{
+			.transition(background-color .2s ease);
+			padding: 10px;
+		}
+		ul{
+			.border-radius(0 0 0 0);
+			.box-shadow(none);	
+			background-color: @mondrianMenuBackground;
+			border: none;
+			display: none;
+			left: auto;
+			padding: 0;
+			right: 100%;
+			top: 0;
+			li a{
+				color: @textColor;
+				padding-bottom: 20px;
+				padding-top: 20px;
+				text-align: right;	
+				&:hover{
+					background-color: @grayLighter;
+					background-image:none;
+					color: @textColor;
+					-ms-filter:none;
+					    filter:none;
+				}
+			}
+		}
+		&:hover{
+			> ul{
+				display: block;
+				top: 0;
+			}
+		}
+	}
+}
