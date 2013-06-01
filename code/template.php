@@ -76,7 +76,7 @@ defined('_JEXEC') or die('Restricted access');
                         </aside>
                         <!-- main -->
                         <section id="main" class="mondrian-col">
-                            <?php if ($this->countModules('above-content') || $this->countModules('breadcrumbs') : ?>
+                            <?php if ($this->countModules('above-content') || $this->countModules('breadcrumbs')) : ?>
                                 <?php if ($mainComplementContainer != '') : ?>
 
                                     <div class="<?php echo $mainComplementContainer ?>">
