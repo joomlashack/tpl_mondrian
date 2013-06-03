@@ -992,6 +992,80 @@ ul[class*="newsfeed"]{
 	}
 }
 // Modules
+.color_two{
+	background-color: @color_two;
+	color: @white;
+	a{
+		color: @white;
+		.transition(color .2s ease);
+		&:hover{
+			color: @grayLight;
+		}
+	}
+	.btn-primary{
+		&:hover{
+			color: @white !important;
+		}
+	}
+	&.navbar{
+		.nav{
+			display: table;
+			float: none;
+			left: auto;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.navbar{
+		.nav{
+			display: table;
+			float: none;
+			left: auto;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.nav{
+		>li{
+			padding: 10px 15px 10px;
+			>a{
+				border-bottom: 1px solid @borderCallToActionColor;
+				border-top: 1px solid @borderCallToActionColor;
+				font-size: 22px;
+				padding-left: 0;
+				padding-right: 0;
+				&:hover{
+					background-color: transparent;
+					color: @grayLight;
+				}
+			}
+			>.separator{
+				color: @navbarLinkColor;
+			}
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				padding-right: 0;
+			}
+		}
+		.dropdown-menu{
+			.border-radius(0 0 0 0);
+			li{
+				>.separator{
+					color: @navbarLinkColor;
+					&:hover{
+						background-color: @dropdownmenuBorderColor;
+					}
+				}
+			}
+		}
+	}
+}
+.color_three{
+	background-color: @color_three;
+	
+}
 .color_six{
 	background-color: @white;
 }
@@ -1032,6 +1106,15 @@ ul[class*="newsfeed"]{
 		// margin-right: -20px;
 		width: auto;
 	}
+	.navbar .nav>li>a{
+		color: #7d8c28;
+	}
+	a{
+		color: #7d8c28;
+	}
+	.btn-primary{
+		color: @white !important;
+	}
 }
 .module_ms2,
 .moduletable_ms2,
@@ -1052,6 +1135,18 @@ ul[class*="newsfeed"]{
 		// margin-left: -20px !important;
 		// margin-right: -20px;
 		width: auto;
+	}
+	a{
+		color: @white;
+		.transition(color .2s ease);
+		&:hover{
+			color: @color_one;
+		}
+	}
+	.btn-primary{
+		&:hover{
+			color: @white !important;
+		}
 	}
 }
 .module_ms3,
@@ -1081,6 +1176,19 @@ ul[class*="newsfeed"]{
 	background-color: @color_one;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	color: @white;
+	a{
+		color: @white;
+		.transition(color .2s ease);
+		&:hover{
+			color: @grayLight;
+		}
+	}
+	.btn-primary{
+		&:hover{
+			color: @white !important;
+		}
+	}
 	&.first.last,&:first-child:last-child{
 		.box-sizing(content-box);
 		float: none;
@@ -1116,6 +1224,9 @@ ul[class*="newsfeed"]{
 				font-size: 22px;
 				padding-left: 0;
 				padding-right: 0;
+				&:hover{
+					background-color: transparent;
+				}
 			}
 			>.separator{
 				color: @navbarLinkColor;
