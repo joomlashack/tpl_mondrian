@@ -1659,6 +1659,7 @@ div:first-child+.panel{
 	width: auto;
 	#sliderNav ul li{ 
 		display: block;
+		overflow: hidden;
 		&.active{
 			a{
 				background-color: white !important;
@@ -1666,17 +1667,26 @@ div:first-child+.panel{
 		}
 		a {
 			background-color: @navtabsBg !important;
-			height: 10px!important;
-			width: 10px!important;
-			padding: 0;
-			margin: 5px 0;
-			margin-right: 10px!important;
-			text-indent: -9999px;
 			border: 0;
+			float: none;
+			height: 10px!important;
+			margin: 5px auto;
+			padding: 0;
+			text-indent: -9999px;
+			width: 10px!important;
 			-webkit-border-radius: 8px!important;
-			-moz-border-radius: 8px!important;
-			border-radius: 8px!important;
+			   -moz-border-radius: 8px!important;
+			        border-radius: 8px!important;
+			&.sliderPrev,&.sliderNext{
+				background-color: transparent !important;
+				height: 13px !important;
+				width: 19px !important;
+			}
 			&.sliderPrev{
+				background-image: url(../../images/ss-prev.png) !important;
+			}
+			&.sliderNext{
+				background-image: url(../../images/ss-next.png) !important;
 			}
 		}
 	}
