@@ -139,6 +139,7 @@
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>
+				<field name="mondrian_color_reference" type="templatecustom" default="" label="TPL_JS_MONDRIAN_COLOR_REFERENCE" description="TPL_JS_MONDRIAN_COLOR_REFERENCE_DESC"/>
 			</fieldset>
 		</fields>
 	</config>
