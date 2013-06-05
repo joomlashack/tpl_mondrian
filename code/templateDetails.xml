@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta6</version>
+	<version>1.0.0_rc</version>
     <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -34,6 +34,7 @@
 		<folder>images</folder>
 		<folder>js</folder>
 		<folder>wright</folder>
+		<folder>parameters</folder>
 	</files>
 	
 	<positions>
@@ -103,7 +104,7 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="TPL_JS_MONDRIAN_OPTIONS">
-				<field name="mondrian_full_width_background" type="radio" default="0" label="TPL_JS_MONDRIAN_FULL_WIDTH_BACKGROUND" description="TPL_JS_MONDRIAN_FULL_WIDTH_BACKGROUND">
+				<field name="mondrian_full_width_background" type="radio" default="0" label="TPL_JS_MONDRIAN_FULL_WIDTH_BACKGROUND" description="TPL_JS_MONDRIAN_FULL_WIDTH_BACKGROUND_DESC">
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>
@@ -111,29 +112,29 @@
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>
-				<field name="mondrian_grid_top_background_color" type="list" default="color_four" label="TPL_JS_MONDRIAN_GRID_TOP_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP_POSITION_BACKGROUND_COLOR_DESC">
-					<option value="color_one">Color 1</option>
-					<option value="color_two">Color 2</option>
-					<option value="color_three">Color 3</option>
-					<option value="color_four">Color 4</option>
-					<option value="color_five">Color 5</option>
-					<option value="color_six">Color 6 (White)</option>
+				<field name="mondrian_grid_top_background_color" type="list" default="color_six" label="TPL_JS_MONDRIAN_GRID_TOP_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">TPL_JS_MONDRIAN_COLOR_1</option>
+					<option value="color_two">TPL_JS_MONDRIAN_COLOR_2</option>
+					<option value="color_three">TPL_JS_MONDRIAN_COLOR_3</option>
+					<option value="color_four">TPL_JS_MONDRIAN_COLOR_4</option>
+					<option value="color_five">TPL_JS_MONDRIAN_COLOR_5</option>
+					<option value="color_six">TPL_JS_MONDRIAN_COLOR_6</option>
 				</field>
-				<field name="mondrian_grid_top2_background_color" type="list" default="color_four" label="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR_DESC">
-					<option value="color_one">Color 1</option>
-					<option value="color_two">Color 2</option>
-					<option value="color_three">Color 3</option>
-					<option value="color_four">Color 4</option>
-					<option value="color_five">Color 5</option>
-					<option value="color_six">Color 6 (White)</option>
+				<field name="mondrian_grid_top2_background_color" type="list" default="color_six" label="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">TPL_JS_MONDRIAN_COLOR_1</option>
+					<option value="color_two">TPL_JS_MONDRIAN_COLOR_2</option>
+					<option value="color_three">TPL_JS_MONDRIAN_COLOR_3</option>
+					<option value="color_four">TPL_JS_MONDRIAN_COLOR_4</option>
+					<option value="color_five">TPL_JS_MONDRIAN_COLOR_5</option>
+					<option value="color_six">TPL_JS_MONDRIAN_COLOR_6</option>
 				</field>
-				<field name="mondrian_grid_top3_background_color" type="list" default="color_four" label="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR_DESC">
-					<option value="color_one">Color 1</option>
-					<option value="color_two">Color 2</option>
-					<option value="color_three">Color 3</option>
-					<option value="color_four">Color 4</option>
-					<option value="color_five">Color 5</option>
-					<option value="color_six">Color 6 (White)</option>
+				<field name="mondrian_grid_top3_background_color" type="list" default="color_six" label="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">TPL_JS_MONDRIAN_COLOR_1</option>
+					<option value="color_two">TPL_JS_MONDRIAN_COLOR_2</option>
+					<option value="color_three">TPL_JS_MONDRIAN_COLOR_3</option>
+					<option value="color_four">TPL_JS_MONDRIAN_COLOR_4</option>
+					<option value="color_five">TPL_JS_MONDRIAN_COLOR_5</option>
+					<option value="color_six">TPL_JS_MONDRIAN_COLOR_6</option>
 				</field>
 				<field name="mondrian_toolbar_displayed" type="radio" default="1" label="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED" description="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED_DESC">
 					<option value="0">JNo</option>
