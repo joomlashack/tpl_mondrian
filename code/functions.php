@@ -35,9 +35,9 @@ $mondrianFtBlogClass = ($mondrianFullWidthBg ? ' mondrianFtBlog' : '');
 $sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));  // check if there's a sidebar at all
 
 $mondrianLogoAbsolute = ($this->params->get('mondrian_logo_on_featured','0') == '1' ? true : false);
-$mondrianGridTopBackground = $this->params->get('mondrian_grid_top_background_color','color_four');
-$mondrianGridTop2Background = $this->params->get('mondrian_grid_top2_background_color','color_four');
-$mondrianGridTop3Background = $this->params->get('mondrian_grid_top3_background_color','color_four');
+$mondrianGridTopBackground = $this->params->get('mondrian_grid_top_background_color','color_six');
+$mondrianGridTop2Background = $this->params->get('mondrian_grid_top2_background_color','color_six');
+$mondrianGridTop3Background = $this->params->get('mondrian_grid_top3_background_color','color_six');
 
 
 $gridTopBackground = ' ' . $mondrianGridTopBackground;

@@ -15,7 +15,7 @@ class JFormFieldTemplateCustom extends JFormField
 		$html .= '<div class="container-fluid well">
 	<div class="row-fluid">
 		<div class="span12" style="text-align:center;line-height:30px">
-			<h4>TPL_JS_MONDRIAN_COLOR_BLUE</h4>
+			<h4>Blue</h4>
 			<div class="span2" style="background-color: #263138;color:white;">
 				Color 1
 			</div>
@@ -29,11 +29,14 @@ class JFormFieldTemplateCustom extends JFormField
 				Color 4
 			</div>
 			<div class="span2" style="background-color: #D9DB0B;">
-				Color 4
+				Color 5
+			</div>
+			<div class="span2" style="background-color: #ffffff;">
+				Color 6
 			</div>
 		</div>
 		<br style="clear:both;">
-		<h4 style="text-align: center;">TPL_JS_MONDRIAN_COLOR_BROWN</h4>
+		<h4 style="text-align: center;">Brown</h4>
 		<div class="span12" style="text-align:center;line-height:30px;">
 			<div class="span2" style="background-color: #263138;color:white;">
 				Color 1
@@ -50,9 +53,12 @@ class JFormFieldTemplateCustom extends JFormField
 			<div class="span2" style="background-color: #E2952B;">
 				Color 5
 			</div>
+			<div class="span2" style="background-color: #ffffff;">
+				Color 6
+			</div>
 		</div>
 		<br style="clear:both;">
-		<h4 style="text-align: center;">TPL_JS_MONDRIAN_COLOR_GRAY</h4>
+		<h4 style="text-align: center;">Gray</h4>
 		<div class="span12" style="text-align:center;line-height:30px;color:white;">
 			<div class="span2" style="background-color: #263138;color:white;">
 				Color 1
@@ -69,9 +75,12 @@ class JFormFieldTemplateCustom extends JFormField
 			<div class="span2" style="background-color: #919597;">
 				Color 5
 			</div>
+			<div class="span2" style="background-color: #ffffff;color:#000000">
+				Color 6
+			</div>
 		</div>
 		<br style="clear:both;">
-		<h4 style="text-align: center;">TPL_JS_MONDRIAN_COLOR_GREEN</h4>
+		<h4 style="text-align: center;">Green</h4>
 		<div class="span12" style="text-align:center;line-height:30px;">
 			<div class="span2" style="background-color: #263138;color:white;">
 				Color 1
@@ -88,9 +97,12 @@ class JFormFieldTemplateCustom extends JFormField
 			<div class="span2" style="background-color: #7ECFF1;">
 				Color 5
 			</div>
+			<div class="span2" style="background-color: #ffffff;">
+				Color 6
+			</div>
 		</div>
 		<br style="clear:both;">
-		<h4 style="text-align: center;">TPL_JS_MONDRIAN_COLOR_MINT</h4>
+		<h4 style="text-align: center;">Mint</h4>
 		<div class="span12" style="text-align:center;line-height:30px;">
 			<div class="span2" style="background-color: #263138;color:white;">
 				Color 1
@@ -107,9 +119,12 @@ class JFormFieldTemplateCustom extends JFormField
 			<div class="span2" style="background-color: #353351;color:white">
 				Color 5
 			</div>
+			<div class="span2" style="background-color: #ffffff;">
+				Color 6
+			</div>
 		</div>
 		<br style="clear:both;">
-		<h4 style="text-align: center;">TPL_JS_MONDRIAN_COLOR_SALMON</h4>
+		<h4 style="text-align: center;">Salmon</h4>
 		<div class="span12" style="text-align:center;line-height:30px;color:white;">
 			<div class="span2" style="background-color: #263138;color:white;">
 				Color 1
@@ -126,9 +141,12 @@ class JFormFieldTemplateCustom extends JFormField
 			<div class="span2" style="background-color: #6B6D7A;">
 				Color 5
 			</div>
+			<div class="span2" style="background-color: #ffffff;color:#000000">
+				Color 6
+			</div>
 		</div>
 		<br style="clear:both;">
-		<h4 style="text-align: center;">TPL_JS_MONDRIAN_COLOR_TURQUOISE</h4>
+		<h4 style="text-align: center;">Turquoise</h4>
 		<div class="span12" style="text-align:center;line-height:30px">
 			<div class="span2" style="background-color: #263138;color:white;">
 				Color 1
@@ -144,6 +162,9 @@ class JFormFieldTemplateCustom extends JFormField
 			</div>
 			<div class="span2" style="background-color: #FFE500;">
 				Color 5
+			</div>
+			<div class="span2" style="background-color: #ffffff;">
+				Color 6
 			</div>
 		</div>
 	</div>
