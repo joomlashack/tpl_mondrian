@@ -9,15 +9,15 @@
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
 	<version>1.0.0_rc</version>
-    <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
+    <description>TPL_JS_MONDRIAN_FREE_XML_DESCRIPTION</description>
 
 	<languages folder="language">
 		<!-- en-GB -->
-		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian_free.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian_free.sys.ini</language>
 		<!-- es-ES -->
-		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian.ini</language>
-		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian_free.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian_free.sys.ini</language>
 	</languages>
 	
 	<files>
