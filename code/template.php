@@ -51,22 +51,6 @@ defined('_JEXEC') or die('Restricted access');
                         <w:module type="none" name="featured" chrome="xhtml" />
                     </div>
                 <?php endif; ?>
-                <!-- grid-top -->
-                <?php if ($this->countModules('grid-top')) : ?>
-                    <div id="grid-top" class="<?php echo $gridTopBackground; ?>">
-                        <div class="<?php echo $containerClass; ?>">
-                            <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-top2')) : ?>
-                <!-- grid-top2 -->
-                    <div id="grid-top2" class="<?php echo $gridTop2Background; ?>">
-                        <div class="<?php echo $containerClass; ?>">
-                            <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
-                        </div>
-                    </div>
-                <?php endif; ?>
                 <div class="<?php echo $mainContainer;?> main-wrapp">
                     <div id="main-content" class="<?php echo $mainGridMode; ?>">
                         <!-- sidebar1 -->
@@ -130,25 +114,6 @@ defined('_JEXEC') or die('Restricted access');
                         </aside>
                     </div>
                 </div>
-                <?php if ($this->countModules('grid-bottom')) : ?>
-                <!-- grid-bottom -->
-                <div id="grid-bottom" class="<?php echo $gridTop3Background; ?>">
-                    <div class="<?php echo $containerClass; ?>">
-                        <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
-                    </div>
-                </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-bottom2')) : ?>
-                    <!-- grid-bottom2 -->
-                    <div id="grid-bottom2" >
-                        <div class="<?php echo $containerClass; ?>">
-                            <div class="bd-grid-bottom2"></div>
-                            <div class="grid-bottom2-inner">
-                                <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
                 <?php if ($this->countModules('bottom-menu')) : ?>
                 <!-- bottom-menu -->
                         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
