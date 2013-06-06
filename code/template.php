@@ -31,7 +31,6 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
     <?php endif; ?>
             <div class="mondrian-main">
-
                 <!-- header -->
                     <header id="header" class="<?php if ($mondrianLogoAbsolute): ?>header-absolute<?php endif; ?>">
                         <div class="<?php echo $containerClass ?>">
