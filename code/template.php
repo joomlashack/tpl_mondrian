@@ -31,14 +31,6 @@ defined('_JEXEC') or die('Restricted access');
             <w:nav containerClass="<?php echo $containerClass ?> mondrian-toolbar-container<?php echo ($mondrianToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
         </div>
     <?php endif; ?>
-    <?php if ($this->countModules('floating-menu')) : ?>
-        <div class="mondrianFloatingContainer">
-            <div class="mondrianFloatingToggle" data-toggle="collapse" data-target=".mondrianFloatingModule"></div>
-            <div class="mondrianFloatingModule collapse">
-                <w:module type="none" name="floating-menu" chrome="xhtml" />
-            </div>
-        </div>
-    <?php endif; ?>
     <div class="mondrian-main">
         <!-- header -->
             <header id="header" class="<?php if ($mondrianLogoAbsolute): ?>header-absolute<?php endif; ?>">
