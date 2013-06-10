@@ -1,5 +1,12 @@
 <?php
-// no direct access
+/**
+ * @package     Oficina
+ * @subpackage  Component
+ *
+ * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
 $lang = JFactory::getLanguage();

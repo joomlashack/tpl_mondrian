@@ -1,10 +1,10 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2013 Joomlashack / Meritage Assets
- * @author		Joomlashack / Meritage Assets
- * @package		Wright
+ * @package     Mondrian
+ * @subpackage  Functions
  *
- * Use this file to add any PHP to the template before it is executed
+ * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
  
 // Restrict Access to within Joomla
@@ -37,16 +37,13 @@ $sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getMod
 $mondrianLogoAbsolute = ($this->params->get('mondrian_logo_on_featured','0') == '1' ? true : false);
 $mondrianGridTopBackground = $this->params->get('mondrian_grid_top_background_color','color_six');
 $mondrianGridTop2Background = $this->params->get('mondrian_grid_top2_background_color','color_six');
-$mondrianGridTop3Background = $this->params->get('mondrian_grid_top3_background_color','color_six');
-
+$mondrianGridBottomBackground = $this->params->get('mondrian_grid_bottom_background_color','color_six');
 
 $gridTopBackground = ' ' . $mondrianGridTopBackground;
 $gridTop2Background = ' ' . $mondrianGridTop2Background;
-$gridTop3Background = ' ' . $mondrianGridTop3Background;
+$gridBottomBackground = ' ' . $mondrianGridBottomBackground;
 
 $mondrianToolbarDisplayed = ($this->params->get('mondrian_toolbar_displayed','1') == '1' ? true : false);
-$mondrianToolbarDisplayedClass = ($mondrianToolbarDisplayed ? ' toolbarDisplayed' : '');
-
 
 $mainContainer = $containerClass;
 $mainGridMode = $gridMode;

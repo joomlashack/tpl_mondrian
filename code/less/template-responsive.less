@@ -55,6 +55,10 @@
 	}
 }
 @media (max-width: 979px) {
+	.mondrianFloatingContainer {
+		right: 10px;
+		position: absolute;
+	}
 	.navbar .dropdown-menu .sub-menu{
 		left: auto;
 		margin-top: 0;
@@ -137,30 +141,19 @@
 		}
 	}
 	.wrappToolbar {
-		.transition(none);
-		height: auto !important;
-		#toolbar{
-			.navbar{
+		#toolbar {
+			.navbar {
 				margin-bottom: 0;
 			}
-			.navbar-inner{
-				min-height: 25px;
-			}
-		     .navbar-fixed-top {
-		     	.btn-navbar{
+			.navbar-inner {
+				.collapsedToolbarInner {
 					height: auto;
-					.icon-bar{
-				 		display: block;
-					}
-		     	}
-		     }
+					overflow: inherit;
+				}
+			}
 		}
 	}
-	.wrappToolbar #toolbar .navbar-fixed-top {
-	    position: static;
-	    bottom: auto;
-	    margin-left: 0;
-	}
+
 	#top{
 		.nav{
 			display: table;
@@ -189,12 +182,8 @@
 			font-size: 2em;
 		}
 	}
-	.toolbarDisplayed .wrappToolbar #toolbar .navbar-fixed-top{
-		position: static;
-	}
-	#toolbar .navbar .dropdown-menu li a, #toolbar .navbar .dropdown-menu li span.separator{
-		padding-left: 50px;
-		padding-right: 50px;
+	.mondrianToolbarSwitch {
+		display: none;
 	}
 }
 @media (max-width: 767px) {
@@ -340,5 +329,9 @@
 	}
 	#logo{
 		margin-bottom: 20px;
+	}
+	.wrapper-toolbar .navbar-fixed-top {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
