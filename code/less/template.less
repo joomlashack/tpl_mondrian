@@ -171,10 +171,13 @@ a[data-icon="icon-svg"]{
 }
 ul.ul-inline{
 	li{
-		float: left;
-		margin-right: 40px;
-		&:last-child{
-			margin-right: 0;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 20px;
+		text-align: center;
+
+		a:hover {
+			.scale(1.1);
 		}
 	}
 }
@@ -598,65 +601,45 @@ dl.nav-tabs{
 		padding-top: 30px;
 	}
 }
-.wrappToolbar{
-	height: 0;
-	position: relative;
-	-webkit-transition: 0.24s ease-in-out height;
-	-moz-transition: 0.24s ease-in-out height;
-	-ms-transition: 0.24s ease-in-out height;
-	-o-transition: 0.24s ease-in-out height;
-	transition: 0.24s ease-in-out height;
-	#toolbar{
-	     .navbar-fixed-top {
-	        position: absolute;
-	        bottom: 0;
-	        top: auto;
-	        width: 100%;
-	       
-	        .btn-navbar{
-			.box-shadow(none);
-			 height: 7px;
-			 border: none;
-			 .icon-bar{
-			 	display: none;
-			 }
-	        }
-	        
-	    }
-	    .navbar .nav{
-	    		.transition(.25s ease-in-out padding-bottom);
-	    }
+.mondrianToolbarSwitch {
+	// .transition(all 0.24s ease-in-out);
+}
+.wrappToolbar {
+	.wrapper-toolbar {
+		// .transition(all 0.24s ease-in-out);
 	}
-}
-.wrapp-btnToolbar{
-	position: relative;
-}
-#btnToolbar{
-   background-color: @navtabsBgHover;
-   background-image: url(../../images/green/btnToolbar.jpg);
-   background-position: center center;
-   background-repeat: no-repeat;
-   .box-shadow(2px 1px 4px -1px);
-   height: 40px;
-   margin-right: 20px;
-   margin-top: -11px;
-   position: absolute;
-   right: 0;
-   width: 40px;
-   z-index: 1031;
-   &:hover{
-   	cursor: pointer;	
-   }
-}
-.toolbarDisplayed {
-	.wrappToolbar {
-		height: auto;
-		#toolbar .navbar-fixed-top{
-			position: fixed;
-			bottom: auto;
-			top: 0;
+
+	.navbar-inner {
+		// .transition(all 0.24s ease-in-out);
+	}
+
+	.mondrian-toolbar-container {
+		// .transition(height 0.35s ease-in-out);
+	}
+
+	&.collapsedToolbar {
+		.navbar-inner {
+			min-height: 20px;
+			.collapsedToolbarInner {
+				height: 0;
+				overflow: hidden;
+			}
 		}
 	}
+}
+.mondrianToolbarSwitch {
+	background-color: @navtabsBgHover;
+	background-image: url(../../images/green/btnToolbar.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	.box-shadow(2px 1px 4px -1px);
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 20px;
+	top: 10px;
+	z-index: 1031;
+	cursor: pointer;
 }
 .nav.well.nav-list>li>a, .nav.well.nav-list .nav-header{
 	margin-left: -5px;
@@ -919,6 +902,10 @@ dl.nav-tabs{
 dl.tabs{
 	+ div.current{
 		margin-bottom: 10px;
+		dd.tabs {
+			padding: 0 10px;
+			.box-sizing(content-box);
+		}
 	}
 }
 iframe{
@@ -1078,8 +1065,6 @@ ul[class*="newsfeed"]{
 		.box-sizing(content-box);
 		float: none;
 		margin-bottom: 0;
-		// margin-left: -20px !important;
-		// margin-right: -20px;
 		width: auto;
 	}
 	iframe{
@@ -1102,8 +1087,6 @@ ul[class*="newsfeed"]{
 		.box-sizing(content-box);
 		float: none;
 		margin-bottom: 0;
-		// margin-left: -20px !important;
-		// margin-right: -20px;
 		width: auto;
 	}
 	.navbar .nav>li>a{
@@ -1383,7 +1366,6 @@ ul[class*="newsfeed"]{
 #grid-bottom2{
 	background-color: @navtabsBg;
 	color: @white;
-	font-size:  15px;
 	margin-bottom: 0;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -1429,6 +1411,22 @@ ul[class*="newsfeed"]{
 .navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus{
 	.box-shadow(none);
 }
+
+#grid-top, #grid-top2, #grid-bottom, #grid-bottom2 {
+	ul.nav.menu {
+		li {
+			a, span {
+				.btn;
+				padding-left: 10px;
+				padding-right: 10px;
+				&:hover {
+					.btn-primary;
+				}
+			}
+		}
+	}
+}
+
 // Menu
 
 #menu,
@@ -2017,66 +2015,10 @@ body.is_internet.explorer.v_8 {
 	}
 }
 
-.mondrian-menu{
-	.border-radius(4px);
-	background-color: @mondrianMenuBackground;
-	display: table;
-	li{
-		margin-bottom: 0;
-		position: relative;
-		ul{
-			.border-radius(0 0 0 0);
-			.box-shadow(none);	
-			background-color: @mondrianMenuBackground;
-			border: none;
-			display: none;
-			left: auto;
-			padding: 0;
-			right: 100%;
-			top: 0;
-			li a{
-				color: @textColor;
-				padding-bottom: 20px;
-				padding-top: 20px;
-				text-align: right;	
-				&:hover{
-					background-color: @grayLighter;
-					background-image:none;
-					color: @textColor;
-					-ms-filter:none;
-					    filter:none;
-				}
-			}
-		}
-		&:hover{
-			> ul{
-				display: block;
-				top: 0;
-			}
-		}
-	}
-	>li{
-		&:first-child{
-			> a,>span{
-				.border-radius(4px 4px 0 0);
-			}
-		}
-		&:last-child{
-			> a,>span{
-				.border-radius(0 0 4px 4px);
-			}
-		}
-		a,span{
-			.transition(background-color .2s ease);
-			padding: 10px;
-		}
-	}
-}
-
 .mondrianFloatingContainer {
-	position: absolute;
-	top: 50px;
-	right: 0;
+	position: fixed;
+	top: 60px;
+	right: 20px;
 	z-index: 1000;
 
 	.mondrianFloatingToggle {
@@ -2092,6 +2034,114 @@ body.is_internet.explorer.v_8 {
 		.moduletable {
 			padding: 0;
 		}
+
+		&.in.collapse {
+			overflow: visible;
+		}
+
+		ul.menu{
+			.border-radius(4px);
+			background-color: @mondrianMenuBackground;
+			display: table;
+			>li>a, >li>span {
+				>span, >b.caret {
+					display: none;
+				}
+			}
+			li{
+				margin-bottom: 0;
+				position: relative;
+				ul{
+					.border-radius(0 0 0 0);
+					.box-shadow(none);	
+					background-color: @mondrianMenuBackground;
+					border: none;
+					display: none;
+					left: auto;
+					padding: 0;
+					right: 100%;
+					top: 0;
+					min-width: 20px;
+					li {
+						a, span {
+							color: @textColor;
+							padding-bottom: 0 5px;
+							text-align: right;	
+							&:hover{
+								background-color: @grayLighter;
+								background-image:none;
+								color: @textColor;
+								-ms-filter:none;
+								    filter:none;
+							}
+						}
+					}
+				}
+				&:hover{
+					> ul{
+						display: block;
+						top: 0;
+					}
+				}
+			}
+			>li{
+				&:first-child{
+					> a,>span{
+						.border-radius(4px 4px 0 0);
+					}
+				}
+				&:last-child{
+					> a,>span{
+						.border-radius(0 0 4px 4px);
+					}
+				}
+				&:first-child:last-child {
+					> a,>span{
+						.border-radius(4px);
+					}
+				}
+				a,span{
+					.transition(background-color .2s ease);
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
+
+a.mondrian-speaker-link {
+	color: @white;
+	&:hover {
+		color: @white;
+	}
+	span, span:hover {
+		color: @white;
+	}
+}
+
+.mondrian-speaker-info {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-family: @headingsFontFamily;
+	font-size: 1.3em;
+
+	.icon-twitter {
+		display: block;
+		margin-top: 10px;
+	}
+}
+
+
+body#tinymce {
+	.tab-content > .tab-pane, .pill-content > .pill-pane {
+		display: block;
+		.opacity(70);
+	}
+	.tab-content > .tab-pane.active, .pill-content > .pill-pane.active {
+		.opacity(100);
 	}
 
 }

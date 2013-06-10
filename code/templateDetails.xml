@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
-	<name>js_mondrian_free</name>
-	<creationDate>May 2013</creationDate>
+	<name>js_mondrian</name>
+	<creationDate>June 2013</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_rc</version>
-    <description>TPL_JS_MONDRIAN_FREE_XML_DESCRIPTION</description>
+	<version>1.0.0</version>
+    <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
 
 	<languages folder="language">
 		<!-- en-GB -->
-		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian_free.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian_free.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_mondrian.sys.ini</language>
 		<!-- es-ES -->
-		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian_free.ini</language>
-		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian_free.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian.sys.ini</language>
 	</languages>
 	
 	<files>
@@ -42,24 +42,29 @@
 		<position>logo</position>
 		<position>top</position>
 		<position>top2</position>
+		<position>floating-menu</position>
 		<position>menu</position>
 		<position>featured</position>
+		<position>grid-top</position>
+		<position>grid-top2</position>
 		<position>above-content</position>
 		<position>breadcrumbs</position>
 		<position>sidebar1</position>
 		<position>sidebar2</position>
 		<position>below-content</position>
+		<position>grid-bottom</position>
+		<position>grid-bottom2</position>
 		<position>bottom-menu</position>
 		<position>footer</position>
 	</positions>
 	
 	<config>
-		<fields name="params" addfieldpath="/templates/js_mondrian_free/wright/parameters/joomla_2.5">
+		<fields name="params" addfieldpath="/templates/js_mondrian/wright/parameters/joomla_2.5">
 			<fieldset name="basic">
                 <!-- Start of default Wright params -->
 				<field name="helper" type="help" label="TPL_JS_WRIGHT_FIELD_NEED_HELP_LABEL" description="TPL_JS_WRIGHT_FIELD_NEED_HELP_DESC"/>
 				<field name="rebrand" type="rebrand" default="no" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC" />
-				<field name="style" type="styles" default="blue" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+				<field name="style" type="styles" default="green" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
 				<field name="mootools" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MOOTOOLS_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MOOTOOLS_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
@@ -108,10 +113,35 @@
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>
+				<field name="mondrian_grid_top_background_color" type="list" default="color_six" label="TPL_JS_MONDRIAN_GRID_TOP_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">TPL_JS_MONDRIAN_COLOR_1</option>
+					<option value="color_two">TPL_JS_MONDRIAN_COLOR_2</option>
+					<option value="color_three">TPL_JS_MONDRIAN_COLOR_3</option>
+					<option value="color_four">TPL_JS_MONDRIAN_COLOR_4</option>
+					<option value="color_five">TPL_JS_MONDRIAN_COLOR_5</option>
+					<option value="color_six">TPL_JS_MONDRIAN_COLOR_6</option>
+				</field>
+				<field name="mondrian_grid_top2_background_color" type="list" default="color_six" label="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_TOP2_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">TPL_JS_MONDRIAN_COLOR_1</option>
+					<option value="color_two">TPL_JS_MONDRIAN_COLOR_2</option>
+					<option value="color_three">TPL_JS_MONDRIAN_COLOR_3</option>
+					<option value="color_four">TPL_JS_MONDRIAN_COLOR_4</option>
+					<option value="color_five">TPL_JS_MONDRIAN_COLOR_5</option>
+					<option value="color_six">TPL_JS_MONDRIAN_COLOR_6</option>
+				</field>
+				<field name="mondrian_grid_bottom_background_color" type="list" default="color_six" label="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR" description="TPL_JS_MONDRIAN_GRID_BOTTOM_POSITION_BACKGROUND_COLOR_DESC">
+					<option value="color_one">TPL_JS_MONDRIAN_COLOR_1</option>
+					<option value="color_two">TPL_JS_MONDRIAN_COLOR_2</option>
+					<option value="color_three">TPL_JS_MONDRIAN_COLOR_3</option>
+					<option value="color_four">TPL_JS_MONDRIAN_COLOR_4</option>
+					<option value="color_five">TPL_JS_MONDRIAN_COLOR_5</option>
+					<option value="color_six">TPL_JS_MONDRIAN_COLOR_6</option>
+				</field>
 				<field name="mondrian_toolbar_displayed" type="radio" default="1" label="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED" description="TPL_JS_MONDRIAN_TOOLBAR_DISPLAYED_DESC">
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>
+				<field name="mondrian_color_reference" type="templatecustom" default="" label="TPL_JS_MONDRIAN_COLOR_REFERENCE" description="TPL_JS_MONDRIAN_COLOR_REFERENCE_DESC"/>
 			</fieldset>
 		</fields>
 	</config>
