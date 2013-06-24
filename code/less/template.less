@@ -1,3 +1,10 @@
+// Template specific colors
+// ---------------------------------------------
+@btnNavbarBackground:#1c2429;
+@responsiveUtilitiesTestColor:#468847;
+@responsiveUtilitiesTestBackground:#dff0d8;
+@responsiveUtilitiesTestBorder:#d6e9c6;
+// ---------------------------------------------
 .textColor{
 	color: @textColor;
 }
@@ -1087,10 +1094,10 @@ ul[class*="newsfeed"]{
 		width: auto;
 	}
 	.navbar .nav>li>a{
-		color: #7d8c28;
+		color: @ms1Color;
 	}
 	a{
-		color: #7d8c28;
+		color: @ms1Color;
 	}
 	.btn-primary{
 		color: @white !important;
@@ -1522,7 +1529,7 @@ ul[class*="newsfeed"]{
 	.btn-navbar{
 		padding: 7px 10px !important;
 		&:hover{
-			background-color: #1c2429 !important;
+			background-color: @btnNavbarBackground !important;
 		}
 	}
 	.btn-primary{
@@ -1823,7 +1830,7 @@ div:first-child+.panel{
 	line-height: 43px;
 	color: @grayLight;
 	text-align: center;
-	border: 1px solid #ddd;
+	border: 1px solid @hrColor;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -1839,9 +1846,9 @@ div:first-child+.panel{
 	border-radius: 4px;
 }
 .responsive-utilities-test span {
-	color: #468847;
-	background-color: #dff0d8;
-	border: 1px solid #d6e9c6;
+	color: @responsiveUtilitiesTestColor;
+	background-color: @responsiveUtilitiesTestBackground;
+	border: 1px solid @responsiveUtilitiesTestBorder;
 }
 /* Fluid View
 /**************************************************************************************************/
@@ -1873,7 +1880,7 @@ div:first-child+.panel{
   margin: 0;
   font-size: 16px;
   padding: 14px 14px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid @hrBorder;
 }
 .bs-docs-sidenav {
 	> li:first-child a{
