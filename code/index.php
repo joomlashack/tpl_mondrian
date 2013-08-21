@@ -13,7 +13,6 @@
  * See usage and customization information at
  * http://wright.joomlashack.com
  */
-
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 

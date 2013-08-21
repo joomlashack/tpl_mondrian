@@ -11,17 +11,16 @@
  * if you update the template ever, your changes will not be lost.
  */
 // no direct access
-
 defined('_JEXEC') or die('Restricted access');
 
 ?>
 <doctype>
 <html>
 <head>
-    
+
 <w:head />
 </head>
-<body class="<?php if ($bodyclass != "") { echo $bodyclass . $responsive;  } ?> <?php echo $mondrianFtBlogClass . $fixedClass; ?>">
+<body class="<?php echo  $responsive . $mondrianFtBlogClass . $fixedClass; ?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <?php if (!$mondrianToolbarDisplayed) : ?>
@@ -45,7 +44,7 @@ defined('_JEXEC') or die('Restricted access');
         <!-- menu -->
                 <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="menu" />
         <?php endif; ?>
-        
+
         <!-- featured -->
         <?php if ($this->countModules('featured')) : ?>
             <div id="featured">
@@ -100,7 +99,7 @@ defined('_JEXEC') or die('Restricted access');
                             <div id="below-content">
                                 <w:module type="none" name="below-content" chrome="xhtml" />
                             </div>
-                            
+
                         <?php if ($mainComplementContainer != '') : ?>
                                 </div>
                             </div>
