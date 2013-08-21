@@ -6,7 +6,7 @@
  * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
- 
+
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
@@ -21,10 +21,6 @@ $gridMode = $this->params->get('bs_rowmode','row');
 $containerClass = ($gridMode == 'row-fluid' ? 'container-fluid' : 'container');
 $fixedClass = ($gridMode == 'row-fluid' ? '' : ' fixed');
 
-$bodyclass = "";
-if ($this->countModules('toolbar')) {
-    $bodyclass = "toolbarpadding";
-}
 
 $responsivePage = ($this->params->get('responsive','1') == '1' ? true : false);
 $responsive = ($responsivePage ? ' responsive' : ' no-responsive');

@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_mondrian</name>
-	<creationDate>June 2013</creationDate>
+	<creationDate>August 2013</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.3</version>
+	<version>1.1.0_beta1</version>
     <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -19,7 +19,7 @@
 		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian.ini</language>
 		<language tag="es-ES">es-ES/es-ES.tpl_js_mondrian.sys.ini</language>
 	</languages>
-	
+
 	<files>
 		<filename>component.php</filename>
 		<filename>favicon.ico</filename>
@@ -36,7 +36,7 @@
 		<folder>wright</folder>
 		<folder>parameters</folder>
 	</files>
-	
+
 	<positions>
 		<position>toolbar</position>
 		<position>logo</position>
@@ -57,7 +57,7 @@
 		<position>bottom-menu</position>
 		<position>footer</position>
 	</positions>
-	
+
 	<config>
 		<fields name="params" addfieldpath="/templates/js_mondrian/wright/parameters/joomla_2.5">
 			<fieldset name="basic">
