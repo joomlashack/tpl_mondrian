@@ -10,10 +10,6 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
-// WrightTemplate class, for special settings on Wright
-class WrightTemplate extends WrightTemplateBase {
-}
-
 $wrightTemplate = WrightTemplate::getInstance();
 
 // get the bootstrap row mode ( row / row-fluid )
