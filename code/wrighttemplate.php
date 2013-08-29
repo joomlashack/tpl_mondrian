@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Wright
+ * @package     Mondrian
  * @subpackage  TemplateBase
  *
  * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
