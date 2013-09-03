@@ -722,7 +722,8 @@ dl.nav-tabs{
 			}
 		}
 	}
-	[class^="column-"], [class*="column-"]{
+	[class^="column-"], [class*="column-"],
+	[class^="cols-"], [class*="cols-"]{
 		> .page-header{
 			border: none;
 			color: @linkColor;
@@ -734,7 +735,8 @@ dl.nav-tabs{
 				font-size: 20px;
 			}
 		}
-		&[class^="span"], &[class*="span"] {
+		&[class^="span"], &[class*="span"],
+		[class^="span"], [class*="span"] {
 			border-right: 2px solid @hrBorder;
 			position: relative;
 			.box-sizing(border-box);
@@ -770,6 +772,7 @@ dl.nav-tabs{
 			}
 		}
 	}
+
 	.items-row{
 		padding-bottom: 10px;
 		padding-top: 10px;
