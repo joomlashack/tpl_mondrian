@@ -736,7 +736,7 @@ dl.nav-tabs{
 			}
 		}
 		&[class^="span"], &[class*="span"],
-		[class^="span"], [class*="span"] {
+		>[class^="span"], >[class*="span"] {
 			border-right: 2px solid @hrBorder;
 			position: relative;
 			.box-sizing(border-box);
@@ -772,7 +772,6 @@ dl.nav-tabs{
 			}
 		}
 	}
-
 	.items-row{
 		padding-bottom: 10px;
 		padding-top: 10px;
@@ -846,6 +845,23 @@ dl.nav-tabs{
 	}
 	.blog{
 		margin-bottom: 0;
+	}
+}
+.is_internet.v_8.mondrianFtBlog{
+	[class^="column-"], [class*="column-"],
+	[class^="cols-"], [class*="cols-"]{
+		&[class^="span6"], &[class*="span6"],
+		>[class^="span6"], >[class*="span6"] {
+			&:first-child + .span6{
+				border-right: 0;
+				&:after{
+					background-color: transparent;
+				}
+				&:before{
+					background-color: transparent;
+				}
+			}
+		}
 	}
 }
 .nav-tabs.mondrian-nav-tabs{
