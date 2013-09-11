@@ -38,7 +38,7 @@ jQuery(document).ready(function() {
 			info.css({height: jQuery(this).height() + 'px', width: jQuery(this).width() + 'px' });
 
 			a.hover(function () {
-				jQuery(this).children('.mondrian-speaker-info').css({display: 'block', width: '100%'});
+				jQuery(this).children('.mondrian-speaker-info').css({display: 'block'});
 				jQuery(this).children('.mondrian-speaker').css({opacity: '0.2'});
 			}, function() {
 				jQuery(this).children('.mondrian-speaker-info').css({display: 'none'});
