@@ -1428,7 +1428,7 @@ ul[class*="newsfeed"]{
 #grid-top, #grid-top2, #grid-bottom, #grid-bottom2 {
 	ul.nav.menu {
 		li {
-			a, span {
+			a {
 				.btn;
 				padding-left: 10px;
 				padding-right: 10px;
@@ -1449,18 +1449,13 @@ ul[class*="newsfeed"]{
 .navbar .nav>li>a{
 	text-shadow:none;
 }
-.navbar .nav>.active>span.separator, .navbar .nav>.active>span.separator:hover, .navbar .nav>.active>span.separator:focus{
-	.box-shadow(none);
-	background-color: @navtabsBgHover;
-	color: @navbarLinkColor;
-}
 .navbar{
 	li{
-		a, >span.separator{
+		a{
 			.transition(background-color .25s ease-in-out);
 		}
 		&:hover{
-			> a, > span.separator{
+			> a{
 				background-color: @navbarLinkBackgroundHover;
 			}
 		}
@@ -1475,13 +1470,13 @@ ul[class*="newsfeed"]{
 			display: none !important;
 		}
 		li{
-			a, >span.separator{
+			a{
 				border-bottom: 1px solid @dropdownmenuBorderColor;
 				padding-bottom: 7px;
 				padding-top: 7px;
 			}
 			&:last-child{
-				> a, > span.separator{
+				> a{
 					border-bottom: none;
 				}
 			}
@@ -1495,7 +1490,7 @@ ul[class*="newsfeed"]{
 			}
 		}
 		>.active{
-			>a,>span.separator{
+			>a{
 				background-color: @dropdownmenuBorderColor;
 				background-image:none;
 				-ms-filter:none;
@@ -1507,14 +1502,14 @@ ul[class*="newsfeed"]{
 #toolbar{
 	.navbar{
 		li{
-			a, >span.separator{
+			a{
 				padding-left: 50px;
 				padding-right: 50px;
 			}
 		}
 		.dropdown-menu{
 			li{
-				a, >span.separator{
+				a{
 					padding-left: 15px;
 					padding-right: 15px;
 				}
@@ -1633,21 +1628,8 @@ ul[class*="newsfeed"]{
 }
 .navbar{
 	.nav{
-		>li{
-			>span.separator{
-				color: @navbarLinkColor;
-			}
-		}
 		.dropdown-menu{
 			.border-radius(0 0 0 0);
-			li{
-				>span.separator{
-					color: @navbarLinkColor;
-					&:hover{
-						background-color: @dropdownmenuBorderColor;
-					}
-				}
-			}
 		}
 	}
 }
@@ -2061,12 +2043,9 @@ body.is_internet.explorer.v_8 {
 			.border-radius(4px);
 			background-color: @mondrianMenuBackground;
 			display: table;
-			>li>a, >li>span {
-				>span {
-					b.caret ,.image-title{
-						display: none;
-					}
-
+			>li {
+				b.caret ,.image-title{
+					display: none;
 				}
 			}
 			li{
@@ -2084,7 +2063,7 @@ body.is_internet.explorer.v_8 {
 					top: 0;
 					min-width: 20px;
 					li {
-						a, > span {
+						a {
 							color: @textColor;
 							padding-bottom: 0 5px;
 							text-align: right;
@@ -2107,21 +2086,21 @@ body.is_internet.explorer.v_8 {
 			}
 			>li{
 				&:first-child{
-					> a,>span{
+					> a{
 						.border-radius(4px 4px 0 0);
 					}
 				}
 				&:last-child{
-					> a,>span{
+					> a{
 						.border-radius(0 0 4px 4px);
 					}
 				}
 				&:first-child:last-child {
-					> a,>span{
+					> a{
 						.border-radius(4px);
 					}
 				}
-				a, >span{
+				a{
 					.transition(background-color .2s ease);
 					padding: 10px;
 				}
@@ -2163,18 +2142,5 @@ body#tinymce {
 	}
 	.tab-content > .tab-pane.active, .pill-content > .pill-pane.active {
 		.opacity(100);
-	}
-}
-
-.navbar .nav {
-	li.dropdown{
-		.caret{
-			border-bottom-color: @navbarLinkColor;
-			border-top-color: @navbarLinkColor;
-		}
-		>a:hover .caret, >a:focus .caret{
-			border-bottom-color: @navbarLinkColorHover;
-			border-top-color: @navbarLinkColorHover;
-		}
 	}
 }
