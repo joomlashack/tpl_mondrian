@@ -225,7 +225,7 @@ h6{
 	color: @gray;
 }
 dl.article-info{
-	dd{
+	dd, dd > div{
 		.border-radius(4px 4px 4px 4px);
 		&:hover{
 			background-color: @blueDark;
@@ -452,9 +452,7 @@ dl.article-info{
 }
 .tab-content{
 	border: 1px solid @navtabsBg;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
+	padding: 20px;
 	.page-header{
 		border-bottom-color: @grayLighter - #222;
 	}
