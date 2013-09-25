@@ -23,6 +23,12 @@ jQuery(document).ready(function() {
 		jQuery('.wrappToolbar .wrapper-toolbar').css({minHeight: jQuery('.wrappToolbar .mondrian-toolbar-container').height() + 'px'});
 	});
 
+	jQuery('div.mondrianFloatingModule ul.nav a').each(function (i) {
+		if (jQuery(this).children('span.image-title')) {
+			jQuery(this).attr('title',jQuery(this).children('span.image-title').html());
+		}
+	});
+
 	jQuery('img.mondrian-speaker').each(function (i) {
 		var a = jQuery(this).parent();
 		var link = a.attr('href');
@@ -48,5 +54,15 @@ jQuery(document).ready(function() {
 	})
 
 
+	jQuery(window).load(function() {
+		jQuery('img.mondrian-speaker').each(function (i) {
+			var a = jQuery(this).parent();
+			var title = jQuery(this).attr('title');
+			if (title.length) {
+				var info = a.children('.mondrian-speaker-info');
+				info.css({height: jQuery(this).height() + 'px', width: jQuery(this).width() + 'px' });
+			}
+		});
+	});
 
 });

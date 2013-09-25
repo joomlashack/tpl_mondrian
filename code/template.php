@@ -40,11 +40,6 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             </header>
 
-        <?php if ($this->countModules('menu')) : ?>
-        <!-- menu -->
-                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="menu" />
-        <?php endif; ?>
-
         <!-- featured -->
         <?php if ($this->countModules('featured')) : ?>
             <div id="featured">
