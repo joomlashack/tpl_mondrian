@@ -175,8 +175,8 @@ a[data-icon="icon-svg"]{
 }
 ul.ul-inline{
 	li{
-		display: table-cell;
-		vertical-align: middle;
+		display: inline-block;
+		.ie7-inline-block();
 		padding: 0 20px;
 		text-align: center;
 
@@ -184,6 +184,14 @@ ul.ul-inline{
 			.scale(1.1);
 		}
 	}
+}
+.ul-logos{
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nobullet{
+	list-style: none;
 }
 .rm-margin-bottom{
 	margin-bottom: 0 !important;
