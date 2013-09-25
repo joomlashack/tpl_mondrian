@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_mondrian</name>
-	<creationDate>August 2013</creationDate>
+	<creationDate>September 2013</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.2_beta7</version>
+	<version>1.0.2_beta8</version>
     <description>TPL_JS_MONDRIAN_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -43,7 +43,6 @@
 		<position>top</position>
 		<position>top2</position>
 		<position>floating-menu</position>
-		<position>menu</position>
 		<position>featured</position>
 		<position>grid-top</position>
 		<position>grid-top2</position>
@@ -65,7 +64,7 @@
 				<field name="helper" type="help" label="TPL_JS_WRIGHT_FIELD_NEED_HELP_LABEL" description="TPL_JS_WRIGHT_FIELD_NEED_HELP_DESC"/>
 				<field name="rebrand" type="rebrand" default="no" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC" />
 				<field name="style" type="styles" default="green" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
-				<field name="mootools" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MOOTOOLS_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MOOTOOLS_DESC">
+				<field name="modal" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
