@@ -54,5 +54,15 @@ jQuery(document).ready(function() {
 	})
 
 
+	jQuery(window).load(function() {
+		jQuery('img.mondrian-speaker').each(function (i) {
+			var a = jQuery(this).parent();
+			var title = jQuery(this).attr('title');
+			if (title.length) {
+				var info = a.children('.mondrian-speaker-info');
+				info.css({height: jQuery(this).height() + 'px', width: jQuery(this).width() + 'px' });
+			}
+		});
+	});
 
 });
