@@ -38,6 +38,9 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </div>
     <?php endif; ?>
+    <?php if ($this->countModules('menu')) : ?>
+        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>"  name="menu" />
+    <?php endif; ?>
     <div class="mondrian-main">
         <!-- header -->
             <header id="header" class="<?php if ($mondrianLogoAbsolute): ?>header-absolute<?php endif; ?>">
