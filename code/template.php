@@ -19,6 +19,8 @@ defined('_JEXEC') or die('Restricted access');
 <head>
 
 <w:head />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 </head>
 <body class="<?php echo  $responsive . $mondrianFtBlogClass . $fixedClass; ?>">
     <?php if ($this->countModules('toolbar')) : ?>
@@ -34,7 +36,7 @@ defined('_JEXEC') or die('Restricted access');
         <div class="mondrianFloatingContainer">
             <div class="mondrianFloatingToggle" data-toggle="collapse" data-target=".mondrianFloatingModule"></div>
             <div class="mondrianFloatingModule collapse">
-                <w:module type="none" name="floating-menu" chrome="xhtml" />
+                <w:module type="none" name="floating-menu" chrome="raw" />
             </div>
         </div>
     <?php endif; ?>
@@ -155,21 +157,22 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             </div>
         <?php endif; ?>
-        <?php if ($this->countModules('bottom-menu')) : ?>
-        <!-- bottom-menu -->
-                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
-        <?php endif; ?>
     </div>
 
     <!-- footer -->
     <div class="wrapper-footer">
         <footer id="footer" class="<?php if ($this->params->get('stickyFooter',1)) : ?> sticky<?php endif;?>">
-             <div class="<?php echo $containerClass; ?> footer-inner">
-                 <?php if ($this->countModules('footer')) : ?>
-                     <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
-                  <?php endif; ?>
-                 <w:footer />
-             </div>
+            <?php if ($this->countModules('bottom-menu')) : ?>
+                <!-- bottom-menu -->
+                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
+            <?php endif; ?>
+
+            <div class="<?php echo $containerClass; ?> footer-inner">
+                <?php if ($this->countModules('footer')) : ?>
+                    <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
+                <?php endif; ?>
+                <w:footer />
+            </div>
         </footer>
     </div>
 

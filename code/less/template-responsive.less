@@ -54,20 +54,10 @@
 		}
 	}
 }
-@media (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) {
 	.mondrianFloatingContainer {
 		right: 10px;
 		position: absolute;
-	}
-	.navbar .dropdown-menu .sub-menu{
-		left: auto;
-		margin-top: 0;
-		position: static;
-		top: auto;
-		visibility: visible;
-	}
-	.wrapper-toolbar{
-		position: relative;
 	}
 	[data-icon="icon-car"]{
 		height: 60px;
@@ -92,8 +82,7 @@
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	.ul-logos{
-	}
+
 	.sb1.sb2{
 		#sidebar1:first-child{
 				&::after{
@@ -148,36 +137,17 @@
 		}
 	}
 
-	#top{
-		.nav{
-			display: table;
-			float: none;
-			left: auto;
-			margin-left: auto;
-			margin-right: auto;
-			>li{
-				display: block;
-				float: none;
-			}
-		}
-		.navbar .btn{
-			padding-left: 25px !important;
-			padding-right: 25px !important;
-		}
-	}
-	#menu,
-	#bottom-menu{
-		.btn-navbar{
-			margin-top: 10px;
-		}
-	}
-	[class^="span"], [class*="span"]{
+	[class^="span"], [class*="span"] {
 		&.icon-3x{
 			font-size: 2em;
 		}
 	}
 	.mondrianToolbarSwitch {
 		display: none;
+	}
+	#menu .navbar-inner{
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 @media (max-width: 767px) {
@@ -321,6 +291,10 @@
 	}
 	#logo{
 		margin-bottom: 20px;
+	}
+	.mondrianFloatingContainer {
+		right: 10px;
+		position: absolute;
 	}
 	.wrapper-toolbar .navbar-fixed-top {
 		margin-left: 0;
