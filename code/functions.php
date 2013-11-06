@@ -36,6 +36,7 @@ $gridTop2Background = ' ' . $mondrianGridTop2Background;
 $gridBottomBackground = ' ' . $mondrianGridBottomBackground;
 
 $mondrianToolbarDisplayed = ($this->params->get('mondrian_toolbar_displayed','1') == '1' ? true : false);
+$mondrianToolbarDisplayedClass = ($mondrianToolbarDisplayed == true ? ' toolbarDisplayed' : ' toolbarNoDisplayed');
 
 $mainContainer = $containerClass;
 $mainGridMode = $gridMode;
