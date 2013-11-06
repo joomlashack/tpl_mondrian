@@ -19,8 +19,10 @@ defined('_JEXEC') or die('Restricted access');
 <head>
 
 <w:head />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 </head>
-<body class="<?php echo  $responsive . $mondrianFtBlogClass . $fixedClass; ?>">
+<body class="<?php echo  $responsive . $mondrianFtBlogClass . $fixedClass . $mondrianToolbarDisplayedClass; ?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <?php if (!$mondrianToolbarDisplayed) : ?>
