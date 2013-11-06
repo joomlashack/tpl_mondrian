@@ -22,7 +22,7 @@ defined('_JEXEC') or die('Restricted access');
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 </head>
-<body class="<?php echo  $responsive . $mondrianFtBlogClass . $fixedClass; ?>">
+<body class="<?php echo  $responsive . $mondrianFtBlogClass . $fixedClass . $mondrianToolbarDisplayedClass; ?>">
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <?php if (!$mondrianToolbarDisplayed) : ?>
@@ -178,6 +178,20 @@ defined('_JEXEC') or die('Restricted access');
 
     <?php if(!$mondrianToolbarDisplayed): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/mondrian.js'></script>
+    <?php else: ?>
+        <script type="text/javascript">
+
+            jQuery(document).ready(function() {
+
+                jQuery('.mondrianFloatingContainer').css('top', jQuery('.wrapper-toolbar').height() + 5 + 'px');
+
+                jQuery(window).resize(function() {
+                    jQuery('.mondrianFloatingContainer').css('top', jQuery('.wrapper-toolbar').height() + 5 + 'px');
+                });
+
+            });
+
+        </script>
     <?php endif; ?>
 </body>
 </html>

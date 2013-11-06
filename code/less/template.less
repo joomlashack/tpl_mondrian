@@ -673,24 +673,34 @@ dl.nav-tabs{
 	}
 }
 .wrappToolbar {
-	+ div + .wrapper-menu,
-	+ .wrapper-menu{
-		margin-top: 20px;
+	+ .mondrianFloatingContainer + .wrapper-menu{
+		margin-top: 90px;
 	}
-	.toolbar-fixed{
-		visibility : hidden;
-		&.toolbar-fixed-visible{
-			visibility : visible;
+	+ .wrapper-menu{
+		margin-top: 50px;
+	}
+}
+.toolbarDisplayed{
+	.wrappToolbar {
+		+ .mondrianFloatingContainer + .wrapper-menu{
+			margin-top: 50px;
+		}
+		+ .wrapper-menu{
+			margin-top: 20px;
 		}
 	}
 }
-.bg-toolbar{
-	background-color: #263138;
-	height: 15px;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
+.wrappToolbar {
+	min-height: 15px;
+	&.collapsedToolbar {
+		.navbar-inner {
+			min-height: 15px;
+			.collapsedToolbarInner {
+				height: 0;
+				overflow: hidden;
+			}
+		}
+	}
 }
 .mondrianToolbarSwitch {
 	background-color: @navtabsBgHover;
@@ -706,15 +716,7 @@ dl.nav-tabs{
 	z-index: 1031;
 	cursor: pointer;
 }
-.toolbar-visible{
-	.mondrianToolbarSwitch {
-		position: absolute;
-		top: 100%;
-	}
-	.wrappToolbar{
-		position: relative;
-	}
-}
+
 .nav.well.nav-list>li>a, .nav.well.nav-list .nav-header{
 	margin-left: -5px;
 	margin-right: -5px;
@@ -747,11 +749,6 @@ dl.nav-tabs{
 
 .items-leading{
 	display: block;
-}
-
-.wrapper-menu,
-.wrapper-bottom-menu {
-	background-color: @navbarBackground;
 }
 
 .mondrianFtBlog{
@@ -1490,86 +1487,7 @@ ul[class*="newsfeed"]{
 	}
 }
 
-// Menu
-
-#menu,
-#bottom-menu {
-	margin-bottom: 0;
-}
-.navbar .nav>li>a{
-	text-shadow:none;
-}
 .navbar{
-	li{
-		a{
-			.transition(background-color .25s ease-in-out);
-		}
-		&:hover{
-			> a{
-				background-color: @navbarLinkBackgroundHover;
-			}
-		}
-	}
-	.dropdown-menu{
-		.box-shadow(none);
-		border: none;
-		border-top: 1px solid @dropdownmenuBorderColor;
-		padding-bottom: 0;
-		padding-top: 0;
-		&:before,&:after{
-			display: none !important;
-		}
-		li{
-			a{
-				border-bottom: 1px solid @dropdownmenuBorderColor;
-				padding-bottom: 7px;
-				padding-top: 7px;
-			}
-			&:last-child{
-				> a{
-					border-bottom: none;
-				}
-			}
-			&:hover{
-				> a{
-					background-color: @dropdownmenuBorderColor;
-					background-image:none;
-					-ms-filter:none;
-					    filter:none;
-				}
-			}
-		}
-		>.active{
-			>a{
-				background-color: @dropdownmenuBorderColor;
-				background-image:none;
-				-ms-filter:none;
-				    filter:none;
-			}
-		}
-	}
-}
-#toolbar{
-	.navbar{
-		li{
-			a{
-				padding-left: 50px;
-				padding-right: 50px;
-			}
-		}
-		.dropdown-menu{
-			li{
-				a{
-					padding-left: 15px;
-					padding-right: 15px;
-				}
-			}
-		}
-	}
-}
-
-.navbar{
-	margin-bottom: 0;
 	.btn{
 		font-size: 18px !important;
 		margin-top: 0;
@@ -1617,16 +1535,12 @@ ul[class*="newsfeed"]{
 		}
 	}
 }
-.navbar-inner{
-	.border-radius(0 0 0 0);
-	background-image:none;
-	-ms-filter:none;
-	    filter:none;
-}
+
 .nav-header{
 	text-shadow: none;
 }
-// Menu Position
+
+// Top Position
 #top{
 	background-image:none;
 	-ms-filter:none;
@@ -1676,13 +1590,7 @@ ul[class*="newsfeed"]{
 		}
 	}
 }
-.navbar{
-	.nav{
-		.dropdown-menu{
-			.border-radius(0 0 0 0);
-		}
-	}
-}
+
 // Joomla 3
 // ------------------------------
 .breadcrumb>li{

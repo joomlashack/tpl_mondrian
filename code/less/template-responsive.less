@@ -123,19 +123,6 @@
 				}
 		}
 	}
-	.wrappToolbar {
-		#toolbar {
-			.navbar {
-				margin-bottom: 0;
-			}
-			.navbar-inner {
-				.collapsedToolbarInner {
-					height: auto;
-					overflow: inherit;
-				}
-			}
-		}
-	}
 
 	[class^="span"], [class*="span"] {
 		&.icon-3x{
@@ -148,6 +135,18 @@
 	#menu .navbar-inner{
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.wrappToolbar.collapsedToolbar .navbar-inner .collapsedToolbarInner{
+		height: auto;
+		overflow: visible;
+		.btn-navbar{
+			margin-top: 0;
+		}
+	}
+	.wrappToolbar {
+		+ .mondrianFloatingContainer + .wrapper-menu{
+			margin-top: 60px;
+		}
 	}
 }
 @media (max-width: 767px) {
@@ -299,5 +298,24 @@
 	.wrapper-toolbar .navbar-fixed-top {
 		margin-left: 0;
 		margin-right: 0;
+	}
+	.mondrianToolbarSwitch {
+		display: none;
+	}
+	#menu .navbar-inner{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.wrappToolbar.collapsedToolbar .navbar-inner .collapsedToolbarInner{
+		height: auto;
+		overflow: visible;
+		.btn-navbar{
+			margin-top: 0;
+		}
+	}
+	.wrappToolbar {
+		+ .mondrianFloatingContainer + .wrapper-menu{
+			margin-top: 60px;
+		}
 	}
 }
