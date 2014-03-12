@@ -176,8 +176,9 @@ defined('_JEXEC') or die('Restricted access');
         </footer>
     </div>
 
+    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/mondrian.js'></script>
     <?php if(!$mondrianToolbarDisplayed): ?>
-        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/mondrian.js'></script>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/toolbarDisplayed.js'></script>
     <?php else: ?>
         <script type="text/javascript">
 
