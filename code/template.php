@@ -130,7 +130,7 @@ defined('_JEXEC') or die('Restricted access');
     </div>
 
     <?php if(!$mondrianToolbarDisplayed): ?>
-        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian_free/js/mondrian.js'></script>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian_free/js/toolbarDisplayed.js'></script>
     <?php endif; ?>
 </body>
 </html>
