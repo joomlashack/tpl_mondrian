@@ -994,6 +994,72 @@ dl.nav-tabs{
 	}
 }
 
+.navbar .nav {
+	li {
+		&:hover{
+			> a{
+				background-color: @navbarLinkBackgroundHover;
+				color : @navbarLinkColorHover;
+			}
+		}
+
+		> a {
+			text-shadow: none;
+
+		}
+	}
+
+	> li > a {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+
+dropdown-menu,
+.nav .dropdown-menu {
+	.box-shadow(none);
+	border-radius: 0;
+	border: 0;
+	border-top: 1px solid @dropdownmenuBorderColor;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	&:before,
+	&:after{
+		display: none;
+	}
+
+	li{
+		a{
+			border-top: 1px solid @dropdownmenuBorderColor;
+			padding-bottom: 7px;
+			padding-top: 7px;
+		}
+		&:first-child{
+			> a{
+				border-top: 0;
+			}
+		}
+		&:hover{
+			> a{
+				background-color: @dropdownmenuBorderColor;
+			}
+		}
+	}
+
+	>.active{
+		>a{
+			background-color: @dropdownmenuBorderColor;
+		}
+	}
+
+	.dropdown-menu {
+		border: 0;
+		top: -1px;
+	}
+}
+
 .mondrianFtBlog{
 	.btn-group{
 		.btn{
