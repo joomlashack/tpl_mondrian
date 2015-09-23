@@ -1021,7 +1021,6 @@ dropdown-menu,
 	.box-shadow(none);
 	border-radius: 0;
 	border: 0;
-	border-top: 1px solid @dropdownmenuBorderColor;
 	padding-bottom: 0;
 	padding-top: 0;
 
@@ -1036,11 +1035,6 @@ dropdown-menu,
 			padding-bottom: 7px;
 			padding-top: 7px;
 		}
-		&:first-child{
-			> a{
-				border-top: 0;
-			}
-		}
 		&:hover{
 			> a{
 				background-color: @dropdownmenuBorderColor;
@@ -1052,11 +1046,6 @@ dropdown-menu,
 		>a{
 			background-color: @dropdownmenuBorderColor;
 		}
-	}
-
-	.dropdown-menu {
-		border: 0;
-		top: -1px;
 	}
 }
 
