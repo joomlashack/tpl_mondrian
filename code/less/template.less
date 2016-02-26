@@ -262,21 +262,16 @@ dl.article-info{
 .breadcrumb{
 	font-size: 12px;
 	margin-top: 10px;
-	a,span{
+
+	a, span{
 		.ie7-inline-block();
 		display: inline-block;
 		height: 25px;
 		line-height: 25px;
 	}
-	> span:last-child{
-		.border-radius(4px);
-		background-color: @blueDark;
-		color: @white;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-	li:last-child{
-		span{
+
+	li.active {
+		> span{
 			.border-radius(4px);
 			background-color: @blueDark;
 			color: @white;
@@ -284,6 +279,7 @@ dl.article-info{
 			padding-right: 5px;
 		}
 	}
+
 	.icon-caret-right{
 		position: relative;
 		display: inline-block;
