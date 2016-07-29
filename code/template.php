@@ -56,7 +56,7 @@ defined('_JEXEC') or die('Restricted access');
         <!-- featured -->
         <?php if ($this->countModules('featured')) : ?>
             <div id="featured">
-                <w:module type="none" name="featured" chrome="xhtml" />
+                <w:module type="none" name="featured" />
             </div>
         <?php endif; ?>
         <!-- grid-top -->
@@ -79,7 +79,7 @@ defined('_JEXEC') or die('Restricted access');
             <div id="main-content" class="<?php echo $mainGridMode; ?>">
                 <!-- sidebar1 -->
                 <aside id="sidebar1" class="mondrian-col">
-                    <w:module name="sidebar1" chrome="xhtml" />
+                    <w:module name="sidebar1" />
                 </aside>
                 <!-- main -->
                 <section id="main" class="mondrian-col">
@@ -94,7 +94,7 @@ defined('_JEXEC') or die('Restricted access');
                                         <?php if ($this->countModules('above-content')) : ?>
                                         <!-- above-content -->
                                             <div id="above-content">
-                                                <w:module type="none" name="above-content" chrome="xhtml" />
+                                                <w:module type="none" name="above-content" />
                                             </div>
                                         <?php endif; ?>
                                         <?php if ($this->countModules('breadcrumbs')) : ?>
@@ -121,7 +121,7 @@ defined('_JEXEC') or die('Restricted access');
                                     <div class="<?php echo $mainComplementSpan ?>">
                         <?php endif; ?>
                             <div id="below-content">
-                                <w:module type="none" name="below-content" chrome="xhtml" />
+                                <w:module type="none" name="below-content" />
                             </div>
 
                         <?php if ($mainComplementContainer != '') : ?>
@@ -134,7 +134,7 @@ defined('_JEXEC') or die('Restricted access');
                 </section>
                 <!-- sidebar2 -->
                 <aside id="sidebar2" class="mondrian-col">
-                    <w:module name="sidebar2" chrome="xhtml" />
+                    <w:module name="sidebar2" />
                 </aside>
             </div>
         </div>
@@ -175,7 +175,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </footer>
     </div>
-
+    <w:module type="none" name="debug" chrome="none" />
     <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/mondrian.js'></script>
     <?php if(!$mondrianToolbarDisplayed): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_mondrian/js/toolbarDisplayed.js'></script>
