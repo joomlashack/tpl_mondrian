@@ -468,9 +468,17 @@ dl.article-info{
 	text-shadow: none;
 }
 
+.btn [class^="icon-"],
+.nav [class^="icon-"], 
+.btn [class*=" icon-"], 
+.nav [class*=" icon-"]{
+  line-height: .6em;
+}
+
 .nav {
 	li a {
 		.transition(background-color .25s ease-in-out);
+    
 	}
 
 	// General Submenus (only vertical menus)
@@ -1317,12 +1325,22 @@ dl.tabs{
 	background-image:none;
 	-ms-filter:none;
 	    filter:none;
+
 	.footer-inner{
 		font-size: 11px;
 		a{
 			color:@white;
 		}
 	}
+
+ .navbar .nav > li > a.divider-vertical {
+    border-left-color: inherit;
+    border-right: 0;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    text-decoration: underline;
+  }
 }
 .pagination{
 	.counter{
@@ -1502,7 +1520,7 @@ ul[class*="newsfeed"]{
 		text-align: center;
 		padding: 10px;
 	}
-	.custom_ms3{
+	.custom{
 		.border-radius(3px);
 		background-color: @white;
 		padding: 10px;
@@ -2275,7 +2293,6 @@ body#tinymce {
 	        >li{
 	            float: left;
 	            >a{
-	            	border-left: 1px solid @white;
 	                display: inline-block;
 	                line-height: 10px;
 	                padding-bottom: 0;
