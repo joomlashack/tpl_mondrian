@@ -12,7 +12,7 @@ class JFormFieldTemplateCustom extends JFormField
 		$doc = JFactory::getDocument();
 		$html = '';
 		
-		$html .= '<div class="container-fluid well">
+		$html .= '<div class="container-fluid well" style="clear:both;">
 	<div class="row-fluid">
 		<div class="span12" style="text-align:center;line-height:30px">
 			<h4>Blue</h4>
