@@ -411,6 +411,7 @@ dl.article-info{
 }
 .wrappToolbar {
 	min-height: 15px;
+
 	&.collapsedToolbar {
 		.navbar-inner {
 			min-height: 15px;
@@ -422,11 +423,7 @@ dl.article-info{
 	}
 }
 .mondrianToolbarSwitch {
-	background-color: @navtabsBgHover;
-	background-image: url(../images/green/btnToolbar.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	.box-shadow(2px 1px 4px -1px);
+	background-color: @color_one;
 	width: 40px;
 	height: 40px;
 	position: fixed;
@@ -434,6 +431,13 @@ dl.article-info{
 	top: 0;
 	z-index: 1031;
 	cursor: pointer;
+
+	i:before {
+		color: @white;
+		display: block;
+		font-size: 20px;
+		padding: 11px;
+	}
 }
 
 #sidebar1,
@@ -1027,13 +1031,13 @@ dl.nav-tabs{
 	}
 
 	> li > a {
-		padding-left: 50px;
-		padding-right: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
 
-dropdown-menu,
+.dropdown-menu,
 .nav .dropdown-menu {
 	.box-shadow(none);
 	border-radius: 0;
@@ -1044,11 +1048,12 @@ dropdown-menu,
 	&:before,
 	&:after{
 		display: none;
+		border: none !important;
 	}
 
 	li{
 		a{
-			border-top: 1px solid @dropdownmenuBorderColor;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
 			padding-bottom: 7px;
 			padding-top: 7px;
 		}

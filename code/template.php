@@ -26,7 +26,7 @@ defined('_JEXEC') or die('Restricted access');
     <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
         <?php if (!$mondrianToolbarDisplayed) : ?>
-            <div class="mondrianToolbarSwitch"></div>
+            <div class="mondrianToolbarSwitch"><i class="icon-bars"></i></div>
         <?php endif; ?>
         <div class="wrappToolbar<?php echo ($mondrianToolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
             <w:nav containerClass="<?php echo $containerClass ?> mondrian-toolbar-container<?php echo ($mondrianToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
