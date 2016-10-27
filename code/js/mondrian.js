@@ -9,7 +9,7 @@ function FloatingContainerAlign(){
 
 jQuery(document).ready(function() {
 
-	jQuery('div.mondrianFloatingModule ul.nav a').each(function (i) {
+    jQuery('div.mondrianFloatingModule ul.nav a').each(function (i) {
 		if (jQuery(this).children('span.image-title')) {
 			jQuery(this).attr('title',jQuery(this).children('span.image-title').html());
 		}
