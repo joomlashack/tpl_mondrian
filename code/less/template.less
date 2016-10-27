@@ -13,6 +13,16 @@
 .text-large{
 	font-size: @fontSizeLarge;
 }
+
+a {
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
 p{
 	margin-bottom: 20px;
 }
@@ -1071,14 +1081,14 @@ dl.nav-tabs{
 	.items-row{
 		padding-bottom: 40px;
 		padding-top: 40px;
-		a{
-			text-decoration: underline;
-		}
+
 		.btn{
 			text-decoration: none;
 			min-width: 132px;
 		}
+
 		.btn-group{
+
 			.btn{
 				min-width: 24px;
 			}
@@ -1194,11 +1204,13 @@ dl.nav-tabs{
 			&.active{
 				background-color: transparent;
 				a{
-					background-color: @blueDark !important;
+					background-color: @color_one !important;
 					text-decoration: none;
 					border: 0!important;
-					&:hover{
-						background-color: @blueDark !important;
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: @color_one !important;
 						border: 0!important;
 					}
 				}
@@ -1207,12 +1219,17 @@ dl.nav-tabs{
 				.border-radius(3px) !important;
 				background-color: transparent;
 				border: 0!important;
-				color: @linkColor;
+				color: @white;
+				background-color: @grayLight !important;
 				padding: 2px 30px;
-				&:hover{
-					background-color: @blueDark !important;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					background-color: @color_one !important;
 					border: 0!important;
 					color: @white;
+					text-decoration: none;
 				}
 			}
 		}
@@ -1224,13 +1241,9 @@ dl.nav-tabs{
 	clear: both;
 }
 .hour{
-	.border-radius(3px);
-	background-color: @hourBackground;
-	border-bottom: 3px solid @hourBorderColor;
 	margin-top: 10px;
-	padding: 0 10px;
 	text-align: right;
-	color: @white;
+	line-height: 18px;
 }
 
 .footer-inner{
