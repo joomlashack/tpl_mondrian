@@ -182,7 +182,7 @@ dl.article-info{
 	text-shadow: none;
 }
 .breadcrumb{
-	background-color: transparent;
+	background-color: #f2f2f2;
 }
 
 .breadcrumbs,
@@ -195,16 +195,6 @@ dl.article-info{
 		display: inline-block;
 		height: 25px;
 		line-height: 25px;
-	}
-
-	li.active {
-		> span{
-			.border-radius(4px);
-			background-color: @blueDark;
-			color: @white;
-			padding-left: 5px;
-			padding-right: 5px;
-		}
 	}
 
 	.icon-caret-right{
@@ -529,7 +519,7 @@ dl.article-info{
 
 	> li {
 		background-color: @bodyBackground;
-		border-bottom: 2px solid @navtabsBgHover;
+		border-bottom: 1px solid @white;
 		margin-bottom: 0;
 		margin-right: 0 !important;
 		margin-top: 0;
@@ -1373,11 +1363,32 @@ ul[class*="newsfeed"]{
 .color_six{
 	background-color: @white;
 }
-[class^="module"], [class*="module"] {
+
+.breadcrumb,
+.well {
+	.border-radius(0);
+}
+
+.well {
+	.box-shadow(none);
+	padding: 30px;
+}
+
+fieldset {
+
+	.control-group {
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+[class^="module"],
+[class*="module"] {
 	.clearfix();
 	margin-bottom: 20px;
-	padding-right: 10px;
-	padding-left: 10px;
+
 	&.first.last,&:first-child:last-child{
 		.box-sizing(content-box);
 		float: none;
@@ -1730,11 +1741,19 @@ ul[class*="newsfeed"]{
 	margin-bottom: 0;
 }
 
-#grid-top, #grid-top2, #grid-bottom, #grid-bottom2 {
+#top,
+#grid-top,
+#grid-top2,
+#grid-bottom,
+#grid-bottom2 {
+
 	ul.nav.menu {
+
 		li {
+
 			a {
 				.btn;
+
 				padding-left: 14px;
 				padding-right: 14px;
 				background: darken(@color_one, 10%);
