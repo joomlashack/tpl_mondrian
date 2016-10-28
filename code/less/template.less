@@ -269,9 +269,7 @@ dl.article-info{
 	-ms-filter:none;
 	filter:none;
 }
-.btn-large{
-	padding: 5px 35px;
-}
+
 .btn-group{
 	ul.actions.dropdown-menu{
 		padding: 5px 0;
@@ -1265,12 +1263,15 @@ div {
 	}
 }
 
-.footer-inner{
-	padding-top: 14px;
+.footer-inner {
+	padding-top: 30px;
 }
+
 dl.tabs{
+
 	+ div.current{
 		margin-bottom: 10px;
+
 		dd.tabs {
 			padding: 0 10px;
 			.box-sizing(content-box);
@@ -1740,7 +1741,7 @@ fieldset {
 		padding: 10px;
 		> h3{
 			font-size: 18px;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 			margin-top: 0;
 			text-transform: uppercase;
 		}
@@ -1759,8 +1760,14 @@ fieldset {
 	.list-striped li:nth-child(odd), .list-striped dd:nth-child(odd), .row-striped .row:nth-child(odd), .row-striped .row-fluid:nth-child(odd){
 		background-color: @color_two;
 	}
-	a{
-		color: @white;
+	a:not(.btn){
+		color: @grayDark;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: @gray;
+		}
 	}
 	.readmore a{
 		color: @textColor;
@@ -2286,6 +2293,8 @@ body#tinymce {
 }
 
 #footer {
+	color: @white;
+
 	.footer-inner{
 	    .navbar .nav{
 	        >li{
