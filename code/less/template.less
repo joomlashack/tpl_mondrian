@@ -26,9 +26,22 @@ a {
 p{
 	margin-bottom: 20px;
 }
+
+.btn {
+	color: @white;
+	.box-shadow(0 1px 0 rgba(255, 255, 255, 0.2) inset);
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: @white;
+	}
+}
+
 .bold{
 	font-weight: bold;
 }
+
 .item-page{
 	> .page-header{
 		margin-bottom: 0;
@@ -155,13 +168,13 @@ h3{
 	font-size: 24px;
 }
 h4{
-	font-size: 20px;
+	font-size: 16px;
 }
 h5{
-	font-size: 18px;
+	font-size: 14px;
 }
 h6{
-	font-size: 16px;
+	font-size: 12px;
 }
 .muted{
 	color: @gray;
@@ -1018,19 +1031,22 @@ dl.nav-tabs{
 			}
 		}
 	}
-	[class^="column-"], [class*="column-"],
-	[class^="cols-"], [class*="cols-"]{
+
+	[class^="column-"],
+	[class*="column-"],
+	[class^="cols-"],
+	[class*="cols-"]{
+
 		> .page-header{
 			border: 0;
-			color: @linkColor;
-			display: table;
-			margin-left: auto;
-			margin-right: auto;
 			margin-top: 0;
+			margin-bottom: 15px;
+
 			h2{
 				font-size: 20px;
 			}
 		}
+
 		&[class^="span"], &[class*="span"],
 		>[class^="span"], >[class*="span"] {
 			border-right: 2px solid @hrBorder;
@@ -1074,7 +1090,7 @@ dl.nav-tabs{
 
 		.btn{
 			text-decoration: none;
-			min-width: 132px;
+			min-width: 120px;
 		}
 
 		.btn-group{
@@ -1137,17 +1153,21 @@ dl.nav-tabs{
 			}
 		}
 	}
-	.tab-content{
+
+	.tab-content {
 		border: 0;
-		padding-left: 5px;
-		padding-right: 5px;
 	}
+
 	hr{
 		margin: 30px 0;
 	}
+
 	.blog{
 		margin-bottom: 0;
-		> .page-header ,> h2, > .category-desc{
+
+		> .page-header ,
+		> h2,
+		> .category-desc{
 			text-align: center;
 		}
 	}
@@ -1171,8 +1191,8 @@ dl.nav-tabs{
 }
 .nav-tabs.mondrian-nav-tabs{
 		display: table;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: 0;
+
 		> li{
 			border: 0;
 			padding-top: 0;
@@ -1205,14 +1225,16 @@ dl.nav-tabs{
 					}
 				}
 			}
+
 			a{
-				.border-radius(3px) !important;
+				.border-radius(2px) !important;
 				background-color: transparent;
 				border: 0!important;
 				color: @white;
 				background-color: @grayLight !important;
-				padding: 2px 30px;
+				padding: 4px 12px;
 				text-decoration: none;
+				.box-shadow(0 1px 0 rgba(255, 255, 255, 0.2) inset);
 
 				&:hover,
 				&:focus {
@@ -1234,6 +1256,13 @@ dl.nav-tabs{
 	margin-top: 10px;
 	text-align: right;
 	line-height: 18px;
+}
+
+div {
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
 }
 
 .footer-inner{
@@ -1753,10 +1782,10 @@ fieldset {
 
 			a {
 				.btn;
-
 				padding-left: 14px;
 				padding-right: 14px;
 				background: darken(@color_one, 10%);
+				.box-shadow(0 1px 0 rgba(0, 0, 0, 0.04) inset);
 
 				&:hover,
 				&:focus {
