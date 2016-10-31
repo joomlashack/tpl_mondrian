@@ -302,4 +302,26 @@
 			margin-top: 60px;
 		}
 	}
+
+	.nav-tabs {
+
+		&> li:last-child > a,
+		&> .active:last-child > a {
+			border-bottom: none;
+		}
+	}
+
+	#footer .footer-inner {
+
+		.navbar .nav.pull-right,
+		.navbar .nav {
+			float: none;
+			margin: 0 auto;
+
+			&> li {
+				display: inline;
+				float: none;
+			}
+		}
+	}
 }

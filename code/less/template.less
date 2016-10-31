@@ -145,12 +145,19 @@ ul.ul-inline{
 	margin-left: 0;
 	text-align: center;
 }
-.nobullet{
+
+.nobullet {
 	list-style: none;
 }
-.rm-margin-bottom{
+
+.rm-margin-bottom {
 	margin-bottom: 0 !important;
 }
+
+.rm-margin-top {
+	margin-top: 0 !important;
+}
+
 .rm-padding-side{
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -237,14 +244,14 @@ dl.article-info {
 		display: inline-block;
 		height: 10px;
 		width: 10px;
+
 		&:before{
-			content: '.';
 			display: block;
 			font-size: 13px;
 			height: 2px;
 			position: absolute;
 			right: 0;
-			top: -3px;
+			top: -1px;
 			width: 7px;
 		}
 	}
@@ -905,6 +912,7 @@ dl.nav-tabs{
 }
 
 .navbar{
+
 	.btn{
 		font-size: 18px !important;
 		margin-top: 0;
@@ -915,13 +923,17 @@ dl.nav-tabs{
 			background-color: @btnBackgroundHighlight !important;
 		}
 	}
+
 	.btn-navbar{
 		margin-top: 6px;
 		padding: 7px 10px !important;
+		background-image: none;
+
 		&:hover{
 			background-color: @btnNavbarBackground !important;
 		}
 	}
+
 	.btn-primary{
 		&:hover{
 			background-color: @btnPrimaryBackgroundHighlight !important;
@@ -1011,11 +1023,14 @@ dl.nav-tabs{
 }
 
 .mondrianFtBlog{
+
 	.btn-group{
+
 		.btn{
 			min-width: 24px;
 		}
 	}
+
 	.items-leading{
 		.clearfix();
 		.full-leading:nth-child(odd) {
@@ -1300,16 +1315,19 @@ dl.tabs{
 		}
 	}
 }
-#footer{
+
+#footer {
 	background-color: @navtabsBgHover;
 	background-image:none;
 	-ms-filter:none;
 	    filter:none;
 
-	.footer-inner{
+	.footer-inner {
 		font-size: 11px;
-		a{
-			color:@white;
+
+		a {
+			color:@yellow;
+			text-decoration: none !important;
 		}
 	}
 
@@ -1456,79 +1474,93 @@ fieldset {
 .moduletext_ms1,.color_four{
 	.box-sizing(border-box);
 	background-color: @ms1Background;
-	color:@ms1Color;
-	padding: 10px;
-	> h3,[class^="module"] > h3, [class*="module"] > h3{
+	color: @white;
+	padding: 20px;
+
+	> h3,
+	[class^="module"] > h3,
+	[class*="module"] > h3 {
 		margin-top: 0;
-		text-align: center;
-		text-transform: uppercase;
 	}
-	&.first.last,&:first-child:last-child{
+
+	&.first.last,&:first-child:last-child {
 		.box-sizing(content-box);
 		float: none;
 		margin-bottom: 0;
 		width: auto;
 	}
-	.navbar .nav>li>a{
+
+	.navbar .nav > li > a {
 		color: @ms1Color;
 	}
-	a{
+
+	a {
 		color: @ms1Color;
 	}
-	.btn-primary{
+
+	.btn-primary {
 		color: @white !important;
 	}
 }
+
 .module_ms2,
 .moduletable_ms2,
-.moduletext_ms2,.color_five{
+.moduletext_ms2,
+.color_five {
 	.box-sizing(border-box);
 	background-color: @ms2Background;
 	color: @white;
-	padding: 40px 10px;
+	padding: 20px;
+
 	> h3,[class^="module"] > h3, [class*="module"] > h3{
 		margin-top: 0;
-		text-align: center;
-		text-transform: uppercase;
 	}
-	&.first.last,&:first-child:last-child{
+
+	&.first.last,
+	&:first-child:last-child {
 		.box-sizing(content-box);
 		float: none;
 		margin-bottom: 0;
 		width: auto;
 	}
-	a{
+
+	a {
 		color: @white;
 		.transition(color .2s ease);
-		&:hover{
+
+		&:hover {
 			color: @color_one;
 		}
 	}
-	.btn-primary{
-		&:hover{
+
+	.btn-primary {
+
+		&:hover {
 			color: @white !important;
 		}
 	}
 }
+
 .module_ms3,
 .moduletable_ms3,
 .moduletext_ms3{
-	background-color: @blue;
+	background-color: @color_three;
 	padding-bottom: 10px;
+
 	> h3{
-		.border-radius(3px);
 		background-color: @white;
-		color: @linkColor;
+		color: @color_three;
 		font-size: 20px;
-		text-align: center;
-		padding: 10px;
+		padding: 10px 0;
+		margin: 10px 0 1px !important;
 	}
+
 	.custom{
-		.border-radius(3px);
 		background-color: @white;
 		padding: 10px;
 	}
 }
+
 .module_ms4,
 .moduletable_ms4,
 .moduletext_ms4,
@@ -1670,12 +1702,19 @@ fieldset {
 	margin-top: 10px;
 }
 
-#main-content{
-	.clearfix();
-	section, aside {
-		.box-sizing(border-box);
+#main {
+	margin-bottom: 20px;
+
+	&-content{
+		.clearfix();
+
+		section,
+		aside {
+			.box-sizing(border-box);
+		}
 	}
 }
+
 #top{
 	.moduletable{
 		color: @white;
@@ -1900,6 +1939,14 @@ fieldset {
 		padding: 0 34px;
 	}
 }
+
+div.cat_children > div,
+div.cat-children > div,
+div.categories-list > div {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
 .categories-list{
 	.page-header.item-title{
 		border: 0;
