@@ -34,7 +34,9 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
     <?php if ($this->countModules('floating-menu')) : ?>
         <div class="mondrianFloatingContainer">
-            <div class="mondrianFloatingToggle" data-toggle="collapse" data-target=".mondrianFloatingModule"></div>
+            <div class="mondrianFloatingToggle" data-toggle="collapse" data-target=".mondrianFloatingModule">
+                <i class="icon-cog icon-2x"></i>
+            </div>
             <div class="mondrianFloatingModule collapse">
                 <w:module type="none" name="floating-menu" chrome="raw" />
             </div>
