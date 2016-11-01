@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
 				jQuery('.wrappToolbar').removeClass('collapsedToolbar');
 				jQuery('.wrappToolbar .mondrian-toolbar-container').removeClass('collapsedToolbarInner');
 				jQuery(this).css({top: jQuery('.wrappToolbar .mondrian-toolbar-container').height() + 'px'});
-				jQuery('.mondrianFloatingContainer').css({top: jQuery('.wrappToolbar .mondrian-toolbar-container').height()+40 + 'px'});
+				jQuery('.mondrianFloatingContainer').css({top: jQuery('.wrappToolbar .mondrian-toolbar-container').height()+50 + 'px'});
 			}
 			else {
 				jQuery('.wrappToolbar').addClass('collapsedToolbar');

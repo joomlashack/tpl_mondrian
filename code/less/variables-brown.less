@@ -17,6 +17,10 @@
 @dropdownLinkGradient : false;
 @navbarInverseDropdownLinkGradient : false;
 
+@navbarInnerGradient : false;
+@navbarInverseInnerGradient : false;
+
+@buttonGradient: false;
 
 // Dropdown For navbar-inverse
 // -------------------------
@@ -33,24 +37,24 @@
 @import url(//fonts.googleapis.com/css?family=Lato:400,400italic,700italic);
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
-@navtabsBg:#263138;
-@navtabsBgHover:#151D21;
-@tableThColor:#F4F4F0;
-@ms1Background:#CCB49C;
-@ms2Background:#E2952B;
-@ms1Color:#786959;
-@BgAlternate:#EFEFEF;
-@borderCallToActionColor:#535362;
-@hourBackground:#CDB49A;
-@hourBorderColor:#A99177;
-@selectionColor:#FBC3BF;
-@color_one:#263138;
-@color_two:#151D21;
-@color_three:@btnPrimaryBackground;
-@color_four:@ms1Background;
-@color_five:@ms2Background;
-@dropdownmenuBorderColor:#263138;
-@mondrianMenuBackground:#EBEBEB;
+@navtabsBg:					@color_one;
+@navtabsBgHover:			#151D21;
+@tableThColor:				#F4F4F0;
+@ms1Background:				#96c346;
+@ms2Background:				@color_three;
+@ms1Color: 					@color_one;
+@BgAlternate:				#EFEFEF;
+@borderCallToActionColor:	#535362;
+@hourBackground:			#96c346;
+@hourBorderColor:			#7D8D1C;
+@selectionColor:			#D1E751;
+@color_one:					#BC9A76;
+@color_two:					#151D21;
+@color_three:				#f34a3e;
+@color_four:				#D1E751;
+@color_five:				#7ECFF1;
+@dropdownmenuBorderColor:	@color_one;
+@mondrianMenuBackground:	#EBEBEB;
 
 
 // Global values
@@ -72,8 +76,8 @@
 // -------------------------
 @blue:                  #33CCFF;
 @blueDark:              #00ABE9;
-@green:                 #46a546;
-@red:                   #F34A3E;
+@green:                 #D1E751;
+@red:                   #9d261d;
 @yellow:                #ffc40d;
 @orange:                #f89406;
 @pink:                  #c3325f;
@@ -88,7 +92,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #325159;
+@linkColor:             @color_one;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -120,26 +124,26 @@
 @paddingSmall:          2px 10px;  // 26px
 @paddingMini:           0 6px;   // 22px
 
-@baseBorderRadius:      4px;
-@borderRadiusLarge:     6px;
-@borderRadiusSmall:     3px;
+@baseBorderRadius:      2px;
+@borderRadiusLarge:     4px;
+@borderRadiusSmall:     2px;
 
 
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #FDDBD8; // for striping
+@tableBackgroundAccent:             #D6F5FF; // for striping
 @tableBackgroundHover:              darken(@tableBackgroundAccent ,6%);; // for hover
 @tableBorder:                       @navtabsBg; // table and cell border
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBackground:                     @color_one;
+@btnBackgroundHighlight:            lighten(@color_one, 20%);
 @btnBorder:                         #ccc;
 
-@btnPrimaryBackground:              @red;
-@btnPrimaryBackgroundHighlight:     #BD341A;
+@btnPrimaryBackground:              @color_three;
+@btnPrimaryBackgroundHighlight:     lighten(@btnPrimaryBackground, 20%);
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;

@@ -1,5 +1,5 @@
 {
-  "height": 468,
+  "height": 0,
   "height_adjustment": "adjust",
   "title_description_alignment": "center",
   "description_show": true,
@@ -8,17 +8,15 @@
   "navigation_show": 2,
   "navigation_orientation": "vertical",
   "navigation_custom_align": true,
-  "navigation_padding_dots": 30,
+  "navigation_padding_dots": 15,
   "navigation_effect_theme": "default",
   "navigation_dots_color": "263138",
   "navigation_activedots_color": "FFFFFF",
   "navigation_opacity": 100,
-  "navigation_dots_width": 12,
-  "navigation_dots_height": 12,
+  "navigation_dots_width": 20,
+  "navigation_dots_height": 20,
   "navigation_buttons_show": 2,
   "buttons_theme": "none",
-  "navigation_buttons_custom_previous": "/templates/js_mondrian/images/ss-prev.png",
-  "navigation_buttons_custom_next": "/templates/js_mondrian/images/ss-next.png",
   "navigation_buttons_custom_width": 19,
   "navigation_buttons_custom_height": 13
 }
