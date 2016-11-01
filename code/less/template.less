@@ -382,6 +382,7 @@ dl.article-info {
 	z-index: 1031;
 	cursor: pointer;
 	text-align: center;
+	.border-radius(0 0 2px 2px);
 
 	i:before {
 		color: @white;
@@ -2185,39 +2186,59 @@ body.is_internet.explorer.v_8 {
 		}
 
 		ul.menu{
-			.border-radius(4px);
+			.border-radius(2px);
 			background-color: @mondrianMenuBackground;
 			display: table;
-			>li {
+			min-width: 53px;
+
+			> li {
+
 				b.caret ,.image-title{
 					display: none;
 				}
 			}
-			> li {
-				> a{
-					color: @linkColor;
 
-					[class^="icon-"],
-					[class*=" icon-"]{
-						color: @linkColor;
+			> li {
+
+				> a {
+					color: @grayDark;
+
+					[class*=" icon-"] {
+						color: @grayDark;
+
+						&:hover,
+						&:focus,
+						&:active {
+							color: lighten(@grayDark, 10%);
+						}
 					}
+
+					&.hidden-text [class*=" icon-"] {
+						margin-right: 0;
+					}
+
 					.caret{
 						border-top-color: @linkColor;
 					}
+
 					&:hover,
-					&:focus{
+					&:focus,
+					&:active {
 						background-color: #dcdcdc;
-						color: @linkColorHover;
-						[class^="icon-"],
-						[class*=" icon-"]{
-							color: @linkColorHover;
+						color: lighten(@grayDark, 10%);
+
+						[class*="icon-"]{
+							color: lighten(@grayDark, 10%);
 						}
+
 						.caret{
 							border-top-color: @linkColorHover;
 						}
 					}
 				}
+
 				&.active{
+
 					> a{
 						background-color: #dcdcdc;
 					}
@@ -2386,7 +2407,7 @@ body#tinymce {
 	        >li{
 	            float: left;
 				margin-right: 5px;
-				
+
 	            >a{
 	                display: inline-block;
 	                line-height: 10px;
