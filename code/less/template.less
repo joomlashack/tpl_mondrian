@@ -577,15 +577,15 @@ dl.article-info {
 		text-transform: uppercase;
 
 		&:first-child{
-			.border-radius(6px 0 0 0);
+			.border-radius(2px 0 0 0);
 			a{
-				.border-radius(6px 0 0 0) !important;
+				.border-radius(2px 0 0 0) !important;
 			}
 		}
 		&:last-child{
-			.border-radius(0 6px 0 0) !important;
+			.border-radius(0 2px 0 0) !important;
 			a{
-				.border-radius(0 6px 0 0) !important;
+				.border-radius(0 2px 0 0) !important;
 			}
 		}
 		&:hover{
@@ -686,33 +686,17 @@ dl.article-info {
 			}
 		}
 	}
-	dd + dt.tabs{
-		h3,	p{
-			.border-radius(6px 0 0 0);
-			a{
-				.border-radius(6px 0 0 0);
-			}
-		}
-	}
-	dt.tabs:last-child{
-		h3,p{
-			.border-radius(0 6px 0 0);
-			a{
-				.border-radius(0 6px 0 0);
-			}
-		}
-	}
-	dt h3, dt p{
+
+	dt h3,
+	dt p {
 		background-color: @bodyBackground;
 		padding-top: 3px;
 		border-bottom: 2px solid @navtabsBgHover;
 		margin-right: 0 !important;
 		margin-top: 0;
 		text-transform: uppercase;
-		&:hover{
-			background-color: @navtabsBgHover;
-		}
-		a{
+
+		a {
 			.border-radius(0);
 			background-color:@navtabsBg;
 			color: @white;
@@ -729,14 +713,19 @@ dl.article-info {
 			}
 		}
 	}
+
 	dt:last-child{
-		h3, p{
+
+		h3,
+		p{
 			padding-right: 0;
 		}
 	}
-	dt.open h3,	dt.open p {
-		background-color: @navtabsBgHover;
-		a{
+
+	dt.open h3,
+	dt.open p {
+
+		a {
 			background-color: @navtabsBgHover;
 			color: @white !important;
 			border-color: @navtabsBgHover;
@@ -762,15 +751,15 @@ dl.article-info {
 				}
 			}
 			&:first-child{
-				.border-radius(6px 6px 0 0) !important;
+				.border-radius(2px 2px 0 0) !important;
 				a{
-					.border-radius(6px 6px 0 0)!important;
+					.border-radius(2px 2px 0 0)!important;
 				}
 			}
 			&:last-child{
-				.border-radius(0 0 6px 6px) !important;
+				.border-radius(0 0 2px 2px) !important;
 				a{
-					.border-radius(0 0 6px 6px)!important;
+					.border-radius(0 0 2px 2px)!important;
 				}
 			}
 		}
