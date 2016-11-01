@@ -1178,7 +1178,9 @@ dl.nav-tabs{
 				border: 0!important;
 				color: @linkColor;
 				padding: 2px 30px;
-				&:hover{
+
+				&:hover,
+				&:focus {
 					background-color: @blueDark !important;
 					border: 0!important;
 					color: @white;
@@ -1861,11 +1863,13 @@ fieldset {
 	padding-left: 20px;
 	padding-right: 20px;
 	position: relative;
+
 	> .row-fluid{
 		position: relative;
 		z-index: 3;
 	}
-	.bd-grid-bottom2{
+
+	.bd-grid-bottom2 {
 		background-color: @navtabsBgHover;
 		height: 40px;
 		left: 0;
@@ -1873,8 +1877,12 @@ fieldset {
 		width: 100%;
 		z-index: 2;
 	}
-	.module, .moduletext, .moduletable{
+
+	.module,
+	.moduletext,
+	.moduletable {
 		padding: 10px;
+
 		> h3{
 			font-size: 18px;
 			margin-bottom: 40px;
@@ -1882,21 +1890,42 @@ fieldset {
 			text-transform: uppercase;
 		}
 	}
-	.grid-bottom2-inner{
+
+	.grid-bottom2-inner {
 		position: relative;
 		z-index: 3;
 	}
-	h1,h2,h4,h5,h6{
+
+	h1,
+	h2,
+	h4,
+	h5,
+	h6 {
 		margin-bottom: 0;
 		font-weight: normal;
 	}
-	h3{
+
+	h3 {
 		font-weight: normal;
 	}
-	.list-striped li:nth-child(odd), .list-striped dd:nth-child(odd), .row-striped .row:nth-child(odd), .row-striped .row-fluid:nth-child(odd){
+
+	.list-striped li:nth-child(odd),
+	.list-striped dd:nth-child(odd),
+	.row-striped .row:nth-child(odd),
+	.row-striped .row-fluid:nth-child(odd){
 		background-color: @color_two;
 	}
+
+	a:not(.btn) {
+		color: lighten(@color_one, 15%);
+
+		&:hover,
+		&:focus {
+			color: lighten(@color_one, 20%);
+		}
+	}
 }
+
 #grid-top{
 	margin-bottom: 0;
 }

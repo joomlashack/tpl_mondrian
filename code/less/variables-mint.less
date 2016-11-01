@@ -37,25 +37,24 @@
 @import url(//fonts.googleapis.com/css?family=Lato:400,400italic,700italic);
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
-@turquoise:#2AB5A5;
-@navtabsBg:#263138;
-@navtabsBgHover:#151D21;
-@tableThColor:#F4F4F0;
-@ms1Background:@green;
-@ms2Background:#353351;
-@ms1Color:#658F57;
-@BgAlternate:#EFEFEF;
-@borderCallToActionColor:#535362;
-@hourBackground:@green;
-@hourBorderColor:#649054;
-@selectionColor:#D8F7CE;
-@color_one:#263138;
-@color_two:#151D21;
-@color_three:@btnPrimaryBackground;
-@color_four:@ms1Background;
-@color_five:@ms2Background;
-@dropdownmenuBorderColor:#263138;
-@mondrianMenuBackground:#EBEBEB;
+@navtabsBg:					@color_one;
+@navtabsBgHover:			#151D21;
+@tableThColor:				#F4F4F0;
+@ms1Background:				#96c346;
+@ms2Background:				@color_three;
+@ms1Color: 					@color_one;
+@BgAlternate:				#EFEFEF;
+@borderCallToActionColor:	#535362;
+@hourBackground:			#96c346;
+@hourBorderColor:			#7D8D1C;
+@selectionColor:			#D1E751;
+@color_one:					#55DC28;
+@color_two:					#151D21;
+@color_three:				#005587;
+@color_four:				#D1E751;
+@color_five:				#7ECFF1;
+@dropdownmenuBorderColor:	@color_one;
+@mondrianMenuBackground:	#EBEBEB;
 
 
 // Global values
@@ -75,11 +74,11 @@
 
 // Accent colors
 // -------------------------
-@blue:                  #394F92;
-@blueDark:              #222E59;
-@green:                 #ABEE95;
-@red:                   #E23122;
-@yellow:                #FFE500;
+@blue:                  #33CCFF;
+@blueDark:              #00ABE9;
+@green:                 #D1E751;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
 @orange:                #f89406;
 @pink:                  #c3325f;
 @purple:                #7a43b6;
@@ -93,7 +92,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #325159;
+@linkColor:             @color_one;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -125,26 +124,26 @@
 @paddingSmall:          2px 10px;  // 26px
 @paddingMini:           0 6px;   // 22px
 
-@baseBorderRadius:      4px;
-@borderRadiusLarge:     6px;
-@borderRadiusSmall:     3px;
+@baseBorderRadius:      2px;
+@borderRadiusLarge:     4px;
+@borderRadiusSmall:     2px;
 
 
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #CCDDE7; // for striping
+@tableBackgroundAccent:             #D6F5FF; // for striping
 @tableBackgroundHover:              darken(@tableBackgroundAccent ,6%);; // for hover
 @tableBorder:                       @navtabsBg; // table and cell border
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBackground:                     @color_one;
+@btnBackgroundHighlight:            lighten(@color_one, 20%);
 @btnBorder:                         #ccc;
 
-@btnPrimaryBackground:              #005587;
-@btnPrimaryBackgroundHighlight:     #003D6A;
+@btnPrimaryBackground:              @color_three;
+@btnPrimaryBackgroundHighlight:     lighten(@btnPrimaryBackground, 20%);
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
