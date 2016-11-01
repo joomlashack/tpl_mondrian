@@ -135,15 +135,25 @@
 		float: left;
 	}
 
-	#header .wrapp-logo {
-		padding-top: 10px;
+	#header {
+		padding-bottom: 10px;
 
-		#logo {
-			width: 200px;
+		.wrapp-logo {
+			padding-top: 10px;
+			padding-bottom: 0;
 
-			img {
-				margin-left: 20px;
+			#logo {
+				width: 200px;
+				margin-bottom: 0;
+
+				img {
+					margin-left: 20px;
+				}
 			}
+		}
+
+		&.header-absolute {
+			position: relative;
 		}
 	}
 
@@ -151,7 +161,7 @@
 
 		.jss-slider .owl-carousel .jss-image-container.jss-descpos-bottom .jss-image .jss-title-description .jss-description {
 			padding-top: 70px;
-
+			
 			h1,
 			h2,
 			h3,
