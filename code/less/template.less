@@ -412,6 +412,10 @@ dl.article-info {
 
 #featured{
 	margin-bottom: 0;
+
+	.hero-unit {
+		margin-bottom: 30px;
+	}
 }
 
 .wrapper-toolbar,
@@ -1594,29 +1598,77 @@ fieldset {
 .moduletext_ms4,
 .color_one {
 	.clearfix();
-	background-color: @color_one;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background-color: @grayDark;
+	padding: 20px;
 	color: @white;
-	a{
+
+	> h3 {
+		margin-top: 0;
+	}
+
+	a {
 		color: @white;
 		.transition(color .2s ease);
-		&:hover{
+
+		&:hover,
+		&:focus {
 			color: @grayLight;
 		}
 	}
+
 	.btn-primary{
+
 		&:hover{
 			color: @white !important;
 		}
 	}
-	&.first.last,&:first-child:last-child{
+
+	&.first.last,
+	&:first-child:last-child{
 		.box-sizing(content-box);
 		float: none;
 		margin-bottom: 0;
 		width: auto;
 	}
+}
+
+.color_one {
+	.clearfix();
+	background-color: @color_one;
+	padding: 20px;
+	color: @white;
+
+	> h3 {
+		margin-top: 0;
+	}
+
+	a {
+		color: @white;
+		.transition(color .2s ease);
+
+		&:hover,
+		&:focus {
+			color: @grayLight;
+		}
+	}
+
+	.btn-primary{
+
+		&:hover{
+			color: @white !important;
+		}
+	}
+
+	&.first.last,
+	&:first-child:last-child{
+		.box-sizing(content-box);
+		float: none;
+		margin-bottom: 0;
+		width: auto;
+	}
+
 	&.navbar{
+
 		.nav{
 			display: table;
 			float: none;
@@ -1625,7 +1677,9 @@ fieldset {
 			margin-right: auto;
 		}
 	}
+
 	.navbar{
+
 		.nav{
 			display: table;
 			float: none;
@@ -1671,7 +1725,6 @@ fieldset {
 		}
 	}
 }
-
 
 #sidebar1 {
 	border-right: 2px solid @hrBorder;
