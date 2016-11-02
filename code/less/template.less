@@ -393,9 +393,9 @@ dl.article-info {
 	text-align: center;
 	.border-radius(0 0 2px 2px);
 
-	i:before {
+	.icon-bars {
 		color: @white;
-		display: block;
+		display: inline-block;
 		font-size: 20px;
 		padding: 11px;
 	}
@@ -421,10 +421,6 @@ dl.article-info {
 
 #featured{
 	margin-bottom: 0;
-
-	.hero-unit {
-		margin-bottom: 30px;
-	}
 }
 
 .wrapper-toolbar,
@@ -1940,6 +1936,10 @@ fieldset {
 	}
 }
 
+#grid-top + #grid-top2 {
+	margin-top: 30px;
+}
+
 #top,
 #grid-top,
 #grid-top2,
@@ -2259,12 +2259,10 @@ body.is_internet.explorer.v_8 {
 		.border-radius(2px);
 		text-align: center;
 
-		i {
-
-			&:before {
-				color: @white;
-				margin-top: 3px;
-			}
+		[class*="icon-"] {
+			color: @white;
+			margin-top: 3px;
+			display: inline-block;
 		}
 	}
 
@@ -2545,5 +2543,15 @@ body#tinymce {
 			    }
 		    }
 	    }
+	}
+}
+
+.is_internet,
+.is_chrome,
+.is_opera,
+.is_safari {
+
+	.mondrianFloatingContainer .mondrianFloatingToggle [class*='icon-'] {
+		margin-top: 5px;
 	}
 }

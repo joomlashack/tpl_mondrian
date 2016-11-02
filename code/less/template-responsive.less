@@ -135,15 +135,30 @@
 		float: left;
 	}
 
-	#header .wrapp-logo {
-		padding-top: 10px;
+	#grid-top .navbar .nav > li {
+		float: none;
+		text-align: center;
+	}
 
-		#logo {
-			width: 200px;
+	#header {
+		padding-bottom: 10px;
 
-			img {
-				margin-left: 20px;
+		.wrapp-logo {
+			padding-top: 10px;
+			padding-bottom: 0;
+
+			#logo {
+				width: 200px;
+				margin-bottom: 0;
+
+				img {
+					margin-left: 20px;
+				}
 			}
+		}
+
+		&.header-absolute {
+			position: relative;
 		}
 	}
 
