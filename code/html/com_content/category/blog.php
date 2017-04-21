@@ -22,21 +22,25 @@ $containerClass = ($gridMode == 'row-fluid' ? 'container-fluid' : 'container');
 $this->wrightLeadingExtraClass = 'full-leading';
 if ($mondrianFullWidthBg && !$sidebarExists) {
 
-        $this->wrightLeadingItemElementsStructure = Array(
-                'div.' . $containerClass,
-                        'div.' . $gridMode,
-                                'div.span12',
-                                        'div.leading-content',
-                                                'title',
-                                                'icons',
-                                                'article-info',
-                                                'image',
-                                                'content',
-                                        '/div',
-                                '/div',
-                        '/div',
+$this->wrightLeadingItemElementsStructure = Array(
+    'div.' . $containerClass,
+        'div.' . $gridMode,
+            'div.span12',
+                'div.leading-content',
+                    'title',
+                    'icons',
+                    'article-info',
+                    'image',
+                    'legendtop',
+                    'content',
+                    'legendbottom',
+                    'article-info-below',
+                    'article-info-split',
                 '/div',
-        );
+            '/div',
+        '/div',
+    '/div',
+);
 
         $this->wrightIntroItemsClass = $containerClass;  // Class added to the intro articles (adds an extra wrapper)
         $this->wrightIntroRowMode = $gridMode;  // row mode for each row of the intro articles
