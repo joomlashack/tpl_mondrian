@@ -22,32 +22,32 @@ $containerClass = ($gridMode == 'row-fluid' ? 'container-fluid' : 'container');
 $this->wrightLeadingExtraClass = 'full-leading';
 if ($mondrianFullWidthBg && !$sidebarExists) {
 
-$this->wrightLeadingItemElementsStructure = Array(
-    'div.' . $containerClass,
-        'div.' . $gridMode,
-            'div.span12',
-                'div.leading-content',
-                    'title',
-                    'icons',
-                    'article-info',
-                    'image',
-                    'legendtop',
-                    'content',
-                    'legendbottom',
-                    'article-info-below',
-                    'article-info-split',
+    $this->wrightLeadingItemElementsStructure = Array(
+        'div.' . $containerClass,
+            'div.' . $gridMode,
+                'div.span12',
+                    'div.leading-content',
+                        'title',
+                        'icons',
+                        'article-info',
+                        'image',
+                        'legendtop',
+                        'content',
+                        'legendbottom',
+                        'article-info-below',
+                        'article-info-split',
+                    '/div',
                 '/div',
             '/div',
         '/div',
-    '/div',
-);
+    );
 
-        $this->wrightIntroItemsClass = $containerClass;  // Class added to the intro articles (adds an extra wrapper)
-        $this->wrightIntroRowMode = $gridMode;  // row mode for each row of the intro articles
+    $this->wrightIntroItemsClass = $containerClass;  // Class added to the intro articles (adds an extra wrapper)
+    $this->wrightIntroRowMode = $gridMode;  // row mode for each row of the intro articles
 
-        $this->wrightComplementOuterClass = $containerClass; // Class added to the complements (links, subcategories and pagination) - adds an extra wrapper for all of them
-        $this->wrightComplementExtraClass = $gridMode; // Class added to each complement (links, subcategories and pagination - as blocks).  Adds an extra wrapper before the "Inner" div
-        $this->wrightComplementInnerClass = 'span12'; // Class added to each complement (links, subcategories and pagination - as blocks).  Adds an extra wrapper when needed, or uses the existing one if found
+    $this->wrightComplementOuterClass = $containerClass; // Class added to the complements (links, subcategories and pagination) - adds an extra wrapper for all of them
+    $this->wrightComplementExtraClass = $gridMode; // Class added to each complement (links, subcategories and pagination - as blocks).  Adds an extra wrapper before the "Inner" div
+    $this->wrightComplementInnerClass = 'span12'; // Class added to each complement (links, subcategories and pagination - as blocks).  Adds an extra wrapper when needed, or uses the existing one if found
 }
 
 
