@@ -121,11 +121,6 @@
 				<field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
 				<field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
-			                
-                <field
-                    type="customfooter"
-                    name="customfooter"
-                    media="tpl_js_mondrian" />
             </fieldset>
 			<fieldset name="TPL_JS_MONDRIAN_OPTIONS">
 				<field name="mondrian_full_width_background" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_MONDRIAN_FULL_WIDTH_BACKGROUND" description="TPL_JS_MONDRIAN_FULL_WIDTH_BACKGROUND_DESC">
@@ -141,6 +136,12 @@
 					<option value="1">JYes</option>
 				</field>
 			</fieldset>
+			<fieldset name="footer" addfieldpath="/templates/js_mondrian/form/fields">     
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_mondrian" />
+            </fieldset>
 		</fields>
 	</config>
 
