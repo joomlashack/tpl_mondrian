@@ -2546,6 +2546,63 @@ body#tinymce {
 	}
 }
 
+// JCal Pro
+
+#jcl_component {
+
+	.btn {
+		.border-radius(@baseBorderRadius);
+
+		&-group {
+
+			> .btn {
+				.border-radius(0);
+
+				&:first-of-type,
+				&:first-child {
+					border-bottom-left-radius: @baseBorderRadius;
+					-moz-border-bottom-left-radius: @baseBorderRadius;
+					-webkit-border-bottom-left-radius: @baseBorderRadius;
+					-o-border-bottom-left-radius: @baseBorderRadius;
+					border-top-left-radius: @baseBorderRadius;
+					-moz-border-top-left-radius: @baseBorderRadius;
+					-webkit-border-top-left-radius: @baseBorderRadius;
+					-o-border-top-left-radius: @baseBorderRadius;
+				}
+
+				&:last-of-type,
+				&:last-child {
+					border-top-right-radius: @baseBorderRadius;
+					-moz-border-top-right-radius: @baseBorderRadius;
+					-webkit-border-top-right-radius: @baseBorderRadius;
+					-o-border-top-right-radius: @baseBorderRadius;
+					border-bottom-right-radius: @baseBorderRadius;
+					-moz-border-bottom-right-radius: @baseBorderRadius;
+					-webkit-border-bottom-right-radius: @baseBorderRadius;
+					-o-border-bottom-right-radius: @baseBorderRadius;
+				}
+
+				+ .dropdown-toggle {
+
+
+				}
+			}
+
+			> .btn:last-child,
+			> .dropdown-toggle {
+				border-top-right-radius: @baseBorderRadius;
+				-moz-border-top-right-radius: @baseBorderRadius;
+				-webkit-border-top-right-radius: @baseBorderRadius;
+				-o-border-top-right-radius: @baseBorderRadius;
+				border-bottom-right-radius: @baseBorderRadius;
+				-moz-border-bottom-right-radius: @baseBorderRadius;
+				-webkit-border-bottom-right-radius: @baseBorderRadius;
+				-o-border-bottom-right-radius: @baseBorderRadius;
+			}
+		}
+	}
+}
+
 .is_internet,
 .is_chrome,
 .is_opera,
